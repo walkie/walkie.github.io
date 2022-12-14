@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Eric Walkingshaw  - Variation Control Systems </title>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet" type="text/css">
+  <link href="../css/all.css?v=3" rel="stylesheet" type="text/css">
+  <link href="../css/print.css?v=3" rel="stylesheet" type="text/css" media="print">
+  <link href="../images/LambdaLand-Bold.png" rel="icon" type="image/png" sizes="610x610">
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create','UA-55224698-1','auto');
+  ga('send','pageview');
+</script>
+
+</head>
+
+<body onload="setEmail()">
+<div id="page">
+
+<div id="navbar">
+  <div class="container">
+    <a href="../" class="nav-head">Eric Walkingshaw</a>
+    <div class="nav-sep">&vert;</div>
+    <!-- <a href="/about.html" class="nav-item ">About</a> -->
+    <a href="../software.html" class="nav-item ">Software</a>
+    <a href="../research.html" class="nav-item ">Research</a>
+    <a href="../publications.html" class="nav-item ">Publications</a>
+    <a href="../files/Walkingshaw-CV.pdf" class="nav-item nav-right">CV</a>
+    <a href="../files/Walkingshaw-Resume.pdf" class="nav-item nav-right">Resume</a>
+  </div>
+</div>
+
+<div id="content">
+  <div class="container">
+<h1 id="variation-control-systems">Variation Control Systems</h1>
+<div class="ref-list">
+<ol class="example" type="1">
+<li><div class="pub-block"><a id="icsme16-variation-control-system"></a><div class="pub-title">Concepts, Operations, and Feasibility of a Projection-Based Variation Control System</div><div class="pub-authors">Ștefan Stănciulescu, Thorsten Berger, Eric Walkingshaw, and Andrzej Wąsowski</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">IEEE Int. Conf. on Software Maintenance and Evolution (ICSME)</span>, </span><span class="pub-year">2016</span>, 323–333</div></div><span class="pub-links">[<span class="pub-abstract-link icsme16-variation-control-system"><a href="javascript:toggleAbstract('icsme16-variation-control-system');">Abstract</a></span>, <span class="pub-pdf-link"><a href="../files/pubs/2016/icsme16-variation-control-system.pdf">PDF</a></span>, <span class="pub-code-link pub-data-link"><a href="https://bitbucket.org/modelsteam/2016-vcs-marlin">Code/Data</a></span>]</span><div class="pub-abstract icsme16-variation-control-system"><p>Highly configurable software often uses preprocessor annotations to handle variability. However, understanding, maintaining, and evolving code with such annotations is difficult, mainly because a developer has to work with all variants at a time. Dedicated methods and tools that allow working on a subset of all variants could ease the engineering of highly configurable software. We investigate the potential of one kind of such tools: projection-based variation control systems integrated with projectional editors. For such systems we aim to understand: (i) what end-user operations they need to support, and (ii) whether they can realize the actual evolution of real-world, highly configurable software. We conduct an experiment that investigates variability-related evolution patterns and that evaluates the feasibility of a projection-based variation control system by replaying parts of the history of a real-world 3D printer firmware project. Among others, we show that the prototype variation control system does indeed support the evolution of a highly configurable system and that in general, it does not degrade the code.</p></div></div></li>
+<li><div class="pub-block"><a id="gpce14-projectional-editing"></a><div class="pub-title">Projectional Editing of Variational Software</div><div class="pub-authors">Eric Walkingshaw and Klaus Ostermann</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">ACM SIGPLAN Int. Conf. on Generative Programming and Component Engineering (GPCE)</span>, </span><span class="pub-year">2014</span>, 29–38</div></div><div class="pub-note pub-best">Best paper</div><span class="pub-links">[<span class="pub-abstract-link gpce14-projectional-editing"><a href="javascript:toggleAbstract('gpce14-projectional-editing');">Abstract</a></span>, <span class="pub-pdf-link"><a href="../files/pubs/2014/gpce14-projectional-editing.pdf">PDF</a></span>]</span><div class="pub-abstract gpce14-projectional-editing"><p>Editing the source code of variational software is complicated by the presence
+of variation annotations, such as #ifdef statements, and by code that is only
+included in some configurations. When editing some configurations and not
+others, it would be easier to edit a simplified version of the source code that
+includes only the configurations we currently care about. In this paper, we
+present a projectional editing model for variational software. Using our
+approach, a programmer can partially configure a variational program, edit this
+simplified view of the code, and then automatically update the original, fully
+variational source code. The model is based on an isolation principle where
+edits affect only the variants that are visible in the view. We show that this
+principle has several nice properties that are suggested by related work on
+bidirectional transformations.</p></div></div></li>
+<li><div class="pub-block"><a id="vlhcc11-ifdef-confirmed-harmful"></a><div class="pub-title">#ifdef Confirmed Harmful: Promoting Understandable Software Variation</div><div class="pub-authors">Duc Le, Eric Walkingshaw, and Martin Erwig</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">IEEE Int. Symp. on Visual Languages and Human-Centric Computing (VL/HCC)</span>, </span><span class="pub-year">2011</span>, 143–150</div></div><span class="pub-links">[<span class="pub-abstract-link vlhcc11-ifdef-confirmed-harmful"><a href="javascript:toggleAbstract('vlhcc11-ifdef-confirmed-harmful');">Abstract</a></span>, <span class="pub-pdf-link"><a href="../files/pubs/2011/vlhcc11-ifdef-confirmed-harmful.pdf">PDF</a></span>]</span><div class="pub-abstract vlhcc11-ifdef-confirmed-harmful"><p>Maintaining variation in software is a difficult problem that poses serious
+challenges for the understanding and editing of software artifacts. Although
+the C preprocessor (CPP) is often the default tool used to introduce
+variability to software, because of its simplicity and flexibility, it is
+infamous for its obtrusive syntax and has been blamed for reducing the
+comprehensibility and maintainability of software. In this paper, we address
+this problem by developing a prototype for managing software variation at the
+source code level. We evaluate the difference between our prototype and CPP
+with a user study, which indicates that the prototype helps users reason about
+variational code faster and more accurately than CPP. Our results also support
+the research of others, providing evidence for the effectiveness of related
+tools, such as CIDE and FeatureCommander.</p></div></div></li>
+</ol>
+</div>
+  </div>
+</div>
+
+<div id="footer">
+  <div class="container">
+    <div class="foot-madeby">© 2022 Eric Walkingshaw, <a href="../legal.html">details</a></div>
+  </div>
+</div>
+
+</div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="../js/scripts.js"></script>
+<!-- <script async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+</body>
+</html>

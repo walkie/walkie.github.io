@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Eric Walkingshaw  - Explanation-Oriented Programming </title>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet" type="text/css">
+  <link href="../css/all.css?v=3" rel="stylesheet" type="text/css">
+  <link href="../css/print.css?v=3" rel="stylesheet" type="text/css" media="print">
+  <link href="../images/LambdaLand-Bold.png" rel="icon" type="image/png" sizes="610x610">
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create','UA-55224698-1','auto');
+  ga('send','pageview');
+</script>
+
+</head>
+
+<body onload="setEmail()">
+<div id="page">
+
+<div id="navbar">
+  <div class="container">
+    <a href="../" class="nav-head">Eric Walkingshaw</a>
+    <div class="nav-sep">&vert;</div>
+    <!-- <a href="/about.html" class="nav-item ">About</a> -->
+    <a href="../software.html" class="nav-item ">Software</a>
+    <a href="../research.html" class="nav-item ">Research</a>
+    <a href="../publications.html" class="nav-item ">Publications</a>
+    <a href="../files/Walkingshaw-CV.pdf" class="nav-item nav-right">CV</a>
+    <a href="../files/Walkingshaw-Resume.pdf" class="nav-item nav-right">Resume</a>
+  </div>
+</div>
+
+<div id="content">
+  <div class="container">
+<h1 id="explanation-oriented-programming">Explanation-Oriented Programming</h1>
+<p><em>Explanation-oriented programming</em> (XOP) is motivated by two observations:</p>
+<ol type="1">
+<li>Programs often produce unexpected results.</li>
+<li>Programs have value not only for instructing computers, but as a medium of
+communication between people.</li>
+</ol>
+<p>When a program produces an unexpected result, a user is presented with several
+questions. Is the result correct? If so, what is the user’s misunderstanding?
+If not, what is wrong and how can it be fixed? In these situations an
+<em>explanation</em> of how the result was generated or why it is correct would be
+very helpful. Although some tools exist for addressing these questions, such as
+debuggers, their explanations (e.g. stepping through the program and observing
+its state) are expensive to produce and have low explanatory value, especially
+to non-programmers.</p>
+<p>One goal of XOP is to shift the focus on explaining programs into the language
+design phase, promoting <em>explainability</em> as an explicit design goal. In
+particular, when defining a language, designers should consider not only how
+the syntax relates to the production of results (execution semantics), but also
+how it relates to explanations of how those results are produced and why they
+are correct (an explanation semantics).</p>
+<p>Besides applications to debugging, XOP suggests a new class of domain-specific
+languages where the explanation itself, rather than the final value, is the
+primary output of a program. This emphasizes the second observation above, that
+programs are useful for communication between people. Using such a DSL, an
+<em>explanation designer</em>, who is an expert in the application domain, can create
+and distribute explanation artifacts (programs) to explain problems to
+non-expert <em>explanation consumers</em>.</p>
+<h2 id="publications">Publications</h2>
+<div class="ref-list">
+<ol class="example" type="1">
+<li><div class="pub-block"><a id="sigcse18-algorithm-explanations"></a><div class="pub-title">A Domain Analysis of Data Structure and Algorithm Explanations in the Wild</div><div class="pub-authors">Jeffrey M. Young and Eric Walkingshaw</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">ACM SIGCSE Technical Symp. on Computer Science Education (SIGCSE)</span>, </span><span class="pub-year">2018</span>, 870–875</div></div><span class="pub-links">[<span class="pub-abstract-link sigcse18-algorithm-explanations"><a href="javascript:toggleAbstract('sigcse18-algorithm-explanations');">Abstract</a></span>, <span class="pub-pdf-link"><a href="../files/pubs/2018/sigcse18-algorithm-explanations.pdf">PDF</a></span>, <span class="pub-data-link"><a href="https://github.com/lambda-land/XOP-Algorithms-Data">Data</a></span>]</span><div class="pub-abstract sigcse18-algorithm-explanations"><p>Explanations of data structures and algorithms are complex interactions of
+several notations, including natural language, mathematics, pseudocode, and
+diagrams. Currently, such explanations are created ad hoc using a variety of
+tools and the resulting artifacts are static, reducing explanatory value. We
+envision a domain-specific language for developing rich, interactive
+explanations of data structures and algorithms. In this paper, we analyze this
+domain to sketch requirements for our language. We perform a grounded theory
+analysis to generate a qualitative coding system for explanation artifacts
+collected online. This coding system implies a common structure among
+explanations of algorithms and data structures. We believe this structure can
+be reused as the semantic basis of a domain-specific language for creating
+interactive explanation artifacts. This work is part of our effort to develop
+the paradigm of explanation-oriented programming, which shifts the focus of
+programming from computing results to producing rich explanations of how those
+results were computed.</p></div></div></li>
+<li><div class="pub-block"><a id="jvlc13-probula"></a><div class="pub-title">A Visual Language for Explaining Probabilistic Reasoning</div><div class="pub-authors">Martin Erwig and Eric Walkingshaw</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">Journal of Visual Languages and Computing (JVLC)</span>, vol. 24, num. 2, </span><span class="pub-year">2013</span>, 88–109</div></div><span class="pub-links">[<span class="pub-abstract-link jvlc13-probula"><a href="javascript:toggleAbstract('jvlc13-probula');">Abstract</a></span>, <span class="pub-pdf-link"><a href="../files/pubs/2013/jvlc13-probula.pdf">PDF</a></span>]</span><div class="pub-abstract jvlc13-probula"><p>We present an explanation-oriented, domain-specific, visual language for
+explaining probabilistic reasoning. Explanation-oriented programming is a new
+paradigm that shifts the focus of programming from the computation of results
+to explanations of how those results were computed. Programs in this language
+therefore describe explanations of probabilistic reasoning problems. The
+language relies on a storytelling metaphor of explanation, where the reader is
+guided through a series of well-understood steps from some initial state to the
+final result. Programs can also be manipulated according to a set of laws to
+automatically generate equivalent explanations from one explanation instance.
+This increases the explanatory value of the language by allowing readers to
+cheaply derive alternative explanations if they do not understand the first.
+The language is comprised of two parts: a formal textual notation for
+specifying explanation-producing programs and the more elaborate visual
+notation for presenting those explanations. We formally define the abstract
+syntax of explanations and define the semantics of the textual notation in
+terms of the explanations that are produced.</p></div></div></li>
+<li><div class="pub-block"><a id="dsl11-causation-dsl"></a><div class="pub-title">A DSEL for Studying and Explaining Causation</div><div class="pub-authors">Eric Walkingshaw and Martin Erwig</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">IFIP Working Conf. on Domain-Specific Languages (DSL)</span>, </span><span class="pub-year">2011</span>, 143–167</div></div><span class="pub-links">[<span class="pub-abstract-link dsl11-causation-dsl"><a href="javascript:toggleAbstract('dsl11-causation-dsl');">Abstract</a></span>, <span class="pub-pdf-link"><a href="../files/pubs/2011/dsl11-causation-dsl.pdf">PDF</a></span>, <span class="pub-code-link"><a href="https://github.com/walkie/NeuronDiagram">Code</a></span>]</span><div class="pub-abstract dsl11-causation-dsl"><p>We present a domain-specific embedded language (DSEL) in Haskell that supports
+the philosophical study and practical explanation of causation. The language
+provides constructs for modeling situations comprised of events and functions
+for reliably determining the complex causal relationships that emerge between
+these events. It enables the creation of visual explanations of these causal
+relationships and a means to systematically generate alternative, related
+scenarios, along with corresponding outcomes and causes. The DSEL is based on
+neuron diagrams, a visual notation that is well established in practice and has
+been successfully employed for causation explanation and research. In addition
+to its immediate applicability by users of neuron diagrams, the DSEL is
+extensible, allowing causation experts to extend the notation to introduce
+special-purpose causation constructs. The DSEL also extends the notation of
+neuron diagrams to operate over non-boolean values, improving its
+expressiveness and offering new possibilities for causation research and its
+applications.</p></div></div></li>
+<li><div class="pub-block"><a id="vlhcc10-neuron-diagrams"></a><div class="pub-title">Causal Reasoning with Neuron Diagrams</div><div class="pub-authors">Martin Erwig and Eric Walkingshaw</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">IEEE Int. Symp. on Visual Languages and Human-Centric Computing (VL/HCC)</span>, </span><span class="pub-year">2010</span>, 101–108</div></div><span class="pub-links">[<span class="pub-abstract-link vlhcc10-neuron-diagrams"><a href="javascript:toggleAbstract('vlhcc10-neuron-diagrams');">Abstract</a></span>, <span class="pub-pdf-link"><a href="../files/pubs/2010/vlhcc10-neuron-diagrams.pdf">PDF</a></span>]</span><div class="pub-abstract vlhcc10-neuron-diagrams"><p>The principle of causation is fundamental to science and society and has
+remained an active topic of discourse in philosophy for over two millennia.
+Modern philosophers often rely on “neuron diagrams”, a domain-specific visual
+language for discussing and reasoning about causal relationships and the
+concept of causation itself. In this paper we formalize the syntax and
+semantics of neuron diagrams. We discuss existing algorithms for identifying
+causes in neuron diagrams, show how these approaches are flawed, and propose
+solutions to these problems. We separate the standard representation of a
+dynamic execution of a neuron diagram from its static definition and define two
+separate, but related semantics, one for the causal effects of neuron diagrams
+and one for the identification of causes themselves. Most significantly, we
+propose a simple language extension that supports a clear, consistent, and
+comprehensive algorithm for automatic causal inference.</p></div></div></li>
+<li><div class="pub-block"><a id="vlhcc09-visual-explanations-probability"></a><div class="pub-title">Visual Explanations of Probabilistic Reasoning</div><div class="pub-authors">Martin Erwig and Eric Walkingshaw</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">IEEE Int. Symp. on Visual Languages and Human-Centric Computing (VL/HCC)</span>, </span><span class="pub-year">2009</span>, 23–27</div></div><span class="pub-links">[<span class="pub-abstract-link vlhcc09-visual-explanations-probability"><a href="javascript:toggleAbstract('vlhcc09-visual-explanations-probability');">Abstract</a></span>, <span class="pub-pdf-link"><a href="../files/pubs/2009/vlhcc09-visual-explanations-probability.pdf">PDF</a></span>]</span><div class="pub-abstract vlhcc09-visual-explanations-probability"><p>Continuing our research in explanation-oriented language design, we present a
+domain-specific visual language for explaining probabilistic reasoning.
+Programs in this language, called explanation objects, can be manipulated
+according to a set of laws to automatically generate many equivalent
+explanation instances. We argue that this increases the explanatory power of
+our language by allowing a user to view a problem from many different
+perspectives.</p></div></div></li>
+<li><div class="pub-block"><a id="dsl09-explaining-probability"></a><div class="pub-title">A DSL for Explaining Probabilistic Reasoning</div><div class="pub-authors">Martin Erwig and Eric Walkingshaw</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">IFIP Working Conf. on Domain-Specific Languages (DSL)</span>, LNCS vol. 5658, Springer, </span><span class="pub-year">2009</span>, 335–359</div></div><div class="pub-note pub-best">Best paper</div><span class="pub-links">[<span class="pub-abstract-link dsl09-explaining-probability"><a href="javascript:toggleAbstract('dsl09-explaining-probability');">Abstract</a></span>, <span class="pub-pdf-link"><a href="../files/pubs/2009/dsl09-explaining-probability.pdf">PDF</a></span>]</span><div class="pub-abstract dsl09-explaining-probability"><p>We propose a new focus in language design where languages provide constructs
+that not only describe the computation of results, but also produce
+explanations of how and why those results were obtained. We posit that if users
+are to understand computations produced by a language, that language should
+provide explanations to the user. As an example of such an
+explanation-oriented language we present a domain-specific language for
+explaining probabilistic reasoning, a domain that is not well understood by
+non-experts. We show the design of the DSL in several steps. Based on a
+story-telling metaphor of explanations, we identify generic constructs for
+building stories out of events, and obtaining explanations by applying stories
+to specific examples. These generic constructs are then adapted to the
+particular explanation domain of probabilistic reasoning. Finally, we develop a
+visual notation for explaining probabilistic reasoning.</p></div></div></li>
+<li><div class="pub-block"><a id="vlhcc08-explaining-strategies"></a><div class="pub-title">A Visual Language for Representing and Explaining Strategies in Game Theory</div><div class="pub-authors">Martin Erwig and Eric Walkingshaw</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">IEEE Int. Symp. on Visual Languages and Human-Centric Computing (VL/HCC)</span>, </span><span class="pub-year">2008</span>, 101–108</div></div><span class="pub-links">[<span class="pub-abstract-link vlhcc08-explaining-strategies"><a href="javascript:toggleAbstract('vlhcc08-explaining-strategies');">Abstract</a></span>, <span class="pub-pdf-link"><a href="../files/pubs/2008/vlhcc08-explaining-strategies.pdf">PDF</a></span>]</span><div class="pub-abstract vlhcc08-explaining-strategies"><p>We present a visual language for strategies in game theory, which has potential
+applications in economics, social sciences, and in general science education.
+This language facilitates explanations of strategies by visually representing
+the interaction of players’ strategies with game execution. We have utilized
+the cognitive dimensions framework in the design phase and recognized the need
+for a new cognitive dimension of “traceability” that considers how well a
+language can represent the execution of a program. We consider how traceability
+interacts with other cognitive dimensions and demonstrate its use in analyzing
+existing languages. We conclude that the design of a visual representation for
+execution traces should be an integral part of the design of visual languages
+because understanding a program is often tightly coupled to its execution.</p></div></div></li>
+</ol>
+</div>
+  </div>
+</div>
+
+<div id="footer">
+  <div class="container">
+    <div class="foot-madeby">© 2022 Eric Walkingshaw, <a href="../legal.html">details</a></div>
+  </div>
+</div>
+
+</div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="../js/scripts.js"></script>
+<!-- <script async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+</body>
+</html>

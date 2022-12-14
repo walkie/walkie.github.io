@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Eric Walkingshaw  - Verifying GUI Applications </title>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet" type="text/css">
+  <link href="../css/all.css?v=3" rel="stylesheet" type="text/css">
+  <link href="../css/print.css?v=3" rel="stylesheet" type="text/css" media="print">
+  <link href="../images/LambdaLand-Bold.png" rel="icon" type="image/png" sizes="610x610">
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create','UA-55224698-1','auto');
+  ga('send','pageview');
+</script>
+
+</head>
+
+<body onload="setEmail()">
+<div id="page">
+
+<div id="navbar">
+  <div class="container">
+    <a href="../" class="nav-head">Eric Walkingshaw</a>
+    <div class="nav-sep">&vert;</div>
+    <!-- <a href="/about.html" class="nav-item ">About</a> -->
+    <a href="../software.html" class="nav-item ">Software</a>
+    <a href="../research.html" class="nav-item ">Research</a>
+    <a href="../publications.html" class="nav-item ">Publications</a>
+    <a href="../files/Walkingshaw-CV.pdf" class="nav-item nav-right">CV</a>
+    <a href="../files/Walkingshaw-Resume.pdf" class="nav-item nav-right">Resume</a>
+  </div>
+</div>
+
+<div id="content">
+  <div class="container">
+<h1 id="directly-verifying-gui-applications">Directly Verifying GUI Applications</h1>
+<div class="ref-list">
+<ol class="example" type="1">
+<li><div class="pub-block"><a id="ppdp18-declarative-guis"></a><div class="pub-title">Declarative GUIs: Simple, Consistent, and Verified</div><div class="pub-authors">Stephan Adelsberger, Anton Setzer, and Eric Walkingshaw</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">ACM SIGPLAN Int. Symp. on Principles and Practice of Declarative Programming (PPDP)</span>, </span><span class="pub-year">2018</span>, 4:1–4:15</div></div><span class="pub-links">[<span class="pub-abstract-link ppdp18-declarative-guis"><a href="javascript:toggleAbstract('ppdp18-declarative-guis');">Abstract</a></span>, <span class="pub-pdf-link"><a href="../files/pubs/2018/ppdp18-declarative-guis.pdf">PDF</a></span>, <span class="pub-code-link"><a href="https://github.com/stephanadelsb/PPDP18">Code</a></span>]</span><div class="pub-abstract ppdp18-declarative-guis"><p>Graphical user interfaces (GUIs) are ubiquitous in real-world software and a notorious source of bugs that are difficult to catch through software testing. Model checking has been used to prove the absence of certain kinds of bugs, but model checking works on an abstract model of the GUI application, which might be inconsistent with its implementation. We present a library for developing directly verified, state-dependent GUI applications in the dependently typed programming language Agda. In the library, the type of a GUI’s controller depends on a specification of the GUI itself, statically enforcing consistency between them. Arbitrary properties can be defined and proved in terms of user interactions and state transitions. Our library connects to a custom-built Haskell back-end for declarative vector-based GUI elements. Compared to an earlier version of our library built on an existing imperative GUI framework, the more declarative back-end supports simpler definitions and proofs.</p>
+<p>As a practical application of our library to a safety-critical domain, we present a case study developed in cooperation with the Medical University of Vienna. The case study implements a healthcare process for prescribing anticoagulants, which is highly error-prone when followed manually. Our implementation generates GUIs from an abstract description of a data-aware business process, making our approach easy to reuse and adapt to other safety-critical processes. We prove medically relevant safety properties about the executable GUI application, such as that given certain inputs, certain states must or must not be reached.</p></div></div></li>
+<li><div class="pub-block"><a id="setta18-verified-guis"></a><div class="pub-title">Developing GUI Applications in a Verified Setting</div><div class="pub-authors">Stephan Adelsberger, Anton Setzer, and Eric Walkingshaw</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">Int. Symp. on Dependable Software Engineering: Theories, Tools, and Applications (SETTA)</span>, Springer, </span><span class="pub-year">2018</span>, 89–107</div></div><span class="pub-links">[<span class="pub-abstract-link setta18-verified-guis"><a href="javascript:toggleAbstract('setta18-verified-guis');">Abstract</a></span>, <span class="pub-pdf-link"><a href="../files/pubs/2018/setta18-verified-guis.pdf">PDF</a></span>, <span class="pub-code-link"><a href="https://github.com/stephanpaper/SETTA18">Code</a></span>]</span><div class="pub-abstract setta18-verified-guis"><p>Although there have been major achievements in verified software, work on verifying graphical user interfaces (GUI) applications is underdeveloped relative to their ubiquity and societal importance. In this paper, we present a library for the development of verified, state-dependent GUI applications in the dependently typed programming language Agda. The library uses Agda’s expressive type system to ensure that the GUI, its controller, and the underlying model are all consistent, significantly reducing the scope for GUI-related bugs. We provide a way to specify and prove correctness properties of GUI applications in terms of user interactions and state transitions. Critically, GUI applications and correctness properties are not restricted to finite state machines and may involve the execution of arbitrary interactive programs. Additionally, the library connects to a standard, imperative GUI framework, enabling the development of native GUI applications with expected features, such as concurrency. We present applications of our library to building GUI applications to manage healthcare processes. The correctness properties we consider are the following: (1) That a state can only be reached by passing through a particular intermediate state, for example, that a particular treatment can only be reached after having conducted an X-Ray. (2) That one eventually reaches a particular state, for example, that one eventually decides on a treatment. The specification of such properties is defined in terms of a GUI application simulator, which simulates all possible sequences of interactions carried out by the user.</p></div></div></li>
+</ol>
+</div>
+  </div>
+</div>
+
+<div id="footer">
+  <div class="container">
+    <div class="foot-madeby">© 2022 Eric Walkingshaw, <a href="../legal.html">details</a></div>
+  </div>
+</div>
+
+</div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="../js/scripts.js"></script>
+<!-- <script async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+</body>
+</html>

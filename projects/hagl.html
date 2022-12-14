@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Eric Walkingshaw  - Hagl </title>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet" type="text/css">
+  <link href="../css/all.css?v=3" rel="stylesheet" type="text/css">
+  <link href="../css/print.css?v=3" rel="stylesheet" type="text/css" media="print">
+  <link href="../images/LambdaLand-Bold.png" rel="icon" type="image/png" sizes="610x610">
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create','UA-55224698-1','auto');
+  ga('send','pageview');
+</script>
+
+</head>
+
+<body onload="setEmail()">
+<div id="page">
+
+<div id="navbar">
+  <div class="container">
+    <a href="../" class="nav-head">Eric Walkingshaw</a>
+    <div class="nav-sep">&vert;</div>
+    <!-- <a href="/about.html" class="nav-item ">About</a> -->
+    <a href="../software.html" class="nav-item ">Software</a>
+    <a href="../research.html" class="nav-item ">Research</a>
+    <a href="../publications.html" class="nav-item ">Publications</a>
+    <a href="../files/Walkingshaw-CV.pdf" class="nav-item nav-right">CV</a>
+    <a href="../files/Walkingshaw-Resume.pdf" class="nav-item nav-right">Resume</a>
+  </div>
+</div>
+
+<div id="content">
+  <div class="container">
+<h1 id="hagl-haskell-game-language">Hagl: Haskell Game Language</h1>
+<p><p>A DSL embedded in Haskell for <em>experimental/evolutionary game theory</em>. Hagl
+supports defining a wide variety of games and strategies, then executing them
+repeatedly in order to collect and observe the results.</p>
+<p>Hagl provides built-in support for standard game representations, such as
+normal and extensive form, and constructs for defining games in terms of the
+manipulation of a shared state (as in tic-tac-toe). More exotic game
+representations can be added by instantiating a type class.</p>
+<p>A monadic sub-DSL supports concise and vaguely English-like definitions of
+strategies for playing these games, usually iteratively.</p>
+<p>While Hagl provides some basic game analyses, its primary focus is on
+simulation and experimentation. Games can be executed and strategies can be
+pitted against each other for repeated play and in various tournament formats.</p></p>
+<p>Checkout the <a href="https://github.com/walkie/Hagl">current version of Hagl on GitHub</a>.
+Older versions of Hagl corresponding to specific papers are linked to below.</p>
+<h2 id="publications">Publications</h2>
+<div class="ref-list">
+<ol class="example" type="1">
+<li><div class="pub-block"><a id="msthesis-game-theory-dsls"></a><div class="pub-title">Domain-Specific Language Support for Experimental Game Theory</div><div class="pub-authors">Eric Walkingshaw</div><div class="pub-details"><div class="pub-details"><span class="pub-venue">MS thesis, <span class="pub-venue-name">Oregon State University</span>, </span><span class="pub-year">2011</span></div></div><span class="pub-links">[<span class="pub-abstract-link msthesis-game-theory-dsls"><a href="javascript:toggleAbstract('msthesis-game-theory-dsls');">Abstract</a></span>, <span class="pub-pdf-link"><a href="../files/pubs/2011/msthesis-game-theory-dsls.pdf">PDF</a></span>, <span class="pub-code-link"><a href="https://github.com/walkie/Hagl">Code</a></span>]</span><div class="pub-abstract msthesis-game-theory-dsls"><p>Experimental game theory is the use of game theoretic abstractions—games,
+players, and strategies—in experiments and simulations. It is often used in
+cases where traditional, analytical game theory fails or is difficult to apply.
+This thesis collects three previously published papers that provide
+domain-specific language (DSL) support for defining and executing these
+experiments, and for explaining their results.</p>
+<p>Despite the widespread use of software in this field, there is a distinct lack
+of tool support for common tasks like modeling games and running simulations.
+Instead, most experiments are created from scratch in general-purpose
+programming languages. We have addressed this problem with Hagl, a DSL embedded
+in Haskell that allows the concise, declarative definition of games,
+strategies, and executable experiments. Hagl raises the level of abstraction
+for experimental game theory, reducing the effort to conduct experiments and
+freeing experimenters to focus on hard problems in their domain instead of
+low-level implementation details.</p>
+<p>While analytical game theory is most often used as a prescriptive tool, a way
+to analyze a situation and determine the best course of action, experimental
+game theory is often applied descriptively to explain why agents interact and
+behave in a certain way. Often these interactions are complex and surprising.
+To support this explanatory role, we have designed visual DSL for explaining
+the interaction of strategies for iterated games. This language is used as a
+vehicle to introduce the notational quality of traceability and the new
+paradigm of explanation-oriented programming.</p></div></div></li>
+<li><div class="pub-block"><a id="jfp09-hagl"></a><div class="pub-title">A Domain-Specific Language for Experimental Game Theory</div><div class="pub-authors">Eric Walkingshaw and Martin Erwig</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">Journal of Functional Programming (JFP)</span>, vol. 19, </span><span class="pub-year">2009</span>, 645–661</div></div><span class="pub-links">[<span class="pub-abstract-link jfp09-hagl"><a href="javascript:toggleAbstract('jfp09-hagl');">Abstract</a></span>, <span class="pub-pdf-link"><a href="../files/pubs/2009/jfp09-hagl.pdf">PDF</a></span>, <span class="pub-code-link"><a href="https://github.com/walkie/Hagl-JFP">Code</a></span>]</span><div class="pub-abstract jfp09-hagl"><p>Experimental game theory is increasingly important for research in many fields.
+Unfortunately, it is poorly supported by computer tools. We have created Hagl,
+a domain-specific language embedded in Haskell, to reduce the development time
+of game-theoretic experiments and make the definition and exploration of games
+and strategies simple and fun.</p></div></div></li>
+<li><div class="pub-block"><a id="dsl09-hagl-expressiveness"></a><div class="pub-title">Varying Domain Representations in Hagl – Extending the Expressiveness of a DSL for Experimental Game Theory</div><div class="pub-authors">Eric Walkingshaw and Martin Erwig</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">IFIP Working Conf. on Domain-Specific Languages (DSL)</span>, LNCS vol. 5658, Springer, </span><span class="pub-year">2009</span>, 310–334</div></div><span class="pub-links">[<span class="pub-abstract-link dsl09-hagl-expressiveness"><a href="javascript:toggleAbstract('dsl09-hagl-expressiveness');">Abstract</a></span>, <span class="pub-pdf-link"><a href="../files/pubs/2009/dsl09-hagl-expressiveness.pdf">PDF</a></span>, <span class="pub-code-link"><a href="https://github.com/walkie/Hagl-WCDSL">Code</a></span>]</span><div class="pub-abstract dsl09-hagl-expressiveness"><p>Experimental game theory is an increasingly important research tool in many
+fields, providing insight into strategic behavior through simulation and
+experimentation on game theoretic models. Unfortunately, despite relying
+heavily on automation, this approach has not been well supported by tools. Here
+we present our continuing work on Hagl, a domain-specific language embedded in
+Haskell, intended to drastically reduce the development time of such
+experiments and support a highly explorative research style. In this paper we
+present a fundamental redesign of the underlying game representation in Hagl.
+These changes allow us to better leverage domain knowledge by allowing
+different classes of games to be represented differently, exploiting existing
+domain representations and algorithms. In particular, we show how this supports
+analytical extensions to Hagl, and makes strategies for state-based games
+vastly simpler and more efficient.</p></div></div></li>
+</ol>
+</div>
+<h2 id="related">Related</h2>
+<div class="ref-list resume">
+<ol start="4" class="example" type="1">
+<li><div class="pub-block"><a id="vlhcc08-explaining-strategies"></a><div class="pub-title">A Visual Language for Representing and Explaining Strategies in Game Theory</div><div class="pub-authors">Martin Erwig and Eric Walkingshaw</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">IEEE Int. Symp. on Visual Languages and Human-Centric Computing (VL/HCC)</span>, </span><span class="pub-year">2008</span>, 101–108</div></div><span class="pub-links">[<span class="pub-abstract-link vlhcc08-explaining-strategies"><a href="javascript:toggleAbstract('vlhcc08-explaining-strategies');">Abstract</a></span>, <span class="pub-pdf-link"><a href="../files/pubs/2008/vlhcc08-explaining-strategies.pdf">PDF</a></span>]</span><div class="pub-abstract vlhcc08-explaining-strategies"><p>We present a visual language for strategies in game theory, which has potential
+applications in economics, social sciences, and in general science education.
+This language facilitates explanations of strategies by visually representing
+the interaction of players’ strategies with game execution. We have utilized
+the cognitive dimensions framework in the design phase and recognized the need
+for a new cognitive dimension of “traceability” that considers how well a
+language can represent the execution of a program. We consider how traceability
+interacts with other cognitive dimensions and demonstrate its use in analyzing
+existing languages. We conclude that the design of a visual representation for
+execution traces should be an integral part of the design of visual languages
+because understanding a program is often tightly coupled to its execution.</p></div></div></li>
+</ol>
+</div>
+  </div>
+</div>
+
+<div id="footer">
+  <div class="container">
+    <div class="foot-madeby">© 2022 Eric Walkingshaw, <a href="../legal.html">details</a></div>
+  </div>
+</div>
+
+</div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="../js/scripts.js"></script>
+<!-- <script async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Eric Walkingshaw  - Variational Programming </title>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet" type="text/css">
+  <link href="../css/all.css?v=3" rel="stylesheet" type="text/css">
+  <link href="../css/print.css?v=3" rel="stylesheet" type="text/css" media="print">
+  <link href="../images/LambdaLand-Bold.png" rel="icon" type="image/png" sizes="610x610">
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create','UA-55224698-1','auto');
+  ga('send','pageview');
+</script>
+
+</head>
+
+<body onload="setEmail()">
+<div id="page">
+
+<div id="navbar">
+  <div class="container">
+    <a href="../" class="nav-head">Eric Walkingshaw</a>
+    <div class="nav-sep">&vert;</div>
+    <!-- <a href="/about.html" class="nav-item ">About</a> -->
+    <a href="../software.html" class="nav-item ">Software</a>
+    <a href="../research.html" class="nav-item ">Research</a>
+    <a href="../publications.html" class="nav-item ">Publications</a>
+    <a href="../files/Walkingshaw-CV.pdf" class="nav-item nav-right">CV</a>
+    <a href="../files/Walkingshaw-Resume.pdf" class="nav-item nav-right">Resume</a>
+  </div>
+</div>
+
+<div id="content">
+  <div class="container">
+<h1 id="variational-programming">Variational Programming</h1>
+<h2 id="variational-satisfiability-solving">Variational satisfiability solving</h2>
+<div class="ref-list">
+<ol class="example" type="1">
+<li><div class="pub-block"><a id="emse23-variational-sat"></a><div class="pub-title">Variational Satisfiability Solving: Efficiently Solving Lots of Related SAT Problems</div><div class="pub-authors">Jeffrey M. Young, Paul Maximilian Bittner, Eric Walkingshaw, and Thomas Thüm</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">Empirical Software Engineering (EMSE)</span>, vol. 28, num. 14, Springer, </span><span class="pub-year">2023</span>, 1–53</div></div><span class="pub-links">[<span class="pub-abstract-link emse23-variational-sat"><a href="javascript:toggleAbstract('emse23-variational-sat');">Abstract</a></span>, <span class="pub-pdf-link"><a href="../files/pubs/2023/emse23-variational-sat.pdf">PDF</a></span>, <span class="pub-code-link"><a href="https://github.com/lambda-land/VSAT_EMSE">Code</a></span>]</span><div class="pub-abstract emse23-variational-sat"><p>Incremental satisfiability (SAT) solving is an extension of classic SAT solving that enables solving a set of related SAT problems by identifying and exploiting shared terms. However, using incremental solvers effectively is hard since performance is sensitive to the input order of subterms and results must be tracked manually. For analyses that generate sets of related SAT problems, such as those in software product lines, incremental solvers are either not used or their use is not clearly described in the literature. This paper translates the ordering problem to an encoding problem and automates the use of incremental solving. We introduce variational SAT solving, which differs from incremental solving by accepting all related problems as a single variational input and returning all results as a single variational output. Variational solving syntactically encodes differences in related SAT problems as local points of variation. With this syntax, our approach automates the interaction with the incremental solver and enables a method to automatically optimize sharing in the input. To evaluate these ideas, we formalize a variational SAT algorithm, construct a prototype variational solver, and perform an empirical analysis on two real-world datasets that applied incremental solvers to software evolution scenarios. We show, assuming a variational input, that the prototype solver scales better for these problems than four off-the-shelf incremental solvers while also automatically tracking individual results.</p></div></div></li>
+<li><div class="pub-block"><a id="splc20-variational-sat"></a><div class="pub-title">Variational Satisfiability Solving</div><div class="pub-authors">Jeffrey M. Young, Eric Walkingshaw, and Thomas Thüm</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">ACM SIGSOFT Int. Systems and Software Product Line Conf. (SPLC)</span>, </span><span class="pub-year">2020</span>, 18:1–18:12</div></div><span class="pub-links">[<span class="pub-abstract-link splc20-variational-sat"><a href="javascript:toggleAbstract('splc20-variational-sat');">Abstract</a></span>, <span class="pub-pdf-link"><a href="../files/pubs/2020/splc20-variational-sat.pdf">PDF</a></span>, <span class="pub-code-link"><a href="https://github.com/lambda-land/VSat-SPLC20">Code</a></span>]</span><div class="pub-abstract splc20-variational-sat"><p>Incremental satisfiability (SAT) solving is an extension of classic SAT solving that allows users to efficiently solve a set of related SAT problems by identifying and exploiting shared terms. However, using incremental solvers effectively is hard since performance is sensitive to a problem’s structure and the order sub-terms are fed to the solver, and the burden to track results is placed on the end user. For analyses that generate sets of related SAT problems, such as those in software product lines, incremental SAT solvers are either not used at all, used but not explicitly stated so in the literature, or used but suffer from the aforementioned usability problems. This paper translates the ordering problem to an encoding problem and automates the use of incremental SAT solving. We introduce variational SAT solving, which differs from incremental SAT solving by accepting all related problems as a single variational input and returning all results as a single variational output. Our central idea is to make explicit the operations of incremental SAT solving, thereby encoding differences between related SAT problems as local points of variation. Our approach automates the interaction with the incremental solver and enables methods to automatically optimize sharing of the input. To evaluate our methods we construct a prototype variational SAT solver and perform an empirical analysis on two real-world datasets that applied incremental solvers to software evolution scenarios. We show, assuming a variational input, that the prototype solver scales better for these problems than naive incremental solving while also removing the need to track individual results.</p></div></div></li>
+</ol>
+</div>
+<h2 id="variational-databases">Variational databases</h2>
+<div class="ref-list resume">
+<ol start="3" class="example" type="1">
+<li><div class="pub-block"><a id="gpce21-vdbms"></a><div class="pub-title">A Variational Database Management System</div><div class="pub-authors">Parisa Ataei, Fariba Khan, and Eric Walkingshaw</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">ACM SIGPLAN Int. Conf. on Generative Programming: Concepts and Experiences (GPCE)</span>, </span><span class="pub-year">2021</span>, 29–42</div></div><span class="pub-links">[<span class="pub-abstract-link gpce21-vdbms"><a href="javascript:toggleAbstract('gpce21-vdbms');">Abstract</a></span>, <span class="pub-pdf-link"><a href="../files/pubs/2021/gpce21-vdbms.pdf">PDF</a></span>, <span class="pub-code-link"><a href="https://github.com/lambda-land/VDBMS">Code</a></span>]</span><div class="pub-abstract gpce21-vdbms"><p>Many problems require working with data that varies in its structure and content. Current approaches, such as schema evolution or data integration tools, are highly tailored to specific kinds of variation in databases. While these approaches work well in their roles, they do not address all kinds of variation and do address the interaction of different kinds of variation in databases. In this paper, we define a framework for capturing variation as a generic and orthogonal concern in relational databases. We define variational schemas, variational databases, and variational queries for capturing variation in the structure, content, and information needs of relational databases, respectively. We define a type system that ensures variational queries are consistent with respect to a variational schema. Finally, we design and implement a variational database management system as an abstraction layer over a traditional relational database management system. Using previously developed use cases, we show the feasibility of our framework and demonstrate the performance of different approaches used in our system.</p></div></div></li>
+<li><div class="pub-block"><a id="vamos21-variation-in-databases"></a><div class="pub-title">Should Variation Be Encoded Explicitly in Databases?</div><div class="pub-authors">Parisa Ataei, Qiaoran Li, and Eric Walkingshaw</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">Int. Working Conf. on Variability Modelling of Software-Intensive Systems (VaMoS)</span>, </span><span class="pub-year">2021</span>, 3:1–3:9</div></div><span class="pub-links">[<span class="pub-abstract-link vamos21-variation-in-databases"><a href="javascript:toggleAbstract('vamos21-variation-in-databases');">Abstract</a></span>, <span class="pub-pdf-link"><a href="../files/pubs/2021/vamos21-variation-in-databases.pdf">PDF</a></span>]</span><div class="pub-abstract vamos21-variation-in-databases"><p>Variation occurs in databases in many different forms and contexts. For example, a single database schema evolves over time, data from different sources may be combined, and the various configurations of a software product line (SPL) may have different data needs. While approaches have been developed to deal with many such scenarios, particularly in the fields of database evolution and data integration, there is no solution that treats variation as a general and orthogonal concern in databases. This is a problem when various kinds of variation intersect, such as during the evolution of a SPL. Previously, we have proposed variational databases (VDB) as a general way to represent variation in both the structure and content of databases. Although the model underlying VDB is simple, encoding variation explicitly in databases introduces complexity akin to using preprocessing directives in software. In this paper, we explore the feasibility of VDB and its associated variational query language for encoding different kinds of database variability. We develop two use cases that illustrate how different kinds of variation can be encoded and integrated in VDB, and how the corresponding information needs can be expressed as variational queries. We then use these use cases to discuss the benefits and drawbacks of such a direct encoding of variation in data and queries.</p></div></div></li>
+<li><div class="pub-block"><a id="poly18-heterogeneous-dbs-spls"></a><div class="pub-title">Managing Structurally Heterogeneous Databases in Software Product Lines</div><div class="pub-authors">Parisa Ataei, Arash Termehchy, and Eric Walkingshaw</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">VLDB Workshop: Polystores and Other Systems for Heterogeneous Data (Poly)</span>, Springer, </span><span class="pub-year">2018</span></div></div><span class="pub-links">[<span class="pub-abstract-link poly18-heterogeneous-dbs-spls"><a href="javascript:toggleAbstract('poly18-heterogeneous-dbs-spls');">Abstract</a></span>, <span class="pub-pdf-link"><a href="../files/pubs/2018/poly18-heterogeneous-dbs-spls.pdf">PDF</a></span>]</span><div class="pub-abstract poly18-heterogeneous-dbs-spls"><p>Data variations are prevalent while developing software product lines (SPLs). A
+SPL enables a software vendor to quickly produce different variants of their
+software tailored to variations in their clients’ business requirements,
+conventions, desired feature sets, and deployment environments. In
+database-backed software, the database of each variant may have a different
+schema and content, giving rise to numerous data variants. Users often need to
+query and/or analyze all variants in a SPL simultaneously. For example, a
+software vendor wants to perform common tests or inquiries over all variants.
+Unfortunately, there is no systematic approach to managing and querying data
+variations and users have to use their intuition to perform such tasks, often
+resorting to repeating a task for each variant. We introduce <em>VDBMS</em>
+(Variational Database Management System), a system that provides a compact,
+expressive, and structured representation of variation in relational databases.
+In contrast to data integration systems that provide a unified representation
+for all data sources, VDBMS makes variations explicit in both the schema and
+query. Although variations can make VDBMS queries more complex than plain
+queries, a strong static type system ensures that all variants of the query are
+consistent with the corresponding variants of the database. Additionally,
+<em>variational queries</em> make it possible to compactly represent and efficiently
+run queries over a huge range of data variations in a single query. This
+directly supports many tasks that would otherwise be intractable in highly
+variational database-backed SPLs.</p></div></div></li>
+<li><div class="pub-block"><a id="dbpl17-variational-databases"></a><div class="pub-title">Variational Databases</div><div class="pub-authors">Parisa Ataei, Arash Termehchy, and Eric Walkingshaw</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">Int. Symp. on Database Programming Languages (DBPL)</span>, ACM, </span><span class="pub-year">2017</span>, 11:1–11:4</div></div><span class="pub-links">[<span class="pub-abstract-link dbpl17-variational-databases"><a href="javascript:toggleAbstract('dbpl17-variational-databases');">Abstract</a></span>, <span class="pub-pdf-link"><a href="../files/pubs/2017/dbpl17-variational-databases.pdf">PDF</a></span>]</span><div class="pub-abstract dbpl17-variational-databases"><p>Data variations are prevalent in real-world applications. For example, software vendors handle variations in the business requirements, conventions, and environmental settings of a software product using hundreds of features each combination of which creates a different version of the product. In database-backed software, the database of each version may have a different schema and different content. Variations in the value and representation of each element in a dataset give rise to numerous variants in these applications. Users often would like to express information needs over all such variants. For example, a software vendor would like to perform common tests over all versions of its product, e.g., whether each relation in a relational database has a primary key. Hence, users need a query interface that hides the variational nature of the data and processes a query over all variations of a dataset. We propose a novel abstraction called a <em>variational database</em> that provides a compact and structured representation of general forms of data variations and enables users to query database variations easily.</p></div></div></li>
+</ol>
+</div>
+<h2 id="variational-data-structures">Variational data structures</h2>
+<div class="ref-list resume">
+<ol start="7" class="example" type="1">
+<li><div class="pub-block"><a id="vamos17-variational-stacks"></a><div class="pub-title">A Choice of Variational Stacks: Exploring Variational Data Structures</div><div class="pub-authors">Meng Meng, Jens Meinicke, Chu-Pan Wong, Eric Walkingshaw, and Christian Kästner</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">Int. Workshop on Variability Modelling of Software-Intensive Systems (VaMoS)</span>, ACM, </span><span class="pub-year">2017</span>, 28–35</div></div><span class="pub-links">[<span class="pub-abstract-link vamos17-variational-stacks"><a href="javascript:toggleAbstract('vamos17-variational-stacks');">Abstract</a></span>, <span class="pub-pdf-link"><a href="../files/pubs/2017/vamos17-variational-stacks.pdf">PDF</a></span>]</span><div class="pub-abstract vamos17-variational-stacks"><p>Many applications require not only representing variability in software and
+data, but also computing with it. To do so efficiently requires variational
+data structures that make the variability explicit in the underlying data and
+the operations used to manipulate it. Variational data structures have been
+developed ad hoc for many applications, but there is little general
+understanding of how to design them or what tradeoffs exist among them.
+In this paper, we strive for a more systematic exploration and
+analysis of a variational data structure. We want to know how different design
+decisions affect the performance and scalability of a variational data
+structure, and what properties of the underlying data and operation sequences
+need to be considered.
+Specifically, we study several alternative designs of a variational stack, a
+data structure that supports efficiently representing and computing with
+multiple variants of a plain stack, and that is a common building block in many
+algorithms. The different variational stacks are presented as a small product
+line organized by three design decisions. We analyze how these design decisions
+affect the performance of a variational stack with different usage profiles.
+Finally, we evaluate how these design decisions affect the performance of the
+variational stack in a real-world scenario: in the interpreter  when
+executing real software containing variability.</p></div></div></li>
+<li><div class="pub-block"><a id="onward14-variational-data"></a><div class="pub-title">Variational Data Structures: Exploring Trade-Offs in Computing With Variability</div><div class="pub-authors">Eric Walkingshaw, Christian Kästner, Martin Erwig, Sven Apel, and Eric Bodden</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">ACM SIGPLAN Symp. on New Ideas in Programming and Reflections on Software (Onward!)</span>, </span><span class="pub-year">2014</span>, 213–226</div></div><span class="pub-links">[<span class="pub-abstract-link onward14-variational-data"><a href="javascript:toggleAbstract('onward14-variational-data');">Abstract</a></span>, <span class="pub-pdf-link"><a href="../files/pubs/2014/onward14-variational-data.pdf">PDF</a></span>]</span><div class="pub-abstract onward14-variational-data"><p>Variation is everywhere, and in the construction and analysis of customizable
+software it is paramount. In this context, there arises a need for variational
+data structures for efficiently representing and computing with related
+variants of an underlying data type. So far, variational data structures have
+been explored and developed ad hoc. This paper is a first attempt and a call to
+action for systematic and foundational research in this area. Research on
+variational data structures will benefit not only customizable software, but
+many other application domains that must cope with variability. In this paper,
+we show how support for variation can be understood as a general and orthogonal
+property of data types, data structures, and algorithms. We begin a systematic
+exploration of basic variational data structures, exploring the tradeoffs among
+different implementations. Finally, we retrospectively analyze the design
+decisions in our own previous work where we have independently encountered
+problems requiring variational data structures.</p></div></div></li>
+<li><div class="pub-block"><a id="fosd13-variational-graphs"></a><div class="pub-title">An Abstract Representation of Variational Graphs</div><div class="pub-authors">Martin Erwig, Eric Walkingshaw, and Sheng Chen</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">Int. Workshop on Feature-Oriented Software Development (FOSD)</span>, ACM, </span><span class="pub-year">2013</span>, 25–32</div></div><span class="pub-links">[<span class="pub-abstract-link fosd13-variational-graphs"><a href="javascript:toggleAbstract('fosd13-variational-graphs');">Abstract</a></span>, <span class="pub-pdf-link"><a href="../files/pubs/2013/fosd13-variational-graphs.pdf">PDF</a></span>]</span><div class="pub-abstract fosd13-variational-graphs"><p>In the context of software product lines, there is often a need to represent
+graphs containing variability. For example, extending traditional modeling
+techniques or program analyses to variational software requires a corresponding
+notion of variational graphs. In this paper, we introduce a general model of
+variational graphs and a theoretical framework for discussing variational graph
+algorithms. Specifically, we present an abstract syntax based on tagging for
+succinctly representing variational graphs and other data types relevant to
+variational graph algorithms, such as variational sets and paths. We
+demonstrate how (non-variational) graph algorithms can be generalized to
+operate on variational graphs, to accept variational inputs, and produce
+variational outputs. Finally, we discuss a filtering operation on variational
+graphs and how this interacts with variational graph algorithms.</p></div></div></li>
+</ol>
+</div>
+<h2 id="variational-programming-with-choice-calculus">Variational programming with choice calculus</h2>
+<div class="ref-list resume">
+<ol start="10" class="example" type="1">
+<li><div class="pub-block"><a id="ecoop16-variational-programming-calculus"></a><div class="pub-title">A Calculus for Variational Programming</div><div class="pub-authors">Sheng Chen, Martin Erwig, and Eric Walkingshaw</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">European Conf. on Object-Oriented Programming (ECOOP)</span>, LIPIcs vol. 56, </span><span class="pub-year">2016</span>, 6:1–6:28</div></div><span class="pub-links">[<span class="pub-abstract-link ecoop16-variational-programming-calculus"><a href="javascript:toggleAbstract('ecoop16-variational-programming-calculus');">Abstract</a></span>, <span class="pub-pdf-link"><a href="../files/pubs/2016/ecoop16-variational-programming-calculus.pdf">PDF</a></span>]</span><div class="pub-abstract ecoop16-variational-programming-calculus"><p>Variation is ubiquitous in software. Many applications can benefit from making this variation explicit, then manipulating and computing with it directly—a technique we call “variational programming”. This idea has been independently discovered in several application domains, such as efficiently analyzing and verifying software product lines, combining bounded and symbolic model-checking, and computing with alternative privacy profiles. Although these domains share similar core problems, and there are also many similarities in the solutions, there is no dedicated programming language support for variational programming. This makes the various implementations tedious, prone to errors, hard to maintain and reuse, and difficult to compare.</p>
+<p>In this paper we present a calculus that forms the basis of a programming language with explicit support for representing, manipulating, and computing with variation in programs and data. We illustrate how such a language can simplify the implementation of variational programming tasks. We present the syntax and semantics of the core calculus, a sound type system, and a type inference algorithm that produces principal types.</p></div></div></li>
+<li><div class="pub-block"><a id="gttse11-variation-programming"></a><div class="pub-title">Variation Programming with the Choice Calculus</div><div class="pub-authors">Martin Erwig and Eric Walkingshaw</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">Generative and Transformational Techniques in Software Engineering IV (GTTSE 2011), Revised and Extended Papers</span>, LNCS vol. 7680, Springer, </span><span class="pub-year">2013</span>, 55–100</div></div><span class="pub-links">[<span class="pub-abstract-link gttse11-variation-programming"><a href="javascript:toggleAbstract('gttse11-variation-programming');">Abstract</a></span>, <span class="pub-pdf-link"><a href="../files/pubs/2013/gttse11-variation-programming.pdf">PDF</a></span>, <span class="pub-code-link"><a href="https://github.com/walkie/CC-GTTSE">Code</a></span>]</span><div class="pub-abstract gttse11-variation-programming"><p>The choice calculus provides a language for representing and transforming
+variation in software and other structured documents. Variability is captured
+in localized choices between alternatives. The space of all variations is
+organized by dimensions, which provide scoping and structure to choices. The
+variation space can be reduced through a process of selection, which eliminates
+a dimension and resolves all of its associated choices by replacing each with
+one of their alternatives. The choice calculus also allows the definition of
+arbitrary functions for the flexible construction and transformation of all
+kinds of variation structures. In this tutorial we will first present the
+motivation, general ideas, and principles that underlie the choice calculus.
+This is followed by a closer look at the semantics. We will then present
+practical applications based on several small example scenarios and consider
+the concepts of “variation programming” and “variation querying”. The
+practical applications involve work with a Haskell library that supports
+variation programming and experimentation with the choice calculus.</p></div></div></li>
+</ol>
+</div>
+  </div>
+</div>
+
+<div id="footer">
+  <div class="container">
+    <div class="foot-madeby">© 2022 Eric Walkingshaw, <a href="../legal.html">details</a></div>
+  </div>
+</div>
+
+</div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="../js/scripts.js"></script>
+<!-- <script async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+</body>
+</html>

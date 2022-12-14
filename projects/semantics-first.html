@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Eric Walkingshaw  - Semantics First </title>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet" type="text/css">
+  <link href="../css/all.css?v=3" rel="stylesheet" type="text/css">
+  <link href="../css/print.css?v=3" rel="stylesheet" type="text/css" media="print">
+  <link href="../images/LambdaLand-Bold.png" rel="icon" type="image/png" sizes="610x610">
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create','UA-55224698-1','auto');
+  ga('send','pageview');
+</script>
+
+</head>
+
+<body onload="setEmail()">
+<div id="page">
+
+<div id="navbar">
+  <div class="container">
+    <a href="../" class="nav-head">Eric Walkingshaw</a>
+    <div class="nav-sep">&vert;</div>
+    <!-- <a href="/about.html" class="nav-item ">About</a> -->
+    <a href="../software.html" class="nav-item ">Software</a>
+    <a href="../research.html" class="nav-item ">Research</a>
+    <a href="../publications.html" class="nav-item ">Publications</a>
+    <a href="../files/Walkingshaw-CV.pdf" class="nav-item nav-right">CV</a>
+    <a href="../files/Walkingshaw-Resume.pdf" class="nav-item nav-right">Resume</a>
+  </div>
+</div>
+
+<div id="content">
+  <div class="container">
+<h1 id="semantics-first-language-design">Semantics First Language Design</h1>
+<p>By convention, the design of a language begins by defining its syntax based on
+the use cases the designer anticipates. Once the syntax is established, it is
+given meaning by defining (or usually, implementing) a semantics.</p>
+<p>The <em>semantics first</em> approach argues for an inversion of this process on the
+basis that it leads to more consistent and extensible languages. In the
+semantics first approach, early effort is focused on organizing the target
+domain into a compositional denotational semantics, then incrementally growing
+a syntax on top of the semantic core.</p>
+<p>The approach is partly inspired by the success of combinator-based DSLs in
+Haskell, such as <a href="http://www.haskell.org/haskellwiki/Parsec">Parsec</a>.</p>
+<h2 id="publications">Publications</h2>
+<div class="ref-list">
+<ol class="example" type="1">
+<li><div class="pub-block"><a id="semantics-driven-dsl-design"></a><div class="pub-title">Semantics-Driven DSL Design</div><div class="pub-authors">Martin Erwig and Eric Walkingshaw</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">Formal and Practical Aspects of Domain-Specific Languages: Recent Developments</span>, (ed. Marjan Mernik), IGI Global, </span><span class="pub-year">2012</span>, 56–80</div></div><span class="pub-links">[<span class="pub-abstract-link semantics-driven-dsl-design"><a href="javascript:toggleAbstract('semantics-driven-dsl-design');">Abstract</a></span>, <span class="pub-pdf-link"><a href="../files/pubs/2012/semantics-driven-dsl-design.pdf">PDF</a></span>]</span><div class="pub-abstract semantics-driven-dsl-design"><p>Convention dictates that the design of a language begins with its syntax. We
+argue that early emphasis should be placed instead on the identification of
+general, compositional semantic domains, and that grounding the design process
+in semantics leads to languages with more consistent and more extensible
+syntax. We demonstrate this semantics-driven design process through the design
+and implementation of a DSL for defining and manipulating calendars, using
+Haskell as a metalanguage to support this discussion. We emphasize the
+importance of compositionality in semantics-driven language design, and
+describe a set of language operators that support an incremental and modular
+design process.</p></div></div></li>
+<li><div class="pub-block"><a id="sle11-semantics-first"></a><div class="pub-title">Semantics First! Rethinking the Language Design Process</div><div class="pub-authors">Martin Erwig and Eric Walkingshaw</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">ACM SIGPLAN Int. Conf. on Software Language Engineering (SLE)</span>, LNCS vol. 6940, Springer, </span><span class="pub-year">2011</span>, 243–262</div></div><span class="pub-links">[<span class="pub-abstract-link sle11-semantics-first"><a href="javascript:toggleAbstract('sle11-semantics-first');">Abstract</a></span>, <span class="pub-pdf-link"><a href="../files/pubs/2011/sle11-semantics-first.pdf">PDF</a></span>]</span><div class="pub-abstract sle11-semantics-first"><p>The design of languages is still more of an art than an engineering discipline.
+Although recently tools have been put forward to support the language design
+process, such as language workbenches, these have mostly focused on a syntactic
+view of languages. While these tools are quite helpful for the development of
+parsers and editors, they provide little support for the underlying design of
+the languages. In this paper we illustrate how to support the design of
+languages by focusing on their semantics first. Specifically, we will show that
+powerful and general language operators can be employed to adapt and grow
+sophisticated languages out of simple semantics concepts. We use Haskell as a
+metalanguage and will associate generic language concepts, such as semantics
+domains, with Haskell-specific ones, such as data types. We do this in a way
+that clearly distinguishes our approach to language design from the traditional
+syntax-oriented one. This will reveal some unexpected correlations, such as
+viewing type classes as language multipliers. We illustrate the viability of
+our approach with several real-world examples.</p></div></div></li>
+</ol>
+</div>
+  </div>
+</div>
+
+<div id="footer">
+  <div class="container">
+    <div class="foot-madeby">© 2022 Eric Walkingshaw, <a href="../legal.html">details</a></div>
+  </div>
+</div>
+
+</div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="../js/scripts.js"></script>
+<!-- <script async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+</body>
+</html>

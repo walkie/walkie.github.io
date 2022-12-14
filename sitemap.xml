@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://eric.walkingshaw.net/index.html</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://eric.walkingshaw.net/legal.html</loc>
+    <priority>0.1</priority>
+  </url>
+
+  <url>
+    <loc>https://eric.walkingshaw.net/projects/choice-calculus.html</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://eric.walkingshaw.net/projects/explanation-oriented-programming.html</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://eric.walkingshaw.net/projects/hagl.html</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://eric.walkingshaw.net/projects/semantics-first.html</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://eric.walkingshaw.net/projects/variation-control-systems.html</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://eric.walkingshaw.net/projects/variational-programming.html</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://eric.walkingshaw.net/projects/variational-typing.html</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://eric.walkingshaw.net/projects/verified-guis.html</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://eric.walkingshaw.net/publications.html</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://eric.walkingshaw.net/research.html</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://eric.walkingshaw.net/software.html</loc>
+    <priority>0.5</priority>
+  </url>
+
+
+  <url>
+    <loc>https://eric.walkingshaw.net/files/Walkingshaw-CV.pdf</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://eric.walkingshaw.net/files/Walkingshaw-Resume.pdf</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://eric.walkingshaw.net/files/pubs/2008/vlhcc08-explaining-strategies.pdf</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://eric.walkingshaw.net/files/pubs/2009/dsl09-explaining-probability.pdf</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://eric.walkingshaw.net/files/pubs/2009/dsl09-hagl-expressiveness.pdf</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://eric.walkingshaw.net/files/pubs/2009/idetc09-software-hardware-design.pdf</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://eric.walkingshaw.net/files/pubs/2009/jfp09-hagl.pdf</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://eric.walkingshaw.net/files/pubs/2009/vlhcc09-visual-explanations-probability.pdf</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://eric.walkingshaw.net/files/pubs/2010/foser10-program-fields.pdf</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://eric.walkingshaw.net/files/pubs/2010/vlhcc10-neuron-diagrams.pdf</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://eric.walkingshaw.net/files/pubs/2011/dsl11-causation-dsl.pdf</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://eric.walkingshaw.net/files/pubs/2011/msthesis-game-theory-dsls.pdf</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://eric.walkingshaw.net/files/pubs/2011/sle11-semantics-first.pdf</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://eric.walkingshaw.net/files/pubs/2011/tosem11-choice-calculus.pdf</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://eric.walkingshaw.net/files/pubs/2011/vlhcc11-ifdef-confirmed-harmful.pdf</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://eric.walkingshaw.net/files/pubs/2012/gpce12-compositional-cc.pdf</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://eric.walkingshaw.net/files/pubs/2012/icfp12-variational-type-errors.pdf</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://eric.walkingshaw.net/files/pubs/2012/semantics-driven-dsl-design.pdf</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://eric.walkingshaw.net/files/pubs/2013/dissertation-choice-calculus.pdf</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://eric.walkingshaw.net/files/pubs/2013/fosd13-variational-graphs.pdf</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://eric.walkingshaw.net/files/pubs/2013/gttse11-variation-programming.pdf</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://eric.walkingshaw.net/files/pubs/2013/jvlc13-probula.pdf</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://eric.walkingshaw.net/files/pubs/2013/vamos13-cc-select.pdf</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://eric.walkingshaw.net/files/pubs/2014/gpce14-projectional-editing.pdf</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://eric.walkingshaw.net/files/pubs/2014/onward14-variational-data.pdf</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://eric.walkingshaw.net/files/pubs/2014/toplas14-variational-typing.pdf</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://eric.walkingshaw.net/files/pubs/2015/vlhcc15-programs-for-people.pdf</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://eric.walkingshaw.net/files/pubs/2016/ecoop16-variational-programming-calculus.pdf</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://eric.walkingshaw.net/files/pubs/2016/fosd16-formula-choice-calculus.pdf</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://eric.walkingshaw.net/files/pubs/2016/icsme16-variation-control-system.pdf</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://eric.walkingshaw.net/files/pubs/2017/dbpl17-variational-databases.pdf</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://eric.walkingshaw.net/files/pubs/2017/mutation17-how-good-are-your-types.pdf</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://eric.walkingshaw.net/files/pubs/2017/vamos17-variational-stacks.pdf</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://eric.walkingshaw.net/files/pubs/2018/icfp18-casts-and-costs.pdf</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://eric.walkingshaw.net/files/pubs/2018/poly18-heterogeneous-dbs-spls.pdf</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://eric.walkingshaw.net/files/pubs/2018/popl18-migrating-gradual-types.pdf</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://eric.walkingshaw.net/files/pubs/2018/ppdp18-declarative-guis.pdf</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://eric.walkingshaw.net/files/pubs/2018/setta18-verified-guis.pdf</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://eric.walkingshaw.net/files/pubs/2018/sigcse18-algorithm-explanations.pdf</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://eric.walkingshaw.net/files/pubs/2019/varivolution19-variation-in-time-and-space.pdf</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://eric.walkingshaw.net/files/pubs/2020/splc20-variational-sat.pdf</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://eric.walkingshaw.net/files/pubs/2021/gpce21-vdbms.pdf</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://eric.walkingshaw.net/files/pubs/2021/vamos21-variation-in-databases.pdf</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://eric.walkingshaw.net/files/pubs/2022/jfp22-migrating-gradual-types.pdf</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://eric.walkingshaw.net/files/pubs/2023/emse23-variational-sat.pdf</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://eric.walkingshaw.net/files/pubs/students/abbott-17-ms-thesis.pdf</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://eric.walkingshaw.net/files/pubs/students/alkubaish-20-ms-thesis.pdf</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://eric.walkingshaw.net/files/pubs/students/ataei-17-ms-thesis.pdf</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://eric.walkingshaw.net/files/pubs/students/ataei-21-phd-dissertation.pdf</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://eric.walkingshaw.net/files/pubs/students/grasley-18-ms-thesis.pdf</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://eric.walkingshaw.net/files/pubs/students/hubbard-16-ms-thesis.pdf</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://eric.walkingshaw.net/files/pubs/students/khan-21-ms-thesis.pdf</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://eric.walkingshaw.net/files/pubs/students/li-19-ms-project.pdf</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://eric.walkingshaw.net/files/pubs/students/mcgirr-18-ms-project.pdf</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://eric.walkingshaw.net/files/pubs/students/meng-17-ms-thesis.pdf</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://eric.walkingshaw.net/files/pubs/students/vandewetering-17-honors-thesis.pdf</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://eric.walkingshaw.net/files/pubs/students/wu-17-ms-project.pdf</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://eric.walkingshaw.net/files/pubs/students/young-21-phd-dissertation.pdf</loc>
+    <priority>0.5</priority>
+  </url>
+
+</urlset>

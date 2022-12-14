@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Eric Walkingshaw  - Software </title>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet" type="text/css">
+  <link href="./css/all.css?v=3" rel="stylesheet" type="text/css">
+  <link href="./css/print.css?v=3" rel="stylesheet" type="text/css" media="print">
+  <link href="./images/LambdaLand-Bold.png" rel="icon" type="image/png" sizes="610x610">
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create','UA-55224698-1','auto');
+  ga('send','pageview');
+</script>
+
+</head>
+
+<body onload="setEmail()">
+<div id="page">
+
+<div id="navbar">
+  <div class="container">
+    <a href="./" class="nav-head">Eric Walkingshaw</a>
+    <div class="nav-sep">&vert;</div>
+    <!-- <a href="/about.html" class="nav-item ">About</a> -->
+    <a href="./software.html" class="nav-item  nav-active ">Software</a>
+    <a href="./research.html" class="nav-item ">Research</a>
+    <a href="./publications.html" class="nav-item ">Publications</a>
+    <a href="./files/Walkingshaw-CV.pdf" class="nav-item nav-right">CV</a>
+    <a href="./files/Walkingshaw-Resume.pdf" class="nav-item nav-right">Resume</a>
+  </div>
+</div>
+
+<div id="content">
+  <div class="container">
+<h1 id="software-projects">Software Projects</h1>
+<p>I’m primarily a <a href="https://www.rust-lang.org/">Rust</a> and <a href="https://www.haskell.org/">Haskell</a> hacker, though I enjoy
+learning new languages and so tend to dabble in lots of them. This page
+provides links and brief descriptions of a few projects I’ve worked on that are
+freely available.</p>
+<p><strong><a href="https://github.com/walkie">My GitHub profile</a></strong> contains a motley collection of other small
+demos, experiments, and prototypes developed over the years.</p>
+<h2 id="frame-homepageframehome-githubframegit">Frame (<a href="http://frame-lang.org/">Homepage</a>, <a href="https://github.com/frame-lang/frame_transpiler">GitHub</a>)</h2>
+<p>Frame is an open-source DSL, implemented in Rust, used to model a software
+system’s behavior using state diagrams in a style similar to <a href="https://en.wikipedia.org/wiki/State_diagram#Harel_statechart">Harel’s
+statecharts</a>. Frame specifications can be compiled into code and
+documentation in a variety of languages.</p>
+<p>I am not the creator of Frame, but I have been a major contributor. Aside from
+bugfixes, improvements, and general maintenance, I led some larger efforts in
+the early development of Frame, including:</p>
+<ul>
+<li><p>Designed and implemented a runtime system for Frame’s Rust backend that
+provides:</p>
+<ul>
+<li>A callback interface to be notified of all Frame-level events.</li>
+<li>A reflection interface for querying all aspects of running Frame models.</li>
+<li>Dynamic visualizations of running Frame models.</li>
+<li>Configurable event and transition history tracking.</li>
+</ul></li>
+<li><p>Added a crate with supporting documentation for integrating Frame models into
+larger Rust projects.</p></li>
+<li><p>Added a hierarchical configuration system for customizing the behavior of
+Frame using a combination of configuration files, properties defined within a
+Frame model, and/or command-line options passed to the compiler.</p></li>
+<li><p>Developed a set of example Frame models exercising Frame’s features and their
+interactions, along with a corresponding integration test suite for the Rust
+backend.</p></li>
+</ul>
+<h2 id="hagl-haskell-game-language-homepagehaglhome-githubhaglgit">Hagl: Haskell Game Language (<a href="./projects/hagl.html">Homepage</a>, <a href="https://github.com/walkie/Hagl/">GitHub</a>)</h2>
+<p><p>A DSL embedded in Haskell for <em>experimental/evolutionary game theory</em>. Hagl
+supports defining a wide variety of games and strategies, then executing them
+repeatedly in order to collect and observe the results.</p>
+<p>Hagl provides built-in support for standard game representations, such as
+normal and extensive form, and constructs for defining games in terms of the
+manipulation of a shared state (as in tic-tac-toe). More exotic game
+representations can be added by instantiating a type class.</p>
+<p>A monadic sub-DSL supports concise and vaguely English-like definitions of
+strategies for playing these games, usually iteratively.</p>
+<p>While Hagl provides some basic game analyses, its primary focus is on
+simulation and experimentation. Games can be executed and strategies can be
+pitted against each other for repeated play and in various tournament formats.</p></p>
+<h2 id="resource-dsl-githubresourcedsl">Resource DSL (<a href="https://github.com/walkie/Resource-DSL">GitHub</a>)</h2>
+<p>A DSL implemented in Haskell for modeling the resource constraints in highly
+configurable systems. This DSL, which rather embarrassingly never got a proper
+name, was the main deliverable for a 4-year contract as part the <a href="https://github.com/darpa-brass/brass">DARPA
+BRASS</a> program.</p>
+<p>Within the language, a software system, the environment it is expected to run
+in, and the capabilities it is expected to perform, are all modeled as
+components that require and provide “resources”. Resources may correspond to
+concrete external entities or quantities, such as required sensors, amount of
+network bandwidth, or a set of installed libraries, or may be a more abstract
+capability, such as <em>wayfinding</em>, that is provided by a component in the
+system.</p>
+<p>Additionally, the system’s components, their connections, the environment, and
+the system’s expectations are all <em>configurable</em>. This reflects actual software
+variation in the system, along with the range of possible environments and
+needs that the system might be expected to perform. The state space of models
+defined in this way grows exponentially as new components and configuration
+options are added.</p>
+<p>The DSL’s interpreter applies <a href="./projects/variational-programming.html">variational programming</a> techniques to
+support efficient analyses of the huge state spaces generated by these models.
+In particular, it supports efficient exhaustive searches for configurations
+that satisfy requirement-provision interfaces among components and for the
+system as a whole.</p>
+<h2 id="hakyll-academic-webpage-githubwebpagegit">Hakyll Academic Webpage (<a href="https://github.com/walkie/academic-webpage">GitHub</a>)</h2>
+<p>This is the code used to statically generate my old academic web page
+(<a href="https://web.engr.oregonstate.edu/~walkiner/">linkrotting here</a>), made available as an example application of
+the <a href="https://jaspervdj.be/hakyll/">Hakyll</a> static site generator library in Haskell.</p>
+<p>I know it’s being used by a handful of folks around the world, thanks to folks
+emailing me… and because some haven’t changed the Google Analytics key! 😬</p>
+<p>The most unique feature is its support for publications. I implemented a <a href="https://github.com/walkie/academic-webpage/blob/main/haskell/WebPage/Pubs/Paper.hs">tiny
+DSL</a> for representing publication entries, which are then loaded into
+Hakyll’s context. Publications can then be enumerated in various ways, or
+individually cited from within Markdown or HTML pages.</p>
+<p>The code that generates the web page you’re reading right now is an evolution
+of the code linked above. However, I’ve not (yet!) released the code for this
+one since I want to separate a reusable template from the content this time
+around, for a variety of obvious reasons.</p>
+<h2 id="modular-pcf-githubmodpcf">Modular PCF (<a href="https://github.com/walkie/modular-pcf/">GitHub</a>)</h2>
+<p>A Haskell implementation of <a href="https://en.wikipedia.org/wiki/Simply_typed_lambda_calculus">simply typed</a> <a href="https://en.wikipedia.org/wiki/Programming_Computable_Functions">PCF</a> extended by a
+simple <a href="https://jozefg.bitbucket.io/posts/2015-01-08-modules.html">ML-style module system</a>. Developed to support a course on
+modularity at Oregon State University.</p>
+<p>The code is written in a simple style (e.g. it uses pattern matching and
+recursive functions in many places where a more idiomatic Haskell program would
+use monads and higher-order functions) with lots of documentation, in an
+attempt to be useful for pedagogical purposes.</p>
+  </div>
+</div>
+
+<div id="footer">
+  <div class="container">
+    <div class="foot-madeby">© 2022 Eric Walkingshaw, <a href="./legal.html">details</a></div>
+  </div>
+</div>
+
+</div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="./js/scripts.js"></script>
+<!-- <script async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+</body>
+</html>

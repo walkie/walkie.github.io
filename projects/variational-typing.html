@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Eric Walkingshaw  - Variational Typing </title>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet" type="text/css">
+  <link href="../css/all.css?v=3" rel="stylesheet" type="text/css">
+  <link href="../css/print.css?v=3" rel="stylesheet" type="text/css" media="print">
+  <link href="../images/LambdaLand-Bold.png" rel="icon" type="image/png" sizes="610x610">
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create','UA-55224698-1','auto');
+  ga('send','pageview');
+</script>
+
+</head>
+
+<body onload="setEmail()">
+<div id="page">
+
+<div id="navbar">
+  <div class="container">
+    <a href="../" class="nav-head">Eric Walkingshaw</a>
+    <div class="nav-sep">&vert;</div>
+    <!-- <a href="/about.html" class="nav-item ">About</a> -->
+    <a href="../software.html" class="nav-item ">Software</a>
+    <a href="../research.html" class="nav-item ">Research</a>
+    <a href="../publications.html" class="nav-item ">Publications</a>
+    <a href="../files/Walkingshaw-CV.pdf" class="nav-item nav-right">CV</a>
+    <a href="../files/Walkingshaw-Resume.pdf" class="nav-item nav-right">Resume</a>
+  </div>
+</div>
+
+<div id="content">
+  <div class="container">
+<h1 id="variational-typing">Variational Typing</h1>
+<h2 id="core-theory">Core theory</h2>
+<div class="ref-list resume">
+<ol class="example" type="1">
+<li><div class="pub-block"><a id="toplas14-variational-typing"></a><div class="pub-title">Extending Type Inference to Variational Programs</div><div class="pub-authors">Sheng Chen, Martin Erwig, and Eric Walkingshaw</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">ACM Trans. on Programming Languages and Systems (TOPLAS)</span>, vol. 36, num. 1, </span><span class="pub-year">2014</span>, 1:1–1:54</div></div><span class="pub-links">[<span class="pub-abstract-link toplas14-variational-typing"><a href="javascript:toggleAbstract('toplas14-variational-typing');">Abstract</a></span>, <span class="pub-pdf-link"><a href="../files/pubs/2014/toplas14-variational-typing.pdf">PDF</a></span>]</span><div class="pub-abstract toplas14-variational-typing"><p>Through the use of conditional compilation and related tools, many software
+projects can be used to generate a huge number of related programs. The problem
+of typing such variational software is difficult. The brute-force strategy of
+generating all variants and typing each one individually is (1) usually
+infeasible for efficiency reasons and (2) produces results that do not map well
+to the underlying variational program. Recent research has focused mainly on
+efficiency and addressed only the problem of type checking. In this work we
+tackle the more general problem of variational type inference and introduce
+variational types to represent the result of typing a variational program. We
+introduce the variational lambda calculus (VLC) as a formal foundation for
+research on typing variational programs. We define a type system for VLC in
+which VLC expressions are mapped to correspondingly variational types. We show
+that the type system is correct by proving that the typing of expressions is
+preserved over the process of variation elimination, which eventually results
+in a plain lambda calculus expression and its corresponding type. We identify a
+set of equivalence rules for variational types and prove that the type
+unification problem modulo these equivalence rules is unitary and decidable; we
+also present a sound and complete unification algorithm. Based on the
+unification algorithm, the variational type inference algorithm is an extension
+of algorithm W. We show that it is sound and complete and computes principal
+types. We also consider the extension of VLC with sum types, a necessary
+feature for supporting variational data types, and demonstrate that the
+previous theoretical results also hold under this extension. Finally, we
+characterize the complexity of variational type inference and demonstrate the
+efficiency gains over the brute-force strategy.</p></div></div></li>
+<li><div class="pub-block"><a id="icfp12-variational-type-errors"></a><div class="pub-title">An Error-Tolerant Type System for Variational Lambda Calculus</div><div class="pub-authors">Sheng Chen, Martin Erwig, and Eric Walkingshaw</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">ACM SIGPLAN Int. Conf. on Functional Programming (ICFP)</span>, </span><span class="pub-year">2012</span>, 29–40</div></div><span class="pub-links">[<span class="pub-abstract-link icfp12-variational-type-errors"><a href="javascript:toggleAbstract('icfp12-variational-type-errors');">Abstract</a></span>, <span class="pub-pdf-link"><a href="../files/pubs/2012/icfp12-variational-type-errors.pdf">PDF</a></span>]</span><div class="pub-abstract icfp12-variational-type-errors"><p>Conditional compilation and software product line technologies make it possible
+to generate a huge number of different programs from a single software project.
+Typing each of these programs individually is usually impossible due to the
+sheer number of possible variants. Our previous work has addressed this problem
+with a type system for variational lambda calculus (VLC), an extension of
+lambda calculus with basic constructs for introducing and organizing variation.
+Although our type inference algorithm is more efficient than the brute-force
+strategy of inferring the types of each variant individually, it is less robust
+since type inference will fail for the entire variational expression if any one
+variant contains a type error. In this work, we extend our type system to
+operate on VLC expressions containing type errors. This extension directly
+supports locating ill-typed variants and the incremental development of
+variational programs. It also has many subtle implications for the unification
+of variational types. We show that our extended type system possesses a
+principal typing property and that the underlying unification problem is
+unitary. Our unification algorithm computes partial unifiers that lead to
+result types that (1) contain errors in as few variants as possible and (2) are
+most general. Finally, we perform an empirical evaluation to determine the
+overhead of this extension compared to our previous work, to demonstrate the
+improvements over the brute-force approach, and to explore the effects of
+various error distributions on the inference process.</p></div></div></li>
+</ol>
+</div>
+<h2 id="application-to-problems-in-gradual-typing">Application to problems in gradual typing</h2>
+<div class="ref-list resume">
+<ol start="3" class="example" type="1">
+<li><div class="pub-block"><a id="jfp22-migrating-gradual-types"></a><div class="pub-title">Migrating Gradual Types</div><div class="pub-authors">John Peter Campora III, Sheng Chen, Martin Erwig, and Eric Walkingshaw</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">Journal of Functional Programming (JFP)</span>, vol. 32, num. e14, </span><span class="pub-year">2022</span>, 1–60</div></div><span class="pub-links">[<span class="pub-abstract-link jfp22-migrating-gradual-types"><a href="javascript:toggleAbstract('jfp22-migrating-gradual-types');">Abstract</a></span>, <span class="pub-pdf-link"><a href="../files/pubs/2022/jfp22-migrating-gradual-types.pdf">PDF</a></span>, <span class="pub-code-link"><a href="https://bitbucket.org/plcacs/popl18aec">Code</a></span>]</span><div class="pub-abstract jfp22-migrating-gradual-types"><p>Gradual typing allows programs to enjoy the benefits of both static typing and dynamic typing. While it is often desirable to migrate a program from more dynamically typed to more statically typed or vice versa, gradual typing itself does not provide a way to facilitate this migration. This places the burden on programmers who have to manually add or remove type annotations. Besides the general challenge of adding type annotations to dynamically typed code, there are subtle interactions between these annotations in gradually typed code that exacerbate the situation. For example, to migrate a program to be as static as possible, in general, all possible combinations of adding or removing type annotations from parameters must be tried out and compared. In this paper, we address this problem by developing migrational typing, which efficiently types all possible ways of replacing dynamic types with fully static types for a gradually typed program. The typing result supports automatically migrating a program to be as static as possible or introducing the least number of dynamic types necessary to remove a type error. The approach can be extended to support user-defined criteria about which annotations to modify. We have implemented migrational typing and evaluated it on large programs. The results show that migrational typing scales linearly with the size of the program and takes only 2–4 times longer than plain gradual typing.</p></div></div></li>
+<li><div class="pub-block"><a id="icfp18-casts-and-costs"></a><div class="pub-title">Casts and Costs: Harmonizing Safety and Performance in Gradual Typing</div><div class="pub-authors">John Peter Campora III, Sheng Chen, and Eric Walkingshaw</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">Proc. of the ACM on Programming Languages (PACMPL)</span> issue <span class="pub-issue">ACM SIGPLAN Int. Conf. on Functional Programming (ICFP)</span>, vol. 2, </span><span class="pub-year">2018</span>, 98:1–98:30</div></div><span class="pub-links">[<span class="pub-abstract-link icfp18-casts-and-costs"><a href="javascript:toggleAbstract('icfp18-casts-and-costs');">Abstract</a></span>, <span class="pub-pdf-link"><a href="../files/pubs/2018/icfp18-casts-and-costs.pdf">PDF</a></span>, <span class="pub-code-link"><a href="https://bitbucket.org/PeterCampora/castsandcostsartifact">Code</a></span>]</span><div class="pub-abstract icfp18-casts-and-costs"><p>Gradual typing allows programmers to use both static and dynamic typing in a single program. However, a well-known problem with sound gradual typing is that the interactions between static and dynamic code can cause significant performance degradation. These performance pitfalls are hard to predict and resolve, and discourage users from using gradual typing features. For example, when migrating to a more statically typed program, often adding a type annotation will trigger a slowdown that can be resolved by adding more annotations elsewhere, but since it’s not clear where the additional annotations must be added, the easier solution is to simply remove the annotation.</p>
+<p>To address these problems, we develop: (1) a static cost semantics that accurately predicts the overhead of static-dynamic interactions in a gradually typed program, (2) a technique for efficiently inferring such costs for all combinations of inferable type assignments in a program, and (3) a method for translating the results of this analysis into specific recommendations and explanations that can help programmers understand, debug, and optimize the performance of gradually typed programs. We have implemented our approach in Herder, a tool for statically analyzing the performance of different typing configurations for Reticulated Python programs. An evaluation on 15 Python programs shows that Herder can use this analysis to accurately and efficiently recommend type assignments that optimize the performance of these programs without sacrificing type safety.</p></div></div></li>
+<li><div class="pub-block"><a id="popl18-migrating-gradual-types"></a><div class="pub-title">Migrating Gradual Types</div><div class="pub-authors">John Peter Campora III, Sheng Chen, Martin Erwig, and Eric Walkingshaw</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">Proc. of the ACM on Programming Languages (PACMPL)</span> issue <span class="pub-issue">ACM SIGPLAN Symp. on Principles of Programming Languages (POPL)</span>, vol. 2, </span><span class="pub-year">2018</span>, 15:1–15:29</div></div><span class="pub-links">[<span class="pub-abstract-link popl18-migrating-gradual-types"><a href="javascript:toggleAbstract('popl18-migrating-gradual-types');">Abstract</a></span>, <span class="pub-pdf-link"><a href="../files/pubs/2018/popl18-migrating-gradual-types.pdf">PDF</a></span>, <span class="pub-code-link"><a href="https://bitbucket.org/plcacs/popl18aec">Code</a></span>]</span><div class="pub-abstract popl18-migrating-gradual-types"><p>Gradual typing allows programs to enjoy the benefits of both static typing and dynamic typing. While it is often desirable to migrate a program from more dynamically-typed to more statically-typed or vice versa, gradual typing itself does not provide a way to facilitate this migration. This places the burden on programmers who have to manually add or remove type annotations. Besides the general challenge of adding type annotations to dynamically typed code, there are subtle interactions between these annotations in gradually typed code that exacerbate the situation. For example, to migrate a program to be as static as possible, in general, all possible combinations of adding or removing type annotations from parameters must be tried out and compared.</p>
+<p>In this paper, we address this problem by developing <em>migrational typing</em>, which efficiently types all possible ways of adding or removing type annotations from a gradually typed program. The typing result supports automatically migrating a program to be as static as possible, or introducing the least number of dynamic types necessary to remove a type error. The approach can be extended to support user-defined criteria about which annotations to modify. We have implemented migrational typing and evaluated it on large programs. The results show that migrational typing scales linearly with the size of the program and takes only 2–4 times longer than plain gradual typing.</p></div></div></li>
+</ol>
+</div>
+  </div>
+</div>
+
+<div id="footer">
+  <div class="container">
+    <div class="foot-madeby">© 2022 Eric Walkingshaw, <a href="../legal.html">details</a></div>
+  </div>
+</div>
+
+</div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="../js/scripts.js"></script>
+<!-- <script async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Eric Walkingshaw  - Choice Calculus </title>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet" type="text/css">
+  <link href="../css/all.css?v=3" rel="stylesheet" type="text/css">
+  <link href="../css/print.css?v=3" rel="stylesheet" type="text/css" media="print">
+  <link href="../images/LambdaLand-Bold.png" rel="icon" type="image/png" sizes="610x610">
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create','UA-55224698-1','auto');
+  ga('send','pageview');
+</script>
+
+</head>
+
+<body onload="setEmail()">
+<div id="page">
+
+<div id="navbar">
+  <div class="container">
+    <a href="../" class="nav-head">Eric Walkingshaw</a>
+    <div class="nav-sep">&vert;</div>
+    <!-- <a href="/about.html" class="nav-item ">About</a> -->
+    <a href="../software.html" class="nav-item ">Software</a>
+    <a href="../research.html" class="nav-item ">Research</a>
+    <a href="../publications.html" class="nav-item ">Publications</a>
+    <a href="../files/Walkingshaw-CV.pdf" class="nav-item nav-right">CV</a>
+    <a href="../files/Walkingshaw-Resume.pdf" class="nav-item nav-right">Resume</a>
+  </div>
+</div>
+
+<div id="content">
+  <div class="container">
+<h1 id="choice-calculus">Choice Calculus</h1>
+<p>The choice calculus is a simple, formal language for representing <em>variation</em>.</p>
+<p>This research was originally motivated by improving the development and
+maintenance of massively configurable software, such as <a href="https://en.wikipedia.org/wiki/Software_product_line">software product
+lines</a>. However, it has since been applied to <a href="https://github.com/walkie/Resource-DSL">modeling software resource
+consumption</a>, optimizing gradually typed programs, typing
+generalized algebraic data types, improving error location during type
+inference, and more.</p>
+<p>The core choice calculus is very small—just two constructs, <em>choices</em> and
+generic object language abstract syntax tree nodes—but can be extended with
+additional language features that support different ways of representing and
+computing with variability. The language is generic, emphasizing that variation
+can often be treated orthogonally to other concerns, but it can be instantiated
+by different object languages and data types when they interact fundamentally
+with variability.</p>
+<p>The primary reference for the choice calculus is the original TOSEM paper
+[<a href="#tosem11-choice-calculus">3</a>], while the most comprehensive
+introduction is my PhD dissertation [<a href="#dissertation-choice-calculus">1</a>].
+The tutorial from the 2011 GTTSE Summer School
+[<a href="#gttse11-variation-programming">2</a>] is also a good (and hopefully fun)
+entry point. The tutorial promotes the idea of “variation anywhere” and of
+generically lifting non-variational algorithms to variational ones.</p>
+<p>However, these early works present a slightly more complex version of the
+calculus than we typically use now. For example, see Section 2 of FOSD’16
+[<a href="#fosd16-formula-choice-calculus">5</a>] for a much simpler and more
+concise introduction.</p>
+<h2 id="introductions-to-the-choice-calculus">Introductions to the Choice Calculus</h2>
+<div class="ref-list">
+<ol class="example" type="1">
+<li><div class="pub-block"><a id="dissertation-choice-calculus"></a><div class="pub-title">The Choice Calculus: A Formal Language of Variation</div><div class="pub-authors">Eric Walkingshaw</div><div class="pub-details"><div class="pub-details"><span class="pub-venue">PhD dissertation, <span class="pub-venue-name">Oregon State University</span>, </span><span class="pub-year">2013</span></div></div><span class="pub-links">[<span class="pub-abstract-link dissertation-choice-calculus"><a href="javascript:toggleAbstract('dissertation-choice-calculus');">Abstract</a></span>, <span class="pub-pdf-link"><a href="../files/pubs/2013/dissertation-choice-calculus.pdf">PDF</a></span>]</span><div class="pub-abstract dissertation-choice-calculus"><p>In this thesis I present the choice calculus, a formal language for
+representing variation in software and other structured artifacts. The choice
+calculus is intended to support variation research in a way similar to the
+lambda calculus in programming language research. Specifically, it provides a
+simple formal basis for presenting, proving, and communicating theoretical
+results. It can serve as a common language of discourse for researchers working
+on different views of similar problems and provide a shared back end in tools.</p>
+<p>This thesis collects a large amount of work on the choice calculus. It defines
+the syntax and denotational semantics of the language along with modular
+language extensions that add features important to variation research. It
+presents several theoretical results related to the choice calculus, such as an
+equivalence relation that supports semantics-preserving transformations of
+choice calculus expressions, and a type system for ensuring that an expression
+is well formed. It also presents a Haskell DSEL based on the choice calculus
+for exploring the concept of variational programming.</p></div></div></li>
+<li><div class="pub-block"><a id="gttse11-variation-programming"></a><div class="pub-title">Variation Programming with the Choice Calculus</div><div class="pub-authors">Martin Erwig and Eric Walkingshaw</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">Generative and Transformational Techniques in Software Engineering IV (GTTSE 2011), Revised and Extended Papers</span>, LNCS vol. 7680, Springer, </span><span class="pub-year">2013</span>, 55–100</div></div><span class="pub-links">[<span class="pub-abstract-link gttse11-variation-programming"><a href="javascript:toggleAbstract('gttse11-variation-programming');">Abstract</a></span>, <span class="pub-pdf-link"><a href="../files/pubs/2013/gttse11-variation-programming.pdf">PDF</a></span>, <span class="pub-code-link"><a href="https://github.com/walkie/CC-GTTSE">Code</a></span>]</span><div class="pub-abstract gttse11-variation-programming"><p>The choice calculus provides a language for representing and transforming
+variation in software and other structured documents. Variability is captured
+in localized choices between alternatives. The space of all variations is
+organized by dimensions, which provide scoping and structure to choices. The
+variation space can be reduced through a process of selection, which eliminates
+a dimension and resolves all of its associated choices by replacing each with
+one of their alternatives. The choice calculus also allows the definition of
+arbitrary functions for the flexible construction and transformation of all
+kinds of variation structures. In this tutorial we will first present the
+motivation, general ideas, and principles that underlie the choice calculus.
+This is followed by a closer look at the semantics. We will then present
+practical applications based on several small example scenarios and consider
+the concepts of “variation programming” and “variation querying”. The
+practical applications involve work with a Haskell library that supports
+variation programming and experimentation with the choice calculus.</p></div></div></li>
+<li><div class="pub-block"><a id="tosem11-choice-calculus"></a><div class="pub-title">The Choice Calculus: A Representation for Software Variation</div><div class="pub-authors">Martin Erwig and Eric Walkingshaw</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">ACM Trans. on Software Engineering and Methodology (TOSEM)</span>, vol. 21, num. 1, </span><span class="pub-year">2011</span>, 6:1–6:27</div></div><span class="pub-links">[<span class="pub-abstract-link tosem11-choice-calculus"><a href="javascript:toggleAbstract('tosem11-choice-calculus');">Abstract</a></span>, <span class="pub-pdf-link"><a href="../files/pubs/2011/tosem11-choice-calculus.pdf">PDF</a></span>]</span><div class="pub-abstract tosem11-choice-calculus"><p>Many areas of computer science are concerned with some form of variation in
+software–from managing changes to software over time, to supporting families
+of related artifacts. We present the choice calculus, a fundamental
+representation for software variation that can serve as a common language of
+discourse for variation research, filling a role similar to the lambda calculus
+in programming language research. We also develop an associated theory of
+software variation, including sound transformations of variation artifacts, the
+definition of strategic normal forms, and a design theory for variation
+structures, which will support the development of better algorithms and
+tools.</p></div></div></li>
+</ol>
+</div>
+<h2 id="extensions-of-the-choice-calculus">Extensions of the Choice Calculus</h2>
+<div class="ref-list resume">
+<ol start="4" class="example" type="1">
+<li><div class="pub-block"><a id="ecoop16-variational-programming-calculus"></a><div class="pub-title">A Calculus for Variational Programming</div><div class="pub-authors">Sheng Chen, Martin Erwig, and Eric Walkingshaw</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">European Conf. on Object-Oriented Programming (ECOOP)</span>, LIPIcs vol. 56, </span><span class="pub-year">2016</span>, 6:1–6:28</div></div><span class="pub-links">[<span class="pub-abstract-link ecoop16-variational-programming-calculus"><a href="javascript:toggleAbstract('ecoop16-variational-programming-calculus');">Abstract</a></span>, <span class="pub-pdf-link"><a href="../files/pubs/2016/ecoop16-variational-programming-calculus.pdf">PDF</a></span>]</span><div class="pub-abstract ecoop16-variational-programming-calculus"><p>Variation is ubiquitous in software. Many applications can benefit from making this variation explicit, then manipulating and computing with it directly—a technique we call “variational programming”. This idea has been independently discovered in several application domains, such as efficiently analyzing and verifying software product lines, combining bounded and symbolic model-checking, and computing with alternative privacy profiles. Although these domains share similar core problems, and there are also many similarities in the solutions, there is no dedicated programming language support for variational programming. This makes the various implementations tedious, prone to errors, hard to maintain and reuse, and difficult to compare.</p>
+<p>In this paper we present a calculus that forms the basis of a programming language with explicit support for representing, manipulating, and computing with variation in programs and data. We illustrate how such a language can simplify the implementation of variational programming tasks. We present the syntax and semantics of the core calculus, a sound type system, and a type inference algorithm that produces principal types.</p></div></div></li>
+<li><div class="pub-block"><a id="fosd16-formula-choice-calculus"></a><div class="pub-title">Formula Choice Calculus</div><div class="pub-authors">Spencer Hubbard and Eric Walkingshaw</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">Int. Workshop on Feature-Oriented Software Development (FOSD)</span>, ACM, </span><span class="pub-year">2016</span>, 49–57</div></div><span class="pub-links">[<span class="pub-abstract-link fosd16-formula-choice-calculus"><a href="javascript:toggleAbstract('fosd16-formula-choice-calculus');">Abstract</a></span>, <span class="pub-pdf-link"><a href="../files/pubs/2016/fosd16-formula-choice-calculus.pdf">PDF</a></span>, <span class="pub-code-link"><a href="https://github.com/lambda-land/FCC-Coq">Code</a></span>]</span><div class="pub-abstract fosd16-formula-choice-calculus"><p>The choice calculus is a simple metalanguage and associated theory that has been successfully applied to several problems of interest to the feature-oriented software development community. The formal presentation of the choice calculus essentially restricts variation points, called choices, to vary based on the inclusion or not of a single feature, while in practice variation points may depend on several features. Therefore, in both theoretical applications of the choice calculus, and in tools inspired by the choice calculus, the syntax of choices has often been generalized to depend on an arbitrary propositional formula of features. The purpose of this paper is to put this syntactic generalization on more solid footing by also generalizing the associated theory. Specifically, after defining the syntax and denotational semantics of the formula choice calculus (FCC), we define and prove the soundness of a syntactic equivalence relation on FCC expressions. This effort validates previous work which has implicitly assumed the soundness of rules in the equivalence relation, and also reveals several rules that are specific to FCC. Finally, we describe some further generalizations to FCC and their limits.</p></div></div></li>
+<li><div class="pub-block"><a id="vamos13-cc-select"></a><div class="pub-title">Adding Configuration to the Choice Calculus</div><div class="pub-authors">Martin Erwig, Klaus Ostermann, Tillmann Rendel, and Eric Walkingshaw</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">Int. Workshop on Variability Modelling of Software-Intensive Systems (VaMoS)</span>, ACM, </span><span class="pub-year">2013</span>, 13:1–13:8</div></div><span class="pub-links">[<span class="pub-abstract-link vamos13-cc-select"><a href="javascript:toggleAbstract('vamos13-cc-select');">Abstract</a></span>, <span class="pub-pdf-link"><a href="../files/pubs/2013/vamos13-cc-select.pdf">PDF</a></span>]</span><div class="pub-abstract vamos13-cc-select"><p>The choice calculus is a formal language for representing variation in software
+artifacts. Variability is organized in the choice calculus through the use of
+dimensions, where each dimension represents a decision that must be made in
+order to obtain a particular variant. However, the process of selecting
+alternatives from dimensions was relegated to an external operation. This
+precludes many interesting variation and reuse patterns, such as nested product
+lines, and theoretical results, such as a syntactic description of
+configuration, that would be possible if selection were a part of the language
+itself.</p>
+<p>In this paper we add a selection operation to the choice calculus and
+illustrate how that increases the expressiveness of the calculus. We
+investigate some alternative semantics of this operation and study their impact
+and utility. Specifically, we will examine selection in the context of static
+and dynamically scoped dimension declarations, as a well as a modest and greedy
+form of dimension elimination. We also present a design for a type system to
+ensure configuration safety and modularity of nested product lines.</p></div></div></li>
+<li><div class="pub-block"><a id="gpce12-compositional-cc"></a><div class="pub-title">A Calculus for Modeling and Implementing Variation</div><div class="pub-authors">Eric Walkingshaw and Martin Erwig</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">ACM SIGPLAN Int. Conf. on Generative Programming and Component Engineering (GPCE)</span>, </span><span class="pub-year">2012</span>, 132–140</div></div><span class="pub-links">[<span class="pub-abstract-link gpce12-compositional-cc"><a href="javascript:toggleAbstract('gpce12-compositional-cc');">Abstract</a></span>, <span class="pub-pdf-link"><a href="../files/pubs/2012/gpce12-compositional-cc.pdf">PDF</a></span>]</span><div class="pub-abstract gpce12-compositional-cc"><p>We present a formal calculus for modeling and implementing variation in
+software. It unifies the compositional and annotative approaches to feature
+implementation and supports the development of abstractions that can be used to
+directly relate feature models to their implementation. Since the compositional
+and annotative approaches are complementary, the calculus enables implementers
+to use the best combination of tools for the job and focus on inherent feature
+interactions, rather than those introduced by biases in the representation. The
+calculus also supports the abstraction of recurring variational patterns and
+provides a metaprogramming platform for organizing variation in artifacts.</p></div></div></li>
+</ol>
+</div>
+<h2 id="related-projects">Related Projects</h2>
+<p>The choice calculus is at the heart of several of my other research projects,
+including:</p>
+<ul>
+<li><p><strong><a href="../projects/variational-programming.html">Variational Programming</a></strong> <br>
+Efficiently computing with massive variation in data and code.</p></li>
+<li><p><strong><a href="../projects/variational-typing.html">Variational Typing</a></strong> <br>
+Efficiently inferring types for variational programs.</p></li>
+<li><p><strong><a href="../projects/variation-control-systems.html">Variation Control Systems</a></strong> <br>
+Editing and managing variational software.</p></li>
+</ul>
+  </div>
+</div>
+
+<div id="footer">
+  <div class="container">
+    <div class="foot-madeby">© 2022 Eric Walkingshaw, <a href="../legal.html">details</a></div>
+  </div>
+</div>
+
+</div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="../js/scripts.js"></script>
+<!-- <script async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Eric Walkingshaw  - Programming Languages Research </title>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet" type="text/css">
+  <link href="./css/all.css?v=3" rel="stylesheet" type="text/css">
+  <link href="./css/print.css?v=3" rel="stylesheet" type="text/css" media="print">
+  <link href="./images/LambdaLand-Bold.png" rel="icon" type="image/png" sizes="610x610">
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create','UA-55224698-1','auto');
+  ga('send','pageview');
+</script>
+
+</head>
+
+<body onload="setEmail()">
+<div id="page">
+
+<div id="navbar">
+  <div class="container">
+    <a href="./" class="nav-head">Eric Walkingshaw</a>
+    <div class="nav-sep">&vert;</div>
+    <!-- <a href="/about.html" class="nav-item ">About</a> -->
+    <a href="./software.html" class="nav-item ">Software</a>
+    <a href="./research.html" class="nav-item  nav-active ">Research</a>
+    <a href="./publications.html" class="nav-item  nav-active ">Publications</a>
+    <a href="./files/Walkingshaw-CV.pdf" class="nav-item nav-right">CV</a>
+    <a href="./files/Walkingshaw-Resume.pdf" class="nav-item nav-right">Resume</a>
+  </div>
+</div>
+
+<div id="content">
+  <div class="container">
+<h1 id="programming-languages-research">Programming Languages Research</h1>
+<p>See my <strong><a href="./publications.html">Publications</a></strong> page for a complete list of my
+publications with downloadable PDFs and links to data and source code.</p>
+<h2 id="overview-and-expertise">Overview and expertise</h2>
+<p>My interest in programming languages is rooted in the belief that the languages
+we use shape the way we view the world, and that better languages can help us
+understand, solve, and explain more difficult problems.</p>
+<p>My core areas of research expertise are:</p>
+<ul>
+<li>domain-specific language (DSL) design and implementation</li>
+<li>functional programming</li>
+<li>type systems and type inference</li>
+<li>all aspects of software variation</li>
+</ul>
+<p>I also have secondary expertise in:</p>
+<ul>
+<li>dependently typed programming and program verification</li>
+<li>compilers, program analysis, and program transformation</li>
+<li>human factors of programming languages and software engineering</li>
+<li>visual programming languages</li>
+<li>module systems and modularity</li>
+</ul>
+<p>Lots of my work involves <em>software variation</em>, which broadly means (typically
+large) <em>sets of related programs</em>. A well-known example of software variation
+arises from the use of the <a href="https://en.wikipedia.org/wiki/C_preprocessor">C preprocessor</a> (e.g. <code>#ifdef</code> and related
+statements). In most large C projects, a huge number of different programs can
+be generated from a single codebase by running the preprocessor with different
+arguments, corresponding to configuring the software to run on different
+platforms or with different sets of features.</p>
+<p>However, software variation can also arise in a variety of other ways, such as
+through <em>exploratory programming</em>, where variations are created through trial
+and error, and <em>speculative program analyses</em>, where variations are created on
+the fly in order to explore large numbers of hypothetical changes to a program.</p>
+<p>I am the co-creator of the <a href="./projects/choice-calculus.html"><em>choice calculus</em></a>, a simple formal language
+for modeling variation that lies at the heart of much of this work.</p>
+<h2 id="projects">Projects</h2>
+<p>Note: these project pages are a work-in-progress. Some simply collect links to
+related papers together but are missing an introduction and overview.</p>
+<h3 id="recent-and-ongoing-work">Recent and ongoing work</h3>
+<ul>
+<li><p><strong><a href="./projects/choice-calculus.html">Choice Calculus</a></strong> <br>
+A simple, formal language for describing variation.</p></li>
+<li><p><strong><a href="./projects/variational-programming.html">Variational Programming</a></strong> <br>
+Efficiently computing with massive numbers of variations in data and code.
+Includes work on variational data structures and variational databases, and
+applications to solving large numbers of related SAT problems.</p></li>
+<li><p><strong><a href="./projects/variational-typing.html">Variational Typing</a></strong> <br>
+Efficiently infer types for massive numbers of related programs. Includes
+applications to problems in gradual typing.</p></li>
+</ul>
+<h3 id="older-work">Older work</h3>
+<ul>
+<li><p><strong><a href="./projects/variation-control-systems.html">Variation Control Systems</a></strong> <br>
+Systems and interfaces for <em>editing</em> and <em>managing</em> massively variational
+software.</p></li>
+<li><p><strong><a href="./projects/verified-guis.html">Verifying GUI Applications</a></strong> <br>
+A small project on verifying GUI application code in Agda.</p></li>
+<li><p><strong><a href="./projects/explanation-oriented-programming.html">Explanation-Oriented Programming</a></strong> <br>
+A new programming paradigm focused around the construction of <em>explanations</em>
+as a primary program output.</p></li>
+<li><p><strong><a href="./projects/semantics-first.html">Semantics-First Language Design</a></strong> <br>
+A language design process inspired by
+<a href="https://en.wikipedia.org/wiki/Combinator_library">combinator library</a>
+pattern from functional programming.</p></li>
+<li><p><strong><a href="./projects/hagl.html">Hagl: Haskell Game Language</a></strong> <br>
+A DSL embedded in Haskell for <em>experimental game theory</em>.</p></li>
+</ul>
+<h2 id="student-mentoring-and-advising">Student mentoring and advising</h2>
+<p>From 2014–2021 I was a professor at Oregon State University and led a
+programming languages research group filled with amazing students. Working with
+these students was the highlight of my academic career, and I’m super proud of
+the work we did together.</p>
+<p>During this time, I founded and co-advised a well-attended <em>Programming
+Languages Reading Group</em> and was the faculty advisor for the student-run <em>OSU
+Functional Programming Club</em>.</p>
+<p>Below is a list of students that graduated from my group. Their graduate theses
+and project reports are included at the bottom of my
+<a href="publications.html#advised-theses">Publications</a> page.</p>
+<h3 id="graduate-students">Graduate students</h3>
+<ul>
+<li><a href="https://github.com/pataei">Parisa Ataei</a>, PhD 2021</li>
+<li><a href="https://github.com/doyougnu">Jeff Young</a>, PhD 2021</li>
+<li><a href="https://www.linkedin.com/in/fark1523/">Fariba Khan</a>, MS 2021</li>
+<li><a href="https://github.com/alkubaig">Ghadeer Alkubaish</a>, MS 2020</li>
+<li><a href="https://github.com/QiaoranChelsea">Qiaoran Li</a>, MS 2019</li>
+<li><a href="https://github.com/agrasley">Alex Grasley</a>, MS 2018</li>
+<li><a href="https://www.mikemcgirr.com/">Mike McGirr</a>, MS 2018</li>
+<li><a href="http://web.engr.oregonstate.edu/~abbottk/">Keeley Abbott</a>, MS 2017</li>
+<li><a href="https://github.com/Meng1024">Meng Meng</a>, MS 2017</li>
+<li><a href="http://suzywu2014.github.io/">Shujin Wu</a>, MS 2017</li>
+<li><a href="https://www.linkedin.com/in/hubbardspencer/">Spencer Hubbard</a>, MS 2016</li>
+</ul>
+<h3 id="undergraduate-students">Undergraduate students</h3>
+<ul>
+<li><a href="https://smitchell556.github.io/">Spencer Mitchell</a>, RELU 2018–2019</li>
+<li><a href="http://milesvdw.github.io/">Miles Van de Wetering</a>, Honors BS 2017</li>
+</ul>
+  </div>
+</div>
+
+<div id="footer">
+  <div class="container">
+    <div class="foot-madeby">© 2022 Eric Walkingshaw, <a href="./legal.html">details</a></div>
+  </div>
+</div>
+
+</div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="./js/scripts.js"></script>
+<!-- <script async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+</body>
+</html>

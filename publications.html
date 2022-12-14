@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Eric Walkingshaw  - Publications </title>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet" type="text/css">
+  <link href="./css/all.css?v=3" rel="stylesheet" type="text/css">
+  <link href="./css/print.css?v=3" rel="stylesheet" type="text/css" media="print">
+  <link href="./images/LambdaLand-Bold.png" rel="icon" type="image/png" sizes="610x610">
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create','UA-55224698-1','auto');
+  ga('send','pageview');
+</script>
+
+</head>
+
+<body onload="setEmail()">
+<div id="page">
+
+<div id="navbar">
+  <div class="container">
+    <a href="./" class="nav-head">Eric Walkingshaw</a>
+    <div class="nav-sep">&vert;</div>
+    <!-- <a href="/about.html" class="nav-item ">About</a> -->
+    <a href="./software.html" class="nav-item ">Software</a>
+    <a href="./research.html" class="nav-item ">Research</a>
+    <a href="./publications.html" class="nav-item ">Publications</a>
+    <a href="./files/Walkingshaw-CV.pdf" class="nav-item nav-right">CV</a>
+    <a href="./files/Walkingshaw-Resume.pdf" class="nav-item nav-right">Resume</a>
+  </div>
+</div>
+
+<div id="content">
+  <div class="container">
+<h1 id="publications">Publications</h1>
+<h2 class="pub-head" id="journal-articles">Journal articles</h2>
+<ol class="pub-list">
+
+<li class="pub-item">
+<div class="pub-block"><a id="emse23-variational-sat"></a><div class="pub-title">Variational Satisfiability Solving: Efficiently Solving Lots of Related SAT Problems</div><div class="pub-authors">Jeffrey M. Young, Paul Maximilian Bittner, Eric Walkingshaw, and Thomas Thüm</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">Empirical Software Engineering (EMSE)</span>, vol. 28, num. 14, Springer, </span><span class="pub-year">2023</span>, 1–53</div></div><span class="pub-links">[<span class="pub-abstract-link emse23-variational-sat"><a href="javascript:toggleAbstract('emse23-variational-sat');">Abstract</a></span>, <span class="pub-pdf-link"><a href="./files/pubs/2023/emse23-variational-sat.pdf">PDF</a></span>, <span class="pub-code-link"><a href="https://github.com/lambda-land/VSAT_EMSE">Code</a></span>]</span><div class="pub-abstract emse23-variational-sat"><p>Incremental satisfiability (SAT) solving is an extension of classic SAT solving that enables solving a set of related SAT problems by identifying and exploiting shared terms. However, using incremental solvers effectively is hard since performance is sensitive to the input order of subterms and results must be tracked manually. For analyses that generate sets of related SAT problems, such as those in software product lines, incremental solvers are either not used or their use is not clearly described in the literature. This paper translates the ordering problem to an encoding problem and automates the use of incremental solving. We introduce variational SAT solving, which differs from incremental solving by accepting all related problems as a single variational input and returning all results as a single variational output. Variational solving syntactically encodes differences in related SAT problems as local points of variation. With this syntax, our approach automates the interaction with the incremental solver and enables a method to automatically optimize sharing in the input. To evaluate these ideas, we formalize a variational SAT algorithm, construct a prototype variational solver, and perform an empirical analysis on two real-world datasets that applied incremental solvers to software evolution scenarios. We show, assuming a variational input, that the prototype solver scales better for these problems than four off-the-shelf incremental solvers while also automatically tracking individual results.</p></div></div>
+</li>
+
+<li class="pub-item">
+<div class="pub-block"><a id="jfp22-migrating-gradual-types"></a><div class="pub-title">Migrating Gradual Types</div><div class="pub-authors">John Peter Campora III, Sheng Chen, Martin Erwig, and Eric Walkingshaw</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">Journal of Functional Programming (JFP)</span>, vol. 32, num. e14, </span><span class="pub-year">2022</span>, 1–60</div></div><span class="pub-links">[<span class="pub-abstract-link jfp22-migrating-gradual-types"><a href="javascript:toggleAbstract('jfp22-migrating-gradual-types');">Abstract</a></span>, <span class="pub-pdf-link"><a href="./files/pubs/2022/jfp22-migrating-gradual-types.pdf">PDF</a></span>, <span class="pub-code-link"><a href="https://bitbucket.org/plcacs/popl18aec">Code</a></span>]</span><div class="pub-abstract jfp22-migrating-gradual-types"><p>Gradual typing allows programs to enjoy the benefits of both static typing and dynamic typing. While it is often desirable to migrate a program from more dynamically typed to more statically typed or vice versa, gradual typing itself does not provide a way to facilitate this migration. This places the burden on programmers who have to manually add or remove type annotations. Besides the general challenge of adding type annotations to dynamically typed code, there are subtle interactions between these annotations in gradually typed code that exacerbate the situation. For example, to migrate a program to be as static as possible, in general, all possible combinations of adding or removing type annotations from parameters must be tried out and compared. In this paper, we address this problem by developing migrational typing, which efficiently types all possible ways of replacing dynamic types with fully static types for a gradually typed program. The typing result supports automatically migrating a program to be as static as possible or introducing the least number of dynamic types necessary to remove a type error. The approach can be extended to support user-defined criteria about which annotations to modify. We have implemented migrational typing and evaluated it on large programs. The results show that migrational typing scales linearly with the size of the program and takes only 2–4 times longer than plain gradual typing.</p></div></div>
+</li>
+
+<li class="pub-item">
+<div class="pub-block"><a id="icfp18-casts-and-costs"></a><div class="pub-title">Casts and Costs: Harmonizing Safety and Performance in Gradual Typing</div><div class="pub-authors">John Peter Campora III, Sheng Chen, and Eric Walkingshaw</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">Proc. of the ACM on Programming Languages (PACMPL)</span> issue <span class="pub-issue">ACM SIGPLAN Int. Conf. on Functional Programming (ICFP)</span>, vol. 2, </span><span class="pub-year">2018</span>, 98:1–98:30</div></div><span class="pub-links">[<span class="pub-abstract-link icfp18-casts-and-costs"><a href="javascript:toggleAbstract('icfp18-casts-and-costs');">Abstract</a></span>, <span class="pub-pdf-link"><a href="./files/pubs/2018/icfp18-casts-and-costs.pdf">PDF</a></span>, <span class="pub-code-link"><a href="https://bitbucket.org/PeterCampora/castsandcostsartifact">Code</a></span>]</span><div class="pub-abstract icfp18-casts-and-costs"><p>Gradual typing allows programmers to use both static and dynamic typing in a single program. However, a well-known problem with sound gradual typing is that the interactions between static and dynamic code can cause significant performance degradation. These performance pitfalls are hard to predict and resolve, and discourage users from using gradual typing features. For example, when migrating to a more statically typed program, often adding a type annotation will trigger a slowdown that can be resolved by adding more annotations elsewhere, but since it’s not clear where the additional annotations must be added, the easier solution is to simply remove the annotation.</p>
+<p>To address these problems, we develop: (1) a static cost semantics that accurately predicts the overhead of static-dynamic interactions in a gradually typed program, (2) a technique for efficiently inferring such costs for all combinations of inferable type assignments in a program, and (3) a method for translating the results of this analysis into specific recommendations and explanations that can help programmers understand, debug, and optimize the performance of gradually typed programs. We have implemented our approach in Herder, a tool for statically analyzing the performance of different typing configurations for Reticulated Python programs. An evaluation on 15 Python programs shows that Herder can use this analysis to accurately and efficiently recommend type assignments that optimize the performance of these programs without sacrificing type safety.</p></div></div>
+</li>
+
+<li class="pub-item">
+<div class="pub-block"><a id="popl18-migrating-gradual-types"></a><div class="pub-title">Migrating Gradual Types</div><div class="pub-authors">John Peter Campora III, Sheng Chen, Martin Erwig, and Eric Walkingshaw</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">Proc. of the ACM on Programming Languages (PACMPL)</span> issue <span class="pub-issue">ACM SIGPLAN Symp. on Principles of Programming Languages (POPL)</span>, vol. 2, </span><span class="pub-year">2018</span>, 15:1–15:29</div></div><span class="pub-links">[<span class="pub-abstract-link popl18-migrating-gradual-types"><a href="javascript:toggleAbstract('popl18-migrating-gradual-types');">Abstract</a></span>, <span class="pub-pdf-link"><a href="./files/pubs/2018/popl18-migrating-gradual-types.pdf">PDF</a></span>, <span class="pub-code-link"><a href="https://bitbucket.org/plcacs/popl18aec">Code</a></span>]</span><div class="pub-abstract popl18-migrating-gradual-types"><p>Gradual typing allows programs to enjoy the benefits of both static typing and dynamic typing. While it is often desirable to migrate a program from more dynamically-typed to more statically-typed or vice versa, gradual typing itself does not provide a way to facilitate this migration. This places the burden on programmers who have to manually add or remove type annotations. Besides the general challenge of adding type annotations to dynamically typed code, there are subtle interactions between these annotations in gradually typed code that exacerbate the situation. For example, to migrate a program to be as static as possible, in general, all possible combinations of adding or removing type annotations from parameters must be tried out and compared.</p>
+<p>In this paper, we address this problem by developing <em>migrational typing</em>, which efficiently types all possible ways of adding or removing type annotations from a gradually typed program. The typing result supports automatically migrating a program to be as static as possible, or introducing the least number of dynamic types necessary to remove a type error. The approach can be extended to support user-defined criteria about which annotations to modify. We have implemented migrational typing and evaluated it on large programs. The results show that migrational typing scales linearly with the size of the program and takes only 2–4 times longer than plain gradual typing.</p></div></div>
+</li>
+
+<li class="pub-item">
+<div class="pub-block"><a id="toplas14-variational-typing"></a><div class="pub-title">Extending Type Inference to Variational Programs</div><div class="pub-authors">Sheng Chen, Martin Erwig, and Eric Walkingshaw</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">ACM Trans. on Programming Languages and Systems (TOPLAS)</span>, vol. 36, num. 1, </span><span class="pub-year">2014</span>, 1:1–1:54</div></div><span class="pub-links">[<span class="pub-abstract-link toplas14-variational-typing"><a href="javascript:toggleAbstract('toplas14-variational-typing');">Abstract</a></span>, <span class="pub-pdf-link"><a href="./files/pubs/2014/toplas14-variational-typing.pdf">PDF</a></span>]</span><div class="pub-abstract toplas14-variational-typing"><p>Through the use of conditional compilation and related tools, many software
+projects can be used to generate a huge number of related programs. The problem
+of typing such variational software is difficult. The brute-force strategy of
+generating all variants and typing each one individually is (1) usually
+infeasible for efficiency reasons and (2) produces results that do not map well
+to the underlying variational program. Recent research has focused mainly on
+efficiency and addressed only the problem of type checking. In this work we
+tackle the more general problem of variational type inference and introduce
+variational types to represent the result of typing a variational program. We
+introduce the variational lambda calculus (VLC) as a formal foundation for
+research on typing variational programs. We define a type system for VLC in
+which VLC expressions are mapped to correspondingly variational types. We show
+that the type system is correct by proving that the typing of expressions is
+preserved over the process of variation elimination, which eventually results
+in a plain lambda calculus expression and its corresponding type. We identify a
+set of equivalence rules for variational types and prove that the type
+unification problem modulo these equivalence rules is unitary and decidable; we
+also present a sound and complete unification algorithm. Based on the
+unification algorithm, the variational type inference algorithm is an extension
+of algorithm W. We show that it is sound and complete and computes principal
+types. We also consider the extension of VLC with sum types, a necessary
+feature for supporting variational data types, and demonstrate that the
+previous theoretical results also hold under this extension. Finally, we
+characterize the complexity of variational type inference and demonstrate the
+efficiency gains over the brute-force strategy.</p></div></div>
+</li>
+
+<li class="pub-item">
+<div class="pub-block"><a id="jvlc13-probula"></a><div class="pub-title">A Visual Language for Explaining Probabilistic Reasoning</div><div class="pub-authors">Martin Erwig and Eric Walkingshaw</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">Journal of Visual Languages and Computing (JVLC)</span>, vol. 24, num. 2, </span><span class="pub-year">2013</span>, 88–109</div></div><span class="pub-links">[<span class="pub-abstract-link jvlc13-probula"><a href="javascript:toggleAbstract('jvlc13-probula');">Abstract</a></span>, <span class="pub-pdf-link"><a href="./files/pubs/2013/jvlc13-probula.pdf">PDF</a></span>]</span><div class="pub-abstract jvlc13-probula"><p>We present an explanation-oriented, domain-specific, visual language for
+explaining probabilistic reasoning. Explanation-oriented programming is a new
+paradigm that shifts the focus of programming from the computation of results
+to explanations of how those results were computed. Programs in this language
+therefore describe explanations of probabilistic reasoning problems. The
+language relies on a storytelling metaphor of explanation, where the reader is
+guided through a series of well-understood steps from some initial state to the
+final result. Programs can also be manipulated according to a set of laws to
+automatically generate equivalent explanations from one explanation instance.
+This increases the explanatory value of the language by allowing readers to
+cheaply derive alternative explanations if they do not understand the first.
+The language is comprised of two parts: a formal textual notation for
+specifying explanation-producing programs and the more elaborate visual
+notation for presenting those explanations. We formally define the abstract
+syntax of explanations and define the semantics of the textual notation in
+terms of the explanations that are produced.</p></div></div>
+</li>
+
+<li class="pub-item">
+<div class="pub-block"><a id="tosem11-choice-calculus"></a><div class="pub-title">The Choice Calculus: A Representation for Software Variation</div><div class="pub-authors">Martin Erwig and Eric Walkingshaw</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">ACM Trans. on Software Engineering and Methodology (TOSEM)</span>, vol. 21, num. 1, </span><span class="pub-year">2011</span>, 6:1–6:27</div></div><span class="pub-links">[<span class="pub-abstract-link tosem11-choice-calculus"><a href="javascript:toggleAbstract('tosem11-choice-calculus');">Abstract</a></span>, <span class="pub-pdf-link"><a href="./files/pubs/2011/tosem11-choice-calculus.pdf">PDF</a></span>]</span><div class="pub-abstract tosem11-choice-calculus"><p>Many areas of computer science are concerned with some form of variation in
+software–from managing changes to software over time, to supporting families
+of related artifacts. We present the choice calculus, a fundamental
+representation for software variation that can serve as a common language of
+discourse for variation research, filling a role similar to the lambda calculus
+in programming language research. We also develop an associated theory of
+software variation, including sound transformations of variation artifacts, the
+definition of strategic normal forms, and a design theory for variation
+structures, which will support the development of better algorithms and
+tools.</p></div></div>
+</li>
+
+<li class="pub-item">
+<div class="pub-block"><a id="jfp09-hagl"></a><div class="pub-title">A Domain-Specific Language for Experimental Game Theory</div><div class="pub-authors">Eric Walkingshaw and Martin Erwig</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">Journal of Functional Programming (JFP)</span>, vol. 19, </span><span class="pub-year">2009</span>, 645–661</div></div><span class="pub-links">[<span class="pub-abstract-link jfp09-hagl"><a href="javascript:toggleAbstract('jfp09-hagl');">Abstract</a></span>, <span class="pub-pdf-link"><a href="./files/pubs/2009/jfp09-hagl.pdf">PDF</a></span>, <span class="pub-code-link"><a href="https://github.com/walkie/Hagl-JFP">Code</a></span>]</span><div class="pub-abstract jfp09-hagl"><p>Experimental game theory is increasingly important for research in many fields.
+Unfortunately, it is poorly supported by computer tools. We have created Hagl,
+a domain-specific language embedded in Haskell, to reduce the development time
+of game-theoretic experiments and make the definition and exploration of games
+and strategies simple and fun.</p></div></div>
+</li>
+
+</ol>
+<h2 class="pub-head" id="peer-reviewed-book-chapters">Peer-reviewed book chapters</h2>
+<ol class="pub-list">
+
+<li class="pub-item">
+<div class="pub-block"><a id="gttse11-variation-programming"></a><div class="pub-title">Variation Programming with the Choice Calculus</div><div class="pub-authors">Martin Erwig and Eric Walkingshaw</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">Generative and Transformational Techniques in Software Engineering IV (GTTSE 2011), Revised and Extended Papers</span>, LNCS vol. 7680, Springer, </span><span class="pub-year">2013</span>, 55–100</div></div><span class="pub-links">[<span class="pub-abstract-link gttse11-variation-programming"><a href="javascript:toggleAbstract('gttse11-variation-programming');">Abstract</a></span>, <span class="pub-pdf-link"><a href="./files/pubs/2013/gttse11-variation-programming.pdf">PDF</a></span>, <span class="pub-code-link"><a href="https://github.com/walkie/CC-GTTSE">Code</a></span>]</span><div class="pub-abstract gttse11-variation-programming"><p>The choice calculus provides a language for representing and transforming
+variation in software and other structured documents. Variability is captured
+in localized choices between alternatives. The space of all variations is
+organized by dimensions, which provide scoping and structure to choices. The
+variation space can be reduced through a process of selection, which eliminates
+a dimension and resolves all of its associated choices by replacing each with
+one of their alternatives. The choice calculus also allows the definition of
+arbitrary functions for the flexible construction and transformation of all
+kinds of variation structures. In this tutorial we will first present the
+motivation, general ideas, and principles that underlie the choice calculus.
+This is followed by a closer look at the semantics. We will then present
+practical applications based on several small example scenarios and consider
+the concepts of “variation programming” and “variation querying”. The
+practical applications involve work with a Haskell library that supports
+variation programming and experimentation with the choice calculus.</p></div></div>
+</li>
+
+<li class="pub-item">
+<div class="pub-block"><a id="semantics-driven-dsl-design"></a><div class="pub-title">Semantics-Driven DSL Design</div><div class="pub-authors">Martin Erwig and Eric Walkingshaw</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">Formal and Practical Aspects of Domain-Specific Languages: Recent Developments</span>, (ed. Marjan Mernik), IGI Global, </span><span class="pub-year">2012</span>, 56–80</div></div><span class="pub-links">[<span class="pub-abstract-link semantics-driven-dsl-design"><a href="javascript:toggleAbstract('semantics-driven-dsl-design');">Abstract</a></span>, <span class="pub-pdf-link"><a href="./files/pubs/2012/semantics-driven-dsl-design.pdf">PDF</a></span>]</span><div class="pub-abstract semantics-driven-dsl-design"><p>Convention dictates that the design of a language begins with its syntax. We
+argue that early emphasis should be placed instead on the identification of
+general, compositional semantic domains, and that grounding the design process
+in semantics leads to languages with more consistent and more extensible
+syntax. We demonstrate this semantics-driven design process through the design
+and implementation of a DSL for defining and manipulating calendars, using
+Haskell as a metalanguage to support this discussion. We emphasize the
+importance of compositionality in semantics-driven language design, and
+describe a set of language operators that support an incremental and modular
+design process.</p></div></div>
+</li>
+
+</ol>
+<h2 class="pub-head" id="peer-reviewed-conference-and-workshop-papers">Peer-reviewed conference and workshop papers</h2>
+<ol class="pub-list">
+
+<li class="pub-item">
+<div class="pub-block"><a id="gpce21-vdbms"></a><div class="pub-title">A Variational Database Management System</div><div class="pub-authors">Parisa Ataei, Fariba Khan, and Eric Walkingshaw</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">ACM SIGPLAN Int. Conf. on Generative Programming: Concepts and Experiences (GPCE)</span>, </span><span class="pub-year">2021</span>, 29–42</div></div><span class="pub-links">[<span class="pub-abstract-link gpce21-vdbms"><a href="javascript:toggleAbstract('gpce21-vdbms');">Abstract</a></span>, <span class="pub-pdf-link"><a href="./files/pubs/2021/gpce21-vdbms.pdf">PDF</a></span>, <span class="pub-code-link"><a href="https://github.com/lambda-land/VDBMS">Code</a></span>]</span><div class="pub-abstract gpce21-vdbms"><p>Many problems require working with data that varies in its structure and content. Current approaches, such as schema evolution or data integration tools, are highly tailored to specific kinds of variation in databases. While these approaches work well in their roles, they do not address all kinds of variation and do address the interaction of different kinds of variation in databases. In this paper, we define a framework for capturing variation as a generic and orthogonal concern in relational databases. We define variational schemas, variational databases, and variational queries for capturing variation in the structure, content, and information needs of relational databases, respectively. We define a type system that ensures variational queries are consistent with respect to a variational schema. Finally, we design and implement a variational database management system as an abstraction layer over a traditional relational database management system. Using previously developed use cases, we show the feasibility of our framework and demonstrate the performance of different approaches used in our system.</p></div></div>
+</li>
+
+<li class="pub-item">
+<div class="pub-block"><a id="vamos21-variation-in-databases"></a><div class="pub-title">Should Variation Be Encoded Explicitly in Databases?</div><div class="pub-authors">Parisa Ataei, Qiaoran Li, and Eric Walkingshaw</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">Int. Working Conf. on Variability Modelling of Software-Intensive Systems (VaMoS)</span>, </span><span class="pub-year">2021</span>, 3:1–3:9</div></div><span class="pub-links">[<span class="pub-abstract-link vamos21-variation-in-databases"><a href="javascript:toggleAbstract('vamos21-variation-in-databases');">Abstract</a></span>, <span class="pub-pdf-link"><a href="./files/pubs/2021/vamos21-variation-in-databases.pdf">PDF</a></span>]</span><div class="pub-abstract vamos21-variation-in-databases"><p>Variation occurs in databases in many different forms and contexts. For example, a single database schema evolves over time, data from different sources may be combined, and the various configurations of a software product line (SPL) may have different data needs. While approaches have been developed to deal with many such scenarios, particularly in the fields of database evolution and data integration, there is no solution that treats variation as a general and orthogonal concern in databases. This is a problem when various kinds of variation intersect, such as during the evolution of a SPL. Previously, we have proposed variational databases (VDB) as a general way to represent variation in both the structure and content of databases. Although the model underlying VDB is simple, encoding variation explicitly in databases introduces complexity akin to using preprocessing directives in software. In this paper, we explore the feasibility of VDB and its associated variational query language for encoding different kinds of database variability. We develop two use cases that illustrate how different kinds of variation can be encoded and integrated in VDB, and how the corresponding information needs can be expressed as variational queries. We then use these use cases to discuss the benefits and drawbacks of such a direct encoding of variation in data and queries.</p></div></div>
+</li>
+
+<li class="pub-item">
+<div class="pub-block"><a id="splc20-variational-sat"></a><div class="pub-title">Variational Satisfiability Solving</div><div class="pub-authors">Jeffrey M. Young, Eric Walkingshaw, and Thomas Thüm</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">ACM SIGSOFT Int. Systems and Software Product Line Conf. (SPLC)</span>, </span><span class="pub-year">2020</span>, 18:1–18:12</div></div><span class="pub-links">[<span class="pub-abstract-link splc20-variational-sat"><a href="javascript:toggleAbstract('splc20-variational-sat');">Abstract</a></span>, <span class="pub-pdf-link"><a href="./files/pubs/2020/splc20-variational-sat.pdf">PDF</a></span>, <span class="pub-code-link"><a href="https://github.com/lambda-land/VSat-SPLC20">Code</a></span>]</span><div class="pub-abstract splc20-variational-sat"><p>Incremental satisfiability (SAT) solving is an extension of classic SAT solving that allows users to efficiently solve a set of related SAT problems by identifying and exploiting shared terms. However, using incremental solvers effectively is hard since performance is sensitive to a problem’s structure and the order sub-terms are fed to the solver, and the burden to track results is placed on the end user. For analyses that generate sets of related SAT problems, such as those in software product lines, incremental SAT solvers are either not used at all, used but not explicitly stated so in the literature, or used but suffer from the aforementioned usability problems. This paper translates the ordering problem to an encoding problem and automates the use of incremental SAT solving. We introduce variational SAT solving, which differs from incremental SAT solving by accepting all related problems as a single variational input and returning all results as a single variational output. Our central idea is to make explicit the operations of incremental SAT solving, thereby encoding differences between related SAT problems as local points of variation. Our approach automates the interaction with the incremental solver and enables methods to automatically optimize sharing of the input. To evaluate our methods we construct a prototype variational SAT solver and perform an empirical analysis on two real-world datasets that applied incremental solvers to software evolution scenarios. We show, assuming a variational input, that the prototype solver scales better for these problems than naive incremental solving while also removing the need to track individual results.</p></div></div>
+</li>
+
+<li class="pub-item">
+<div class="pub-block"><a id="varivolution19-variation-in-time-and-space"></a><div class="pub-title">Toward Efficient Analysis of Variation in Time and Space</div><div class="pub-authors">Thomas Thüm, Leopoldo Teixeira, Klaus Schmid, Eric Walkingshaw, Mukelabai Mukelabai, Mahsa Varshosaz, Goetz Botterweck, Ina Schaefer, and Timo Kehrer</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">Int. Workshop on Variability and Evolution of Software-Intensive Systems (VariVolution)</span>, </span><span class="pub-year">2019</span>, 57–64</div></div><span class="pub-links">[<span class="pub-abstract-link varivolution19-variation-in-time-and-space"><a href="javascript:toggleAbstract('varivolution19-variation-in-time-and-space');">Abstract</a></span>, <span class="pub-pdf-link"><a href="./files/pubs/2019/varivolution19-variation-in-time-and-space.pdf">PDF</a></span>]</span><div class="pub-abstract varivolution19-variation-in-time-and-space"><p>Variation is central to today’s software development. There are two fundamental dimensions to variation: Variation in time refers to the fact that software exists in numerous revisions that typically replace each other (i.e., a newer version supersedes an older one). Variation in space refers to differences among variants that are designed to coexist in parallel. There are numerous analyses to cope with variation in space (i.e., product-line analyses) and others that cope with variation in time (i.e., regression analyses). The goal of this work is to discuss to which extent product-line analyses can be applied to revisions and, conversely, where regression analyses can be applied to variants. In addition, we discuss challenges related to the combination of product-line and regression analyses. The overall goal is to increase the efficiency of analyses by exploiting the inherent commonality between variants and revisions.</p></div></div>
+</li>
+
+<li class="pub-item">
+<div class="pub-block"><a id="ppdp18-declarative-guis"></a><div class="pub-title">Declarative GUIs: Simple, Consistent, and Verified</div><div class="pub-authors">Stephan Adelsberger, Anton Setzer, and Eric Walkingshaw</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">ACM SIGPLAN Int. Symp. on Principles and Practice of Declarative Programming (PPDP)</span>, </span><span class="pub-year">2018</span>, 4:1–4:15</div></div><span class="pub-links">[<span class="pub-abstract-link ppdp18-declarative-guis"><a href="javascript:toggleAbstract('ppdp18-declarative-guis');">Abstract</a></span>, <span class="pub-pdf-link"><a href="./files/pubs/2018/ppdp18-declarative-guis.pdf">PDF</a></span>, <span class="pub-code-link"><a href="https://github.com/stephanadelsb/PPDP18">Code</a></span>]</span><div class="pub-abstract ppdp18-declarative-guis"><p>Graphical user interfaces (GUIs) are ubiquitous in real-world software and a notorious source of bugs that are difficult to catch through software testing. Model checking has been used to prove the absence of certain kinds of bugs, but model checking works on an abstract model of the GUI application, which might be inconsistent with its implementation. We present a library for developing directly verified, state-dependent GUI applications in the dependently typed programming language Agda. In the library, the type of a GUI’s controller depends on a specification of the GUI itself, statically enforcing consistency between them. Arbitrary properties can be defined and proved in terms of user interactions and state transitions. Our library connects to a custom-built Haskell back-end for declarative vector-based GUI elements. Compared to an earlier version of our library built on an existing imperative GUI framework, the more declarative back-end supports simpler definitions and proofs.</p>
+<p>As a practical application of our library to a safety-critical domain, we present a case study developed in cooperation with the Medical University of Vienna. The case study implements a healthcare process for prescribing anticoagulants, which is highly error-prone when followed manually. Our implementation generates GUIs from an abstract description of a data-aware business process, making our approach easy to reuse and adapt to other safety-critical processes. We prove medically relevant safety properties about the executable GUI application, such as that given certain inputs, certain states must or must not be reached.</p></div></div>
+</li>
+
+<li class="pub-item">
+<div class="pub-block"><a id="setta18-verified-guis"></a><div class="pub-title">Developing GUI Applications in a Verified Setting</div><div class="pub-authors">Stephan Adelsberger, Anton Setzer, and Eric Walkingshaw</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">Int. Symp. on Dependable Software Engineering: Theories, Tools, and Applications (SETTA)</span>, Springer, </span><span class="pub-year">2018</span>, 89–107</div></div><span class="pub-links">[<span class="pub-abstract-link setta18-verified-guis"><a href="javascript:toggleAbstract('setta18-verified-guis');">Abstract</a></span>, <span class="pub-pdf-link"><a href="./files/pubs/2018/setta18-verified-guis.pdf">PDF</a></span>, <span class="pub-code-link"><a href="https://github.com/stephanpaper/SETTA18">Code</a></span>]</span><div class="pub-abstract setta18-verified-guis"><p>Although there have been major achievements in verified software, work on verifying graphical user interfaces (GUI) applications is underdeveloped relative to their ubiquity and societal importance. In this paper, we present a library for the development of verified, state-dependent GUI applications in the dependently typed programming language Agda. The library uses Agda’s expressive type system to ensure that the GUI, its controller, and the underlying model are all consistent, significantly reducing the scope for GUI-related bugs. We provide a way to specify and prove correctness properties of GUI applications in terms of user interactions and state transitions. Critically, GUI applications and correctness properties are not restricted to finite state machines and may involve the execution of arbitrary interactive programs. Additionally, the library connects to a standard, imperative GUI framework, enabling the development of native GUI applications with expected features, such as concurrency. We present applications of our library to building GUI applications to manage healthcare processes. The correctness properties we consider are the following: (1) That a state can only be reached by passing through a particular intermediate state, for example, that a particular treatment can only be reached after having conducted an X-Ray. (2) That one eventually reaches a particular state, for example, that one eventually decides on a treatment. The specification of such properties is defined in terms of a GUI application simulator, which simulates all possible sequences of interactions carried out by the user.</p></div></div>
+</li>
+
+<li class="pub-item">
+<div class="pub-block"><a id="poly18-heterogeneous-dbs-spls"></a><div class="pub-title">Managing Structurally Heterogeneous Databases in Software Product Lines</div><div class="pub-authors">Parisa Ataei, Arash Termehchy, and Eric Walkingshaw</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">VLDB Workshop: Polystores and Other Systems for Heterogeneous Data (Poly)</span>, Springer, </span><span class="pub-year">2018</span></div></div><span class="pub-links">[<span class="pub-abstract-link poly18-heterogeneous-dbs-spls"><a href="javascript:toggleAbstract('poly18-heterogeneous-dbs-spls');">Abstract</a></span>, <span class="pub-pdf-link"><a href="./files/pubs/2018/poly18-heterogeneous-dbs-spls.pdf">PDF</a></span>]</span><div class="pub-abstract poly18-heterogeneous-dbs-spls"><p>Data variations are prevalent while developing software product lines (SPLs). A
+SPL enables a software vendor to quickly produce different variants of their
+software tailored to variations in their clients’ business requirements,
+conventions, desired feature sets, and deployment environments. In
+database-backed software, the database of each variant may have a different
+schema and content, giving rise to numerous data variants. Users often need to
+query and/or analyze all variants in a SPL simultaneously. For example, a
+software vendor wants to perform common tests or inquiries over all variants.
+Unfortunately, there is no systematic approach to managing and querying data
+variations and users have to use their intuition to perform such tasks, often
+resorting to repeating a task for each variant. We introduce <em>VDBMS</em>
+(Variational Database Management System), a system that provides a compact,
+expressive, and structured representation of variation in relational databases.
+In contrast to data integration systems that provide a unified representation
+for all data sources, VDBMS makes variations explicit in both the schema and
+query. Although variations can make VDBMS queries more complex than plain
+queries, a strong static type system ensures that all variants of the query are
+consistent with the corresponding variants of the database. Additionally,
+<em>variational queries</em> make it possible to compactly represent and efficiently
+run queries over a huge range of data variations in a single query. This
+directly supports many tasks that would otherwise be intractable in highly
+variational database-backed SPLs.</p></div></div>
+</li>
+
+<li class="pub-item">
+<div class="pub-block"><a id="sigcse18-algorithm-explanations"></a><div class="pub-title">A Domain Analysis of Data Structure and Algorithm Explanations in the Wild</div><div class="pub-authors">Jeffrey M. Young and Eric Walkingshaw</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">ACM SIGCSE Technical Symp. on Computer Science Education (SIGCSE)</span>, </span><span class="pub-year">2018</span>, 870–875</div></div><span class="pub-links">[<span class="pub-abstract-link sigcse18-algorithm-explanations"><a href="javascript:toggleAbstract('sigcse18-algorithm-explanations');">Abstract</a></span>, <span class="pub-pdf-link"><a href="./files/pubs/2018/sigcse18-algorithm-explanations.pdf">PDF</a></span>, <span class="pub-data-link"><a href="https://github.com/lambda-land/XOP-Algorithms-Data">Data</a></span>]</span><div class="pub-abstract sigcse18-algorithm-explanations"><p>Explanations of data structures and algorithms are complex interactions of
+several notations, including natural language, mathematics, pseudocode, and
+diagrams. Currently, such explanations are created ad hoc using a variety of
+tools and the resulting artifacts are static, reducing explanatory value. We
+envision a domain-specific language for developing rich, interactive
+explanations of data structures and algorithms. In this paper, we analyze this
+domain to sketch requirements for our language. We perform a grounded theory
+analysis to generate a qualitative coding system for explanation artifacts
+collected online. This coding system implies a common structure among
+explanations of algorithms and data structures. We believe this structure can
+be reused as the semantic basis of a domain-specific language for creating
+interactive explanation artifacts. This work is part of our effort to develop
+the paradigm of explanation-oriented programming, which shifts the focus of
+programming from computing results to producing rich explanations of how those
+results were computed.</p></div></div>
+</li>
+
+<li class="pub-item">
+<div class="pub-block"><a id="dbpl17-variational-databases"></a><div class="pub-title">Variational Databases</div><div class="pub-authors">Parisa Ataei, Arash Termehchy, and Eric Walkingshaw</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">Int. Symp. on Database Programming Languages (DBPL)</span>, ACM, </span><span class="pub-year">2017</span>, 11:1–11:4</div></div><span class="pub-links">[<span class="pub-abstract-link dbpl17-variational-databases"><a href="javascript:toggleAbstract('dbpl17-variational-databases');">Abstract</a></span>, <span class="pub-pdf-link"><a href="./files/pubs/2017/dbpl17-variational-databases.pdf">PDF</a></span>]</span><div class="pub-abstract dbpl17-variational-databases"><p>Data variations are prevalent in real-world applications. For example, software vendors handle variations in the business requirements, conventions, and environmental settings of a software product using hundreds of features each combination of which creates a different version of the product. In database-backed software, the database of each version may have a different schema and different content. Variations in the value and representation of each element in a dataset give rise to numerous variants in these applications. Users often would like to express information needs over all such variants. For example, a software vendor would like to perform common tests over all versions of its product, e.g., whether each relation in a relational database has a primary key. Hence, users need a query interface that hides the variational nature of the data and processes a query over all variations of a dataset. We propose a novel abstraction called a <em>variational database</em> that provides a compact and structured representation of general forms of data variations and enables users to query database variations easily.</p></div></div>
+</li>
+
+<li class="pub-item">
+<div class="pub-block"><a id="mutation17-how-good-are-your-types"></a><div class="pub-title">How Good are Your Types? Using Mutation Analysis to Evaluate the Effectiveness of Type Annotations</div><div class="pub-authors">Rahul Gopinath and Eric Walkingshaw</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">Int. Workshop on Mutation Analysis (Mutation)</span>, IEEE, </span><span class="pub-year">2017</span>, 122–127</div></div><div class="pub-note pub-best">Best presentation</div><span class="pub-links">[<span class="pub-abstract-link mutation17-how-good-are-your-types"><a href="javascript:toggleAbstract('mutation17-how-good-are-your-types');">Abstract</a></span>, <span class="pub-pdf-link"><a href="./files/pubs/2017/mutation17-how-good-are-your-types.pdf">PDF</a></span>]</span><div class="pub-abstract mutation17-how-good-are-your-types"><p>Software engineers primarily use two orthogonal means to reduce susceptibility
+to faults: software testing and static type checking. While many strategies
+exist to evaluate the effectiveness of a test suite in catching bugs, there are
+few that evaluate the effectiveness of type annotations in a program. This
+problem is most relevant in the context of gradual or optional typing, where
+programmers are free to choose which parts of a program to annotate and in what
+detail. Mutation analysis is one strategy that has proven useful for measuring
+test suite effectiveness by emulating potential software faults. We propose
+that mutation analysis can be used to evaluate the effectiveness of type
+annotations too. We analyze mutants produced by the MutPy mutation framework
+against both a test suite and against type-annotated programs. We show that,
+while mutation analysis can be useful for evaluating the effectiveness of type
+annotations, we require stronger mutation operators that target type
+information in programs to be an effective mutation analysis tool.</p></div></div>
+</li>
+
+<li class="pub-item">
+<div class="pub-block"><a id="vamos17-variational-stacks"></a><div class="pub-title">A Choice of Variational Stacks: Exploring Variational Data Structures</div><div class="pub-authors">Meng Meng, Jens Meinicke, Chu-Pan Wong, Eric Walkingshaw, and Christian Kästner</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">Int. Workshop on Variability Modelling of Software-Intensive Systems (VaMoS)</span>, ACM, </span><span class="pub-year">2017</span>, 28–35</div></div><span class="pub-links">[<span class="pub-abstract-link vamos17-variational-stacks"><a href="javascript:toggleAbstract('vamos17-variational-stacks');">Abstract</a></span>, <span class="pub-pdf-link"><a href="./files/pubs/2017/vamos17-variational-stacks.pdf">PDF</a></span>]</span><div class="pub-abstract vamos17-variational-stacks"><p>Many applications require not only representing variability in software and
+data, but also computing with it. To do so efficiently requires variational
+data structures that make the variability explicit in the underlying data and
+the operations used to manipulate it. Variational data structures have been
+developed ad hoc for many applications, but there is little general
+understanding of how to design them or what tradeoffs exist among them.
+In this paper, we strive for a more systematic exploration and
+analysis of a variational data structure. We want to know how different design
+decisions affect the performance and scalability of a variational data
+structure, and what properties of the underlying data and operation sequences
+need to be considered.
+Specifically, we study several alternative designs of a variational stack, a
+data structure that supports efficiently representing and computing with
+multiple variants of a plain stack, and that is a common building block in many
+algorithms. The different variational stacks are presented as a small product
+line organized by three design decisions. We analyze how these design decisions
+affect the performance of a variational stack with different usage profiles.
+Finally, we evaluate how these design decisions affect the performance of the
+variational stack in a real-world scenario: in the interpreter  when
+executing real software containing variability.</p></div></div>
+</li>
+
+<li class="pub-item">
+<div class="pub-block"><a id="fosd16-formula-choice-calculus"></a><div class="pub-title">Formula Choice Calculus</div><div class="pub-authors">Spencer Hubbard and Eric Walkingshaw</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">Int. Workshop on Feature-Oriented Software Development (FOSD)</span>, ACM, </span><span class="pub-year">2016</span>, 49–57</div></div><span class="pub-links">[<span class="pub-abstract-link fosd16-formula-choice-calculus"><a href="javascript:toggleAbstract('fosd16-formula-choice-calculus');">Abstract</a></span>, <span class="pub-pdf-link"><a href="./files/pubs/2016/fosd16-formula-choice-calculus.pdf">PDF</a></span>, <span class="pub-code-link"><a href="https://github.com/lambda-land/FCC-Coq">Code</a></span>]</span><div class="pub-abstract fosd16-formula-choice-calculus"><p>The choice calculus is a simple metalanguage and associated theory that has been successfully applied to several problems of interest to the feature-oriented software development community. The formal presentation of the choice calculus essentially restricts variation points, called choices, to vary based on the inclusion or not of a single feature, while in practice variation points may depend on several features. Therefore, in both theoretical applications of the choice calculus, and in tools inspired by the choice calculus, the syntax of choices has often been generalized to depend on an arbitrary propositional formula of features. The purpose of this paper is to put this syntactic generalization on more solid footing by also generalizing the associated theory. Specifically, after defining the syntax and denotational semantics of the formula choice calculus (FCC), we define and prove the soundness of a syntactic equivalence relation on FCC expressions. This effort validates previous work which has implicitly assumed the soundness of rules in the equivalence relation, and also reveals several rules that are specific to FCC. Finally, we describe some further generalizations to FCC and their limits.</p></div></div>
+</li>
+
+<li class="pub-item">
+<div class="pub-block"><a id="icsme16-variation-control-system"></a><div class="pub-title">Concepts, Operations, and Feasibility of a Projection-Based Variation Control System</div><div class="pub-authors">Ștefan Stănciulescu, Thorsten Berger, Eric Walkingshaw, and Andrzej Wąsowski</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">IEEE Int. Conf. on Software Maintenance and Evolution (ICSME)</span>, </span><span class="pub-year">2016</span>, 323–333</div></div><span class="pub-links">[<span class="pub-abstract-link icsme16-variation-control-system"><a href="javascript:toggleAbstract('icsme16-variation-control-system');">Abstract</a></span>, <span class="pub-pdf-link"><a href="./files/pubs/2016/icsme16-variation-control-system.pdf">PDF</a></span>, <span class="pub-code-link pub-data-link"><a href="https://bitbucket.org/modelsteam/2016-vcs-marlin">Code/Data</a></span>]</span><div class="pub-abstract icsme16-variation-control-system"><p>Highly configurable software often uses preprocessor annotations to handle variability. However, understanding, maintaining, and evolving code with such annotations is difficult, mainly because a developer has to work with all variants at a time. Dedicated methods and tools that allow working on a subset of all variants could ease the engineering of highly configurable software. We investigate the potential of one kind of such tools: projection-based variation control systems integrated with projectional editors. For such systems we aim to understand: (i) what end-user operations they need to support, and (ii) whether they can realize the actual evolution of real-world, highly configurable software. We conduct an experiment that investigates variability-related evolution patterns and that evaluates the feasibility of a projection-based variation control system by replaying parts of the history of a real-world 3D printer firmware project. Among others, we show that the prototype variation control system does indeed support the evolution of a highly configurable system and that in general, it does not degrade the code.</p></div></div>
+</li>
+
+<li class="pub-item">
+<div class="pub-block"><a id="ecoop16-variational-programming-calculus"></a><div class="pub-title">A Calculus for Variational Programming</div><div class="pub-authors">Sheng Chen, Martin Erwig, and Eric Walkingshaw</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">European Conf. on Object-Oriented Programming (ECOOP)</span>, LIPIcs vol. 56, </span><span class="pub-year">2016</span>, 6:1–6:28</div></div><span class="pub-links">[<span class="pub-abstract-link ecoop16-variational-programming-calculus"><a href="javascript:toggleAbstract('ecoop16-variational-programming-calculus');">Abstract</a></span>, <span class="pub-pdf-link"><a href="./files/pubs/2016/ecoop16-variational-programming-calculus.pdf">PDF</a></span>]</span><div class="pub-abstract ecoop16-variational-programming-calculus"><p>Variation is ubiquitous in software. Many applications can benefit from making this variation explicit, then manipulating and computing with it directly—a technique we call “variational programming”. This idea has been independently discovered in several application domains, such as efficiently analyzing and verifying software product lines, combining bounded and symbolic model-checking, and computing with alternative privacy profiles. Although these domains share similar core problems, and there are also many similarities in the solutions, there is no dedicated programming language support for variational programming. This makes the various implementations tedious, prone to errors, hard to maintain and reuse, and difficult to compare.</p>
+<p>In this paper we present a calculus that forms the basis of a programming language with explicit support for representing, manipulating, and computing with variation in programs and data. We illustrate how such a language can simplify the implementation of variational programming tasks. We present the syntax and semantics of the core calculus, a sound type system, and a type inference algorithm that produces principal types.</p></div></div>
+</li>
+
+<li class="pub-item">
+<div class="pub-block"><a id="vlhcc15-programs-for-people"></a><div class="pub-title">Programs for People: What We Can Learn from Lab Protocols</div><div class="pub-authors">Keeley Abbott, Christopher Bogart, and Eric Walkingshaw</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">IEEE Int. Symp. on Visual Languages and Human-Centric Computing (VL/HCC)</span>, </span><span class="pub-year">2015</span>, 203–211</div></div><span class="pub-links">[<span class="pub-abstract-link vlhcc15-programs-for-people"><a href="javascript:toggleAbstract('vlhcc15-programs-for-people');">Abstract</a></span>, <span class="pub-pdf-link"><a href="./files/pubs/2015/vlhcc15-programs-for-people.pdf">PDF</a></span>, <span class="pub-data-link"><a href="https://github.com/lambda-land/ProtocolStudy-Data">Data</a></span>]</span><div class="pub-abstract vlhcc15-programs-for-people"><p>Humans play an active role in the execution of certain kinds of programs, such
+as spreadsheets, workflows, and interactive notebooks. Interacting closely with
+execution is especially useful when end-users are learning from examples while
+doing their work. In order to better understand the language features needed to
+support this kind of use, we investigated a particularly rigid and formalized
+category of “program” people write for each other: lab protocols. These
+protocols present a linear, idealized process despite the complex contingencies
+of the lab work they describe. However, they employ a variety of techniques for
+limiting or expanding the semantic interpretation of individual steps and for
+integrating outside protocols. We use these observations to derive implications
+for the design of interactive and mixed-initiative programming languages.</p></div></div>
+</li>
+
+<li class="pub-item">
+<div class="pub-block"><a id="onward14-variational-data"></a><div class="pub-title">Variational Data Structures: Exploring Trade-Offs in Computing With Variability</div><div class="pub-authors">Eric Walkingshaw, Christian Kästner, Martin Erwig, Sven Apel, and Eric Bodden</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">ACM SIGPLAN Symp. on New Ideas in Programming and Reflections on Software (Onward!)</span>, </span><span class="pub-year">2014</span>, 213–226</div></div><span class="pub-links">[<span class="pub-abstract-link onward14-variational-data"><a href="javascript:toggleAbstract('onward14-variational-data');">Abstract</a></span>, <span class="pub-pdf-link"><a href="./files/pubs/2014/onward14-variational-data.pdf">PDF</a></span>]</span><div class="pub-abstract onward14-variational-data"><p>Variation is everywhere, and in the construction and analysis of customizable
+software it is paramount. In this context, there arises a need for variational
+data structures for efficiently representing and computing with related
+variants of an underlying data type. So far, variational data structures have
+been explored and developed ad hoc. This paper is a first attempt and a call to
+action for systematic and foundational research in this area. Research on
+variational data structures will benefit not only customizable software, but
+many other application domains that must cope with variability. In this paper,
+we show how support for variation can be understood as a general and orthogonal
+property of data types, data structures, and algorithms. We begin a systematic
+exploration of basic variational data structures, exploring the tradeoffs among
+different implementations. Finally, we retrospectively analyze the design
+decisions in our own previous work where we have independently encountered
+problems requiring variational data structures.</p></div></div>
+</li>
+
+<li class="pub-item">
+<div class="pub-block"><a id="gpce14-projectional-editing"></a><div class="pub-title">Projectional Editing of Variational Software</div><div class="pub-authors">Eric Walkingshaw and Klaus Ostermann</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">ACM SIGPLAN Int. Conf. on Generative Programming and Component Engineering (GPCE)</span>, </span><span class="pub-year">2014</span>, 29–38</div></div><div class="pub-note pub-best">Best paper</div><span class="pub-links">[<span class="pub-abstract-link gpce14-projectional-editing"><a href="javascript:toggleAbstract('gpce14-projectional-editing');">Abstract</a></span>, <span class="pub-pdf-link"><a href="./files/pubs/2014/gpce14-projectional-editing.pdf">PDF</a></span>]</span><div class="pub-abstract gpce14-projectional-editing"><p>Editing the source code of variational software is complicated by the presence
+of variation annotations, such as #ifdef statements, and by code that is only
+included in some configurations. When editing some configurations and not
+others, it would be easier to edit a simplified version of the source code that
+includes only the configurations we currently care about. In this paper, we
+present a projectional editing model for variational software. Using our
+approach, a programmer can partially configure a variational program, edit this
+simplified view of the code, and then automatically update the original, fully
+variational source code. The model is based on an isolation principle where
+edits affect only the variants that are visible in the view. We show that this
+principle has several nice properties that are suggested by related work on
+bidirectional transformations.</p></div></div>
+</li>
+
+<li class="pub-item">
+<div class="pub-block"><a id="fosd13-variational-graphs"></a><div class="pub-title">An Abstract Representation of Variational Graphs</div><div class="pub-authors">Martin Erwig, Eric Walkingshaw, and Sheng Chen</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">Int. Workshop on Feature-Oriented Software Development (FOSD)</span>, ACM, </span><span class="pub-year">2013</span>, 25–32</div></div><span class="pub-links">[<span class="pub-abstract-link fosd13-variational-graphs"><a href="javascript:toggleAbstract('fosd13-variational-graphs');">Abstract</a></span>, <span class="pub-pdf-link"><a href="./files/pubs/2013/fosd13-variational-graphs.pdf">PDF</a></span>]</span><div class="pub-abstract fosd13-variational-graphs"><p>In the context of software product lines, there is often a need to represent
+graphs containing variability. For example, extending traditional modeling
+techniques or program analyses to variational software requires a corresponding
+notion of variational graphs. In this paper, we introduce a general model of
+variational graphs and a theoretical framework for discussing variational graph
+algorithms. Specifically, we present an abstract syntax based on tagging for
+succinctly representing variational graphs and other data types relevant to
+variational graph algorithms, such as variational sets and paths. We
+demonstrate how (non-variational) graph algorithms can be generalized to
+operate on variational graphs, to accept variational inputs, and produce
+variational outputs. Finally, we discuss a filtering operation on variational
+graphs and how this interacts with variational graph algorithms.</p></div></div>
+</li>
+
+<li class="pub-item">
+<div class="pub-block"><a id="vamos13-cc-select"></a><div class="pub-title">Adding Configuration to the Choice Calculus</div><div class="pub-authors">Martin Erwig, Klaus Ostermann, Tillmann Rendel, and Eric Walkingshaw</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">Int. Workshop on Variability Modelling of Software-Intensive Systems (VaMoS)</span>, ACM, </span><span class="pub-year">2013</span>, 13:1–13:8</div></div><span class="pub-links">[<span class="pub-abstract-link vamos13-cc-select"><a href="javascript:toggleAbstract('vamos13-cc-select');">Abstract</a></span>, <span class="pub-pdf-link"><a href="./files/pubs/2013/vamos13-cc-select.pdf">PDF</a></span>]</span><div class="pub-abstract vamos13-cc-select"><p>The choice calculus is a formal language for representing variation in software
+artifacts. Variability is organized in the choice calculus through the use of
+dimensions, where each dimension represents a decision that must be made in
+order to obtain a particular variant. However, the process of selecting
+alternatives from dimensions was relegated to an external operation. This
+precludes many interesting variation and reuse patterns, such as nested product
+lines, and theoretical results, such as a syntactic description of
+configuration, that would be possible if selection were a part of the language
+itself.</p>
+<p>In this paper we add a selection operation to the choice calculus and
+illustrate how that increases the expressiveness of the calculus. We
+investigate some alternative semantics of this operation and study their impact
+and utility. Specifically, we will examine selection in the context of static
+and dynamically scoped dimension declarations, as a well as a modest and greedy
+form of dimension elimination. We also present a design for a type system to
+ensure configuration safety and modularity of nested product lines.</p></div></div>
+</li>
+
+<li class="pub-item">
+<div class="pub-block"><a id="gpce12-compositional-cc"></a><div class="pub-title">A Calculus for Modeling and Implementing Variation</div><div class="pub-authors">Eric Walkingshaw and Martin Erwig</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">ACM SIGPLAN Int. Conf. on Generative Programming and Component Engineering (GPCE)</span>, </span><span class="pub-year">2012</span>, 132–140</div></div><span class="pub-links">[<span class="pub-abstract-link gpce12-compositional-cc"><a href="javascript:toggleAbstract('gpce12-compositional-cc');">Abstract</a></span>, <span class="pub-pdf-link"><a href="./files/pubs/2012/gpce12-compositional-cc.pdf">PDF</a></span>]</span><div class="pub-abstract gpce12-compositional-cc"><p>We present a formal calculus for modeling and implementing variation in
+software. It unifies the compositional and annotative approaches to feature
+implementation and supports the development of abstractions that can be used to
+directly relate feature models to their implementation. Since the compositional
+and annotative approaches are complementary, the calculus enables implementers
+to use the best combination of tools for the job and focus on inherent feature
+interactions, rather than those introduced by biases in the representation. The
+calculus also supports the abstraction of recurring variational patterns and
+provides a metaprogramming platform for organizing variation in artifacts.</p></div></div>
+</li>
+
+<li class="pub-item">
+<div class="pub-block"><a id="icfp12-variational-type-errors"></a><div class="pub-title">An Error-Tolerant Type System for Variational Lambda Calculus</div><div class="pub-authors">Sheng Chen, Martin Erwig, and Eric Walkingshaw</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">ACM SIGPLAN Int. Conf. on Functional Programming (ICFP)</span>, </span><span class="pub-year">2012</span>, 29–40</div></div><span class="pub-links">[<span class="pub-abstract-link icfp12-variational-type-errors"><a href="javascript:toggleAbstract('icfp12-variational-type-errors');">Abstract</a></span>, <span class="pub-pdf-link"><a href="./files/pubs/2012/icfp12-variational-type-errors.pdf">PDF</a></span>]</span><div class="pub-abstract icfp12-variational-type-errors"><p>Conditional compilation and software product line technologies make it possible
+to generate a huge number of different programs from a single software project.
+Typing each of these programs individually is usually impossible due to the
+sheer number of possible variants. Our previous work has addressed this problem
+with a type system for variational lambda calculus (VLC), an extension of
+lambda calculus with basic constructs for introducing and organizing variation.
+Although our type inference algorithm is more efficient than the brute-force
+strategy of inferring the types of each variant individually, it is less robust
+since type inference will fail for the entire variational expression if any one
+variant contains a type error. In this work, we extend our type system to
+operate on VLC expressions containing type errors. This extension directly
+supports locating ill-typed variants and the incremental development of
+variational programs. It also has many subtle implications for the unification
+of variational types. We show that our extended type system possesses a
+principal typing property and that the underlying unification problem is
+unitary. Our unification algorithm computes partial unifiers that lead to
+result types that (1) contain errors in as few variants as possible and (2) are
+most general. Finally, we perform an empirical evaluation to determine the
+overhead of this extension compared to our previous work, to demonstrate the
+improvements over the brute-force approach, and to explore the effects of
+various error distributions on the inference process.</p></div></div>
+</li>
+
+<li class="pub-item">
+<div class="pub-block"><a id="vlhcc11-ifdef-confirmed-harmful"></a><div class="pub-title">#ifdef Confirmed Harmful: Promoting Understandable Software Variation</div><div class="pub-authors">Duc Le, Eric Walkingshaw, and Martin Erwig</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">IEEE Int. Symp. on Visual Languages and Human-Centric Computing (VL/HCC)</span>, </span><span class="pub-year">2011</span>, 143–150</div></div><span class="pub-links">[<span class="pub-abstract-link vlhcc11-ifdef-confirmed-harmful"><a href="javascript:toggleAbstract('vlhcc11-ifdef-confirmed-harmful');">Abstract</a></span>, <span class="pub-pdf-link"><a href="./files/pubs/2011/vlhcc11-ifdef-confirmed-harmful.pdf">PDF</a></span>]</span><div class="pub-abstract vlhcc11-ifdef-confirmed-harmful"><p>Maintaining variation in software is a difficult problem that poses serious
+challenges for the understanding and editing of software artifacts. Although
+the C preprocessor (CPP) is often the default tool used to introduce
+variability to software, because of its simplicity and flexibility, it is
+infamous for its obtrusive syntax and has been blamed for reducing the
+comprehensibility and maintainability of software. In this paper, we address
+this problem by developing a prototype for managing software variation at the
+source code level. We evaluate the difference between our prototype and CPP
+with a user study, which indicates that the prototype helps users reason about
+variational code faster and more accurately than CPP. Our results also support
+the research of others, providing evidence for the effectiveness of related
+tools, such as CIDE and FeatureCommander.</p></div></div>
+</li>
+
+<li class="pub-item">
+<div class="pub-block"><a id="dsl11-causation-dsl"></a><div class="pub-title">A DSEL for Studying and Explaining Causation</div><div class="pub-authors">Eric Walkingshaw and Martin Erwig</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">IFIP Working Conf. on Domain-Specific Languages (DSL)</span>, </span><span class="pub-year">2011</span>, 143–167</div></div><span class="pub-links">[<span class="pub-abstract-link dsl11-causation-dsl"><a href="javascript:toggleAbstract('dsl11-causation-dsl');">Abstract</a></span>, <span class="pub-pdf-link"><a href="./files/pubs/2011/dsl11-causation-dsl.pdf">PDF</a></span>, <span class="pub-code-link"><a href="https://github.com/walkie/NeuronDiagram">Code</a></span>]</span><div class="pub-abstract dsl11-causation-dsl"><p>We present a domain-specific embedded language (DSEL) in Haskell that supports
+the philosophical study and practical explanation of causation. The language
+provides constructs for modeling situations comprised of events and functions
+for reliably determining the complex causal relationships that emerge between
+these events. It enables the creation of visual explanations of these causal
+relationships and a means to systematically generate alternative, related
+scenarios, along with corresponding outcomes and causes. The DSEL is based on
+neuron diagrams, a visual notation that is well established in practice and has
+been successfully employed for causation explanation and research. In addition
+to its immediate applicability by users of neuron diagrams, the DSEL is
+extensible, allowing causation experts to extend the notation to introduce
+special-purpose causation constructs. The DSEL also extends the notation of
+neuron diagrams to operate over non-boolean values, improving its
+expressiveness and offering new possibilities for causation research and its
+applications.</p></div></div>
+</li>
+
+<li class="pub-item">
+<div class="pub-block"><a id="sle11-semantics-first"></a><div class="pub-title">Semantics First! Rethinking the Language Design Process</div><div class="pub-authors">Martin Erwig and Eric Walkingshaw</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">ACM SIGPLAN Int. Conf. on Software Language Engineering (SLE)</span>, LNCS vol. 6940, Springer, </span><span class="pub-year">2011</span>, 243–262</div></div><span class="pub-links">[<span class="pub-abstract-link sle11-semantics-first"><a href="javascript:toggleAbstract('sle11-semantics-first');">Abstract</a></span>, <span class="pub-pdf-link"><a href="./files/pubs/2011/sle11-semantics-first.pdf">PDF</a></span>]</span><div class="pub-abstract sle11-semantics-first"><p>The design of languages is still more of an art than an engineering discipline.
+Although recently tools have been put forward to support the language design
+process, such as language workbenches, these have mostly focused on a syntactic
+view of languages. While these tools are quite helpful for the development of
+parsers and editors, they provide little support for the underlying design of
+the languages. In this paper we illustrate how to support the design of
+languages by focusing on their semantics first. Specifically, we will show that
+powerful and general language operators can be employed to adapt and grow
+sophisticated languages out of simple semantics concepts. We use Haskell as a
+metalanguage and will associate generic language concepts, such as semantics
+domains, with Haskell-specific ones, such as data types. We do this in a way
+that clearly distinguishes our approach to language design from the traditional
+syntax-oriented one. This will reveal some unexpected correlations, such as
+viewing type classes as language multipliers. We illustrate the viability of
+our approach with several real-world examples.</p></div></div>
+</li>
+
+<li class="pub-item">
+<div class="pub-block"><a id="foser10-program-fields"></a><div class="pub-title">Program Fields for Continuous Software</div><div class="pub-authors">Martin Erwig and Eric Walkingshaw</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">ACM SIGSOFT Workshop on the Future of Software Engineering Research (FoSER)</span>, </span><span class="pub-year">2010</span>, 105–108</div></div><span class="pub-links">[<span class="pub-abstract-link foser10-program-fields"><a href="javascript:toggleAbstract('foser10-program-fields');">Abstract</a></span>, <span class="pub-pdf-link"><a href="./files/pubs/2010/foser10-program-fields.pdf">PDF</a></span>]</span><div class="pub-abstract foser10-program-fields"><p>We propose program fields, a formal representation for groups of related
+programs, as a new abstraction to support future software engineering research
+in several areas. We will discuss opportunities offered by program fields and
+research questions that have to be addressed.</p></div></div>
+</li>
+
+<li class="pub-item">
+<div class="pub-block"><a id="vlhcc10-neuron-diagrams"></a><div class="pub-title">Causal Reasoning with Neuron Diagrams</div><div class="pub-authors">Martin Erwig and Eric Walkingshaw</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">IEEE Int. Symp. on Visual Languages and Human-Centric Computing (VL/HCC)</span>, </span><span class="pub-year">2010</span>, 101–108</div></div><span class="pub-links">[<span class="pub-abstract-link vlhcc10-neuron-diagrams"><a href="javascript:toggleAbstract('vlhcc10-neuron-diagrams');">Abstract</a></span>, <span class="pub-pdf-link"><a href="./files/pubs/2010/vlhcc10-neuron-diagrams.pdf">PDF</a></span>]</span><div class="pub-abstract vlhcc10-neuron-diagrams"><p>The principle of causation is fundamental to science and society and has
+remained an active topic of discourse in philosophy for over two millennia.
+Modern philosophers often rely on “neuron diagrams”, a domain-specific visual
+language for discussing and reasoning about causal relationships and the
+concept of causation itself. In this paper we formalize the syntax and
+semantics of neuron diagrams. We discuss existing algorithms for identifying
+causes in neuron diagrams, show how these approaches are flawed, and propose
+solutions to these problems. We separate the standard representation of a
+dynamic execution of a neuron diagram from its static definition and define two
+separate, but related semantics, one for the causal effects of neuron diagrams
+and one for the identification of causes themselves. Most significantly, we
+propose a simple language extension that supports a clear, consistent, and
+comprehensive algorithm for automatic causal inference.</p></div></div>
+</li>
+
+<li class="pub-item">
+<div class="pub-block"><a id="vlhcc09-visual-explanations-probability"></a><div class="pub-title">Visual Explanations of Probabilistic Reasoning</div><div class="pub-authors">Martin Erwig and Eric Walkingshaw</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">IEEE Int. Symp. on Visual Languages and Human-Centric Computing (VL/HCC)</span>, </span><span class="pub-year">2009</span>, 23–27</div></div><span class="pub-links">[<span class="pub-abstract-link vlhcc09-visual-explanations-probability"><a href="javascript:toggleAbstract('vlhcc09-visual-explanations-probability');">Abstract</a></span>, <span class="pub-pdf-link"><a href="./files/pubs/2009/vlhcc09-visual-explanations-probability.pdf">PDF</a></span>]</span><div class="pub-abstract vlhcc09-visual-explanations-probability"><p>Continuing our research in explanation-oriented language design, we present a
+domain-specific visual language for explaining probabilistic reasoning.
+Programs in this language, called explanation objects, can be manipulated
+according to a set of laws to automatically generate many equivalent
+explanation instances. We argue that this increases the explanatory power of
+our language by allowing a user to view a problem from many different
+perspectives.</p></div></div>
+</li>
+
+<li class="pub-item">
+<div class="pub-block"><a id="idetc09-software-hardware-design"></a><div class="pub-title">A Formal Representation of Software-Hardware System Design</div><div class="pub-authors">Eric Walkingshaw, Paul Strauss, Martin Erwig, John Mueller, and Irem Tumer</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">ASME Int. Design Engineering Technical Conf. &amp; Computers and Information in Engineering Conf. (IDETC)</span>, </span><span class="pub-year">2009</span>, 1387–1398</div></div><span class="pub-links">[<span class="pub-abstract-link idetc09-software-hardware-design"><a href="javascript:toggleAbstract('idetc09-software-hardware-design');">Abstract</a></span>, <span class="pub-pdf-link"><a href="./files/pubs/2009/idetc09-software-hardware-design.pdf">PDF</a></span>]</span><div class="pub-abstract idetc09-software-hardware-design"><p>The design of hardware-software systems is a complex and difficult task
+exacerbated by the very different tools used by designers in each field. Even
+in small projects, tracking the impact, motivation and context of individual
+design decisions between designers and over time quickly becomes intractable.
+In an attempt to bridge this gap, we present a general, low-level model of the
+system design process. We formally define the concept of a design decision, and
+provide a hierarchical representation of both the design space and the context
+in which decisions are made. This model can serve as a foundation for
+software-hardware system design tools which will help designers cooperate more
+efficiently and effectively. We provide a high-level example of the use of such
+a system in a design problem provided through collaboration with NASA.</p></div></div>
+</li>
+
+<li class="pub-item">
+<div class="pub-block"><a id="dsl09-explaining-probability"></a><div class="pub-title">A DSL for Explaining Probabilistic Reasoning</div><div class="pub-authors">Martin Erwig and Eric Walkingshaw</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">IFIP Working Conf. on Domain-Specific Languages (DSL)</span>, LNCS vol. 5658, Springer, </span><span class="pub-year">2009</span>, 335–359</div></div><div class="pub-note pub-best">Best paper</div><span class="pub-links">[<span class="pub-abstract-link dsl09-explaining-probability"><a href="javascript:toggleAbstract('dsl09-explaining-probability');">Abstract</a></span>, <span class="pub-pdf-link"><a href="./files/pubs/2009/dsl09-explaining-probability.pdf">PDF</a></span>]</span><div class="pub-abstract dsl09-explaining-probability"><p>We propose a new focus in language design where languages provide constructs
+that not only describe the computation of results, but also produce
+explanations of how and why those results were obtained. We posit that if users
+are to understand computations produced by a language, that language should
+provide explanations to the user. As an example of such an
+explanation-oriented language we present a domain-specific language for
+explaining probabilistic reasoning, a domain that is not well understood by
+non-experts. We show the design of the DSL in several steps. Based on a
+story-telling metaphor of explanations, we identify generic constructs for
+building stories out of events, and obtaining explanations by applying stories
+to specific examples. These generic constructs are then adapted to the
+particular explanation domain of probabilistic reasoning. Finally, we develop a
+visual notation for explaining probabilistic reasoning.</p></div></div>
+</li>
+
+<li class="pub-item">
+<div class="pub-block"><a id="dsl09-hagl-expressiveness"></a><div class="pub-title">Varying Domain Representations in Hagl – Extending the Expressiveness of a DSL for Experimental Game Theory</div><div class="pub-authors">Eric Walkingshaw and Martin Erwig</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">IFIP Working Conf. on Domain-Specific Languages (DSL)</span>, LNCS vol. 5658, Springer, </span><span class="pub-year">2009</span>, 310–334</div></div><span class="pub-links">[<span class="pub-abstract-link dsl09-hagl-expressiveness"><a href="javascript:toggleAbstract('dsl09-hagl-expressiveness');">Abstract</a></span>, <span class="pub-pdf-link"><a href="./files/pubs/2009/dsl09-hagl-expressiveness.pdf">PDF</a></span>, <span class="pub-code-link"><a href="https://github.com/walkie/Hagl-WCDSL">Code</a></span>]</span><div class="pub-abstract dsl09-hagl-expressiveness"><p>Experimental game theory is an increasingly important research tool in many
+fields, providing insight into strategic behavior through simulation and
+experimentation on game theoretic models. Unfortunately, despite relying
+heavily on automation, this approach has not been well supported by tools. Here
+we present our continuing work on Hagl, a domain-specific language embedded in
+Haskell, intended to drastically reduce the development time of such
+experiments and support a highly explorative research style. In this paper we
+present a fundamental redesign of the underlying game representation in Hagl.
+These changes allow us to better leverage domain knowledge by allowing
+different classes of games to be represented differently, exploiting existing
+domain representations and algorithms. In particular, we show how this supports
+analytical extensions to Hagl, and makes strategies for state-based games
+vastly simpler and more efficient.</p></div></div>
+</li>
+
+<li class="pub-item">
+<div class="pub-block"><a id="vlhcc08-explaining-strategies"></a><div class="pub-title">A Visual Language for Representing and Explaining Strategies in Game Theory</div><div class="pub-authors">Martin Erwig and Eric Walkingshaw</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">IEEE Int. Symp. on Visual Languages and Human-Centric Computing (VL/HCC)</span>, </span><span class="pub-year">2008</span>, 101–108</div></div><span class="pub-links">[<span class="pub-abstract-link vlhcc08-explaining-strategies"><a href="javascript:toggleAbstract('vlhcc08-explaining-strategies');">Abstract</a></span>, <span class="pub-pdf-link"><a href="./files/pubs/2008/vlhcc08-explaining-strategies.pdf">PDF</a></span>]</span><div class="pub-abstract vlhcc08-explaining-strategies"><p>We present a visual language for strategies in game theory, which has potential
+applications in economics, social sciences, and in general science education.
+This language facilitates explanations of strategies by visually representing
+the interaction of players’ strategies with game execution. We have utilized
+the cognitive dimensions framework in the design phase and recognized the need
+for a new cognitive dimension of “traceability” that considers how well a
+language can represent the execution of a program. We consider how traceability
+interacts with other cognitive dimensions and demonstrate its use in analyzing
+existing languages. We conclude that the design of a visual representation for
+execution traces should be an integral part of the design of visual languages
+because understanding a program is often tightly coupled to its execution.</p></div></div>
+</li>
+
+</ol>
+<h2 class="pub-head" id="graduate-theses">Graduate theses</h2>
+<ol class="pub-list">
+
+<li class="pub-item">
+<div class="pub-block"><a id="dissertation-choice-calculus"></a><div class="pub-title">The Choice Calculus: A Formal Language of Variation</div><div class="pub-authors">Eric Walkingshaw</div><div class="pub-details"><div class="pub-details"><span class="pub-venue">PhD dissertation, <span class="pub-venue-name">Oregon State University</span>, </span><span class="pub-year">2013</span></div></div><span class="pub-links">[<span class="pub-abstract-link dissertation-choice-calculus"><a href="javascript:toggleAbstract('dissertation-choice-calculus');">Abstract</a></span>, <span class="pub-pdf-link"><a href="./files/pubs/2013/dissertation-choice-calculus.pdf">PDF</a></span>]</span><div class="pub-abstract dissertation-choice-calculus"><p>In this thesis I present the choice calculus, a formal language for
+representing variation in software and other structured artifacts. The choice
+calculus is intended to support variation research in a way similar to the
+lambda calculus in programming language research. Specifically, it provides a
+simple formal basis for presenting, proving, and communicating theoretical
+results. It can serve as a common language of discourse for researchers working
+on different views of similar problems and provide a shared back end in tools.</p>
+<p>This thesis collects a large amount of work on the choice calculus. It defines
+the syntax and denotational semantics of the language along with modular
+language extensions that add features important to variation research. It
+presents several theoretical results related to the choice calculus, such as an
+equivalence relation that supports semantics-preserving transformations of
+choice calculus expressions, and a type system for ensuring that an expression
+is well formed. It also presents a Haskell DSEL based on the choice calculus
+for exploring the concept of variational programming.</p></div></div>
+</li>
+
+<li class="pub-item">
+<div class="pub-block"><a id="msthesis-game-theory-dsls"></a><div class="pub-title">Domain-Specific Language Support for Experimental Game Theory</div><div class="pub-authors">Eric Walkingshaw</div><div class="pub-details"><div class="pub-details"><span class="pub-venue">MS thesis, <span class="pub-venue-name">Oregon State University</span>, </span><span class="pub-year">2011</span></div></div><span class="pub-links">[<span class="pub-abstract-link msthesis-game-theory-dsls"><a href="javascript:toggleAbstract('msthesis-game-theory-dsls');">Abstract</a></span>, <span class="pub-pdf-link"><a href="./files/pubs/2011/msthesis-game-theory-dsls.pdf">PDF</a></span>, <span class="pub-code-link"><a href="https://github.com/walkie/Hagl">Code</a></span>]</span><div class="pub-abstract msthesis-game-theory-dsls"><p>Experimental game theory is the use of game theoretic abstractions—games,
+players, and strategies—in experiments and simulations. It is often used in
+cases where traditional, analytical game theory fails or is difficult to apply.
+This thesis collects three previously published papers that provide
+domain-specific language (DSL) support for defining and executing these
+experiments, and for explaining their results.</p>
+<p>Despite the widespread use of software in this field, there is a distinct lack
+of tool support for common tasks like modeling games and running simulations.
+Instead, most experiments are created from scratch in general-purpose
+programming languages. We have addressed this problem with Hagl, a DSL embedded
+in Haskell that allows the concise, declarative definition of games,
+strategies, and executable experiments. Hagl raises the level of abstraction
+for experimental game theory, reducing the effort to conduct experiments and
+freeing experimenters to focus on hard problems in their domain instead of
+low-level implementation details.</p>
+<p>While analytical game theory is most often used as a prescriptive tool, a way
+to analyze a situation and determine the best course of action, experimental
+game theory is often applied descriptively to explain why agents interact and
+behave in a certain way. Often these interactions are complex and surprising.
+To support this explanatory role, we have designed visual DSL for explaining
+the interaction of strategies for iterated games. This language is used as a
+vehicle to introduce the notational quality of traceability and the new
+paradigm of explanation-oriented programming.</p></div></div>
+</li>
+
+<li class="pub-item">
+<div class="pub-block"><a id="qualifier-variation-survey"></a><div class="pub-title">Features and Feature Models: A Survey of Variation Representations</div><div class="pub-authors">Eric Walkingshaw</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">Compendium of Computer Science Doctoral Qualifying Exams, Oregon State University</span>, </span><span class="pub-year">2010</span></div></div><span class="pub-links">[<span class="pub-abstract-link qualifier-variation-survey"><a href="javascript:toggleAbstract('qualifier-variation-survey');">Abstract</a></span>]</span><div class="pub-abstract qualifier-variation-survey"><p>This survey explores and organizes existing work on the long-term management of
+software that varies in multiple dimensions. It focuses, in particular, on the
+representation of features in software product lines, and on capturing
+relationships between features in feature models.</p></div></div>
+</li>
+
+</ol>
+<h2 class="pub-head" id="advised-theses">Advised theses</h2>
+<p>I was the major advisor for the students whose work is included below.</p>
+<ol class="pub-list">
+
+<li class="pub-item">
+<div class="pub-block"><a id="ataei-21-phd-dissertation"></a><div class="pub-title">Theory and Implementation of a Variational Database Management System</div><div class="pub-authors">Parisa Ataei</div><div class="pub-details"><div class="pub-details"><span class="pub-venue">PhD dissertation, <span class="pub-venue-name">Oregon State University</span>, </span><span class="pub-year">2021</span></div></div><span class="pub-links">[<span class="pub-abstract-link ataei-21-phd-dissertation"><a href="javascript:toggleAbstract('ataei-21-phd-dissertation');">Abstract</a></span>, <span class="pub-pdf-link"><a href="./files/pubs/students/ataei-21-phd-dissertation.pdf">PDF</a></span>]</span><div class="pub-abstract ataei-21-phd-dissertation"><p>In this thesis, I present the variational database management system, a formal
+framework and its implementation for representing variation in relational
+databases and managing variational information needs. A variational database is
+intended to support any kind of variation in a database. Specific kinds of
+variation in databases have already been studied and are well-supported, for
+example, schema evolution systems address the variation of a database’s schema
+over time and data integration systems address variation caused by accessing
+data from multiple data sources simultaneously. However, many other kinds of
+variation in databases arise in practice, and different kinds of variation
+often interact, but these scenarios are not well-supported by the existing
+work. For example, neither the schema evolution systems nor the database
+integration systems can address variation that arises when data sources
+combined in one database evolve over time.</p>
+<p>This thesis collects a large amount of work: It defines the variational
+database framework and the syntax and denotational semantics of the variational
+relational algebra, a query language for variational databases. It presents two
+use cases of the variational database framework that are based on existing
+datasets and scenarios that are partially supported by existing techniques. It
+presents the variational database management system which is a prototype of
+variational databases and variational relational algebra as an abstract layer
+written in Haskell on top of a traditional RDBMS. It also presents several
+theoretical results related to the framework and the query language, such as
+syntax-based equivalence rules that preserve the semantics of a query, a type
+system for ensuring that a variational query is well-formed with respect to the
+underlying variational schema, and a confluence property of the variational
+relational algebra type system with respect to the relational algebra type
+system and its denotational semantics.</p></div></div>
+</li>
+
+<li class="pub-item">
+<div class="pub-block"><a id="young-21-phd-dissertation"></a><div class="pub-title">Variational Satisfiability Solving</div><div class="pub-authors">Jeffrey M. Young</div><div class="pub-details"><div class="pub-details"><span class="pub-venue">PhD dissertation, <span class="pub-venue-name">Oregon State University</span>, </span><span class="pub-year">2021</span></div></div><span class="pub-links">[<span class="pub-abstract-link young-21-phd-dissertation"><a href="javascript:toggleAbstract('young-21-phd-dissertation');">Abstract</a></span>, <span class="pub-pdf-link"><a href="./files/pubs/students/young-21-phd-dissertation.pdf">PDF</a></span>]</span><div class="pub-abstract young-21-phd-dissertation"><p>Over the last two decades, satisfiability and satisfiability-modulo theory
+(SAT/SMT) solvers have grown powerful enough to be general purpose reasoning
+engines throughout software engineering and computer science. However, most
+practical use cases of SAT/SMT solvers require not just solving a single
+SAT/SMT problem, but solving sets of related SAT/SMT problems. This discrepancy
+was directly addressed by the SAT/SMT community with the invention of
+incremental SAT/SMT solving. However, incremental SAT/SMT solvers require users
+to hand write a program which dictates the terms that are shared between
+problems and terms which are unique. By placing the onus on users, incremental
+solvers couple the users’ solution to the users’ exact sequence of SAT/SMT
+problems–making the solution overly specific–and require the user to write
+extra infrastructure to coordinate or handle the results.</p>
+<p>This dissertation argues that the aforementioned problems result from
+accidental complexity produced by solving a problem that is variational without
+the concept of variation, similar to problematic use of GOTO statements in the
+absence of WHILE loop constructs. To demonstrate the argument, this thesis
+applies theory from variational programming to the domain of SAT/SMT solvers to
+create the first variational SAT solver. To do so, the thesis formalizes a
+variational propositional logic and specifies variational SAT solving as a
+compiler that compiles variational SAT problems to instructions for an
+industrial strength SAT solver.</p></div></div>
+</li>
+
+<li class="pub-item">
+<div class="pub-block"><a id="khan-21-ms-thesis"></a><div class="pub-title">Formal Verification of the Variational Database Management System</div><div class="pub-authors">Fariba Khan</div><div class="pub-details"><div class="pub-details"><span class="pub-venue">MS thesis, <span class="pub-venue-name">Oregon State University</span>, </span><span class="pub-year">2021</span></div></div><span class="pub-links">[<span class="pub-abstract-link khan-21-ms-thesis"><a href="javascript:toggleAbstract('khan-21-ms-thesis');">Abstract</a></span>, <span class="pub-pdf-link"><a href="./files/pubs/students/khan-21-ms-thesis.pdf">PDF</a></span>]</span><div class="pub-abstract khan-21-ms-thesis"><p>Variation in data is abundant and ubiquitous in real-world applications.
+Managing variation in databases is, however, difficult and has been extensively
+studied by the database community. Schema evolution, data integration, and
+database versioning are examples of well-studied forms of database variation
+with effective context-specific solutions. However, variation appears in
+different forms and contexts in databases, and existing approaches cannot be
+generalized to handle arbitrary forms of variation irrespective of the context.
+Moreover, in practice, different forms of variation intersect in a particular
+context. Variational databases (VDB) provide a fundamental solution to
+variation management by explicitly encoding variation into relational databases
+that allows addressing different kinds of variation simultaneously. To support
+expressing variation in information need, traditional relational algebra (RA)
+is extended to variational relational algebra (VRA). VRA comes with a static
+type system that checks the validity of variational queries written in VRA.
+This thesis extends the formalization and formally verifies properties of the
+variational database management system (VDBMS). Variational sets and set
+operations definitions are formally verified and VDBs are formally encoded
+using them. Then, the correctness of the VRA type system with respect to the RA
+type system is formally specified and verified. VDBMS also allows writing
+variational queries without repeating variations that are already encoded in
+the VDB and sub-queries. These implicitly annotated v-queries get explicitly
+annotated by the system. Therefore, this thesis further formally verifies the
+process of explicitly annotating variational queries.</p></div></div>
+</li>
+
+<li class="pub-item">
+<div class="pub-block"><a id="alkubaish-20-ms-thesis"></a><div class="pub-title">Integrating Side Effects in Variational Programs Using Algebraic Effects</div><div class="pub-authors">Ghadeer Alkubaish</div><div class="pub-details"><div class="pub-details"><span class="pub-venue">MS thesis, <span class="pub-venue-name">Oregon State University</span>, </span><span class="pub-year">2020</span></div></div><span class="pub-links">[<span class="pub-abstract-link alkubaish-20-ms-thesis"><a href="javascript:toggleAbstract('alkubaish-20-ms-thesis');">Abstract</a></span>, <span class="pub-pdf-link"><a href="./files/pubs/students/alkubaish-20-ms-thesis.pdf">PDF</a></span>]</span><div class="pub-abstract alkubaish-20-ms-thesis"><p>Variational programming supports efficiently executing many related programs at
+once by encoding all of the programs in one “variational program” that captures
+the differences among them statically and explicitly. An open problem in
+variational programming is how to handle side effects–if two program variants
+perform different side effects, we cannot separate the effect of one variant
+from the other since the outside world is not variational. A potential solution
+is to create variation-aware execution environments for variational programs,
+for example, a variational file system that keeps track of file variants
+corresponding to program variants. However, it is infeasible to do this for all
+kinds of effects. Also, there are different ways to handle the interaction of
+effects and variation that are incompatible with each other, preventing a
+one-size-fits-all solution. In this thesis, we argue that algebraic effects can
+be used to resolve the problem of combining variation and effects by enabling
+programmers to flexibly and incrementally extend a variational programming
+environment to handle new kinds of effects. We present a proof-of-concept
+prototype in the Eff programming language that demonstrates how a variational
+programming environment can be extended to support file input/output.
+Crucially, such extensions are done at the library level, which enables
+handling new kinds of effects and handling existing effects in multiple ways,
+both of which are essential in variational programming applications.</p></div></div>
+</li>
+
+<li class="pub-item">
+<div class="pub-block"><a id="li-19-ms-project"></a><div class="pub-title">Application of the Variational Database Management System to Schema Evolution and Software Product Lines</div><div class="pub-authors">Qiaoran Li</div><div class="pub-details"><div class="pub-details"><span class="pub-venue">MS project, <span class="pub-venue-name">Oregon State University</span>, </span><span class="pub-year">2019</span></div></div><span class="pub-links">[<span class="pub-abstract-link li-19-ms-project"><a href="javascript:toggleAbstract('li-19-ms-project');">Abstract</a></span>, <span class="pub-pdf-link"><a href="./files/pubs/students/li-19-ms-project.pdf">PDF</a></span>]</span><div class="pub-abstract li-19-ms-project"><p>As a general solution to the problem of managing structural and content
+variability in relational databases, in previous work we have introduced the
+Variational Database Management System (VDBMS). VDBMS consists of a
+representation of a variational database (VDB) and a corresponding typed query
+language (v-query). However, since this is a novel database representation,
+there are no existing instances of VDBs or v-queries that can be used to
+evaluate the VDBMS. In this project, we present two case studies to demonstrate
+the use of VDBMS and support its evaluation. The case studies were constructed
+by systematically encoding variability scenarios from prior work and generating
+corresponding VDBs by adapting existing widely-used data sets. The first case
+study shows how to use the VDBMS to manage database variants under a schema
+evolution scenario. The second case study demonstrates how to integrate the
+VDBMS with a database-backed software product line. Each case study provides a
+VDB and a set of v-queries that will be used to evaluate the VDBMS.
+Additionally, we provide some insights into generating VDBs from relational
+databases that could assist future VDBMS users.</p></div></div>
+</li>
+
+<li class="pub-item">
+<div class="pub-block"><a id="grasley-18-ms-thesis"></a><div class="pub-title">Imperative Programming with Variational Effects</div><div class="pub-authors">Alexander Grasley</div><div class="pub-details"><div class="pub-details"><span class="pub-venue">MS thesis, <span class="pub-venue-name">Oregon State University</span>, </span><span class="pub-year">2018</span></div></div><span class="pub-links">[<span class="pub-abstract-link grasley-18-ms-thesis"><a href="javascript:toggleAbstract('grasley-18-ms-thesis');">Abstract</a></span>, <span class="pub-pdf-link"><a href="./files/pubs/students/grasley-18-ms-thesis.pdf">PDF</a></span>]</span><div class="pub-abstract grasley-18-ms-thesis"><p>Variation is a commonly encountered element of modern software systems. Recent
+research into variation has led to increasing interest in the development of
+variational programming languages and corresponding variational models of
+execution. Variational imperative languages pose a particular challenge due to
+the complex interactions between side effects and variation. The development of
+interpreters for variational imperative languages has produced a number of
+techniques to address these interactions. This thesis builds upon and
+formalizes these techniques by defining a formal operational semantics for a
+simple imperative language that supports both variation and common side
+effects. We also provide an example of the successful implementation of these
+techniques in the form of the Resource DSL. One area in which variation is
+frequently encountered is in defining configurations and resource requirements
+for the deployment of modern software systems. To this end, we have developed
+the Resource DSL, a language that aids in the specification of resource
+requirements for highly configurable software systems.</p></div></div>
+</li>
+
+<li class="pub-item">
+<div class="pub-block"><a id="mcgirr-18-ms-project"></a><div class="pub-title">The Ownership Monad</div><div class="pub-authors">Michael G. McGirr</div><div class="pub-details"><div class="pub-details"><span class="pub-venue">MS project, <span class="pub-venue-name">Oregon State University</span>, </span><span class="pub-year">2018</span></div></div><span class="pub-links">[<span class="pub-abstract-link mcgirr-18-ms-project"><a href="javascript:toggleAbstract('mcgirr-18-ms-project');">Abstract</a></span>, <span class="pub-pdf-link"><a href="./files/pubs/students/mcgirr-18-ms-project.pdf">PDF</a></span>]</span><div class="pub-abstract mcgirr-18-ms-project"><p>The Rust programming language is a systems programming language with a strong
+static type system. A central feature of Rust’s type system is its unique
+concept of “ownership”, which enables Rust to give a user safe, low-level
+control over resources without the overhead of garbage collection. In Haskell,
+most data is immutable and many of the problems addressed by ownership in Rust
+simply don’t arise. However, ownership is still useful in Haskell in the
+context of mutable references and concurrency. This project report introduces
+the Ownership Monad, a monad that implements aspects of Rust’s ownership system
+as a library in Haskell. This will demonstrate many of the rules enforced by
+the ownership system in Rust in order to better understand the ownership-based
+method of tracking resources. This report will further explore the benefits
+such a system can provide for tracking resource use between concurrent threads.</p></div></div>
+</li>
+
+<li class="pub-item">
+<div class="pub-block"><a id="abbott-17-ms-thesis"></a><div class="pub-title">Formative Work Toward a Mixed-Initiative Programming Language</div><div class="pub-authors">Keeley Abbott</div><div class="pub-details"><div class="pub-details"><span class="pub-venue">MS thesis, <span class="pub-venue-name">Oregon State University</span>, </span><span class="pub-year">2017</span></div></div><span class="pub-links">[<span class="pub-abstract-link abbott-17-ms-thesis"><a href="javascript:toggleAbstract('abbott-17-ms-thesis');">Abstract</a></span>, <span class="pub-pdf-link"><a href="./files/pubs/students/abbott-17-ms-thesis.pdf">PDF</a></span>]</span><div class="pub-abstract abbott-17-ms-thesis"><p>Mixed-initiative programming entails collaboration between a computer system,
+and a human to achieve some desired goal or set of goals. Often these goals
+change or are amended in real time during the course of program execution. As
+such, the plans these programs are based on must adapt and evolve to
+accommodate this iterative process. This thesis collects a literature review of
+research done in the field of mixed-initiative programs that provides an
+understanding of the problems faced when attempting to integrate computer
+systems and human users, a previously published paper with formative work in
+understanding how humans write programs for other humans, and finally some
+initial work done to develop an embedded domain-specific language for
+mixed-initiative drone control.</p></div></div>
+</li>
+
+<li class="pub-item">
+<div class="pub-block"><a id="ataei-17-ms-thesis"></a><div class="pub-title">Principles of Variational Databases</div><div class="pub-authors">Parisa Ataei</div><div class="pub-details"><div class="pub-details"><span class="pub-venue">MS thesis, <span class="pub-venue-name">Oregon State University</span>, </span><span class="pub-year">2017</span></div></div><span class="pub-links">[<span class="pub-abstract-link ataei-17-ms-thesis"><a href="javascript:toggleAbstract('ataei-17-ms-thesis');">Abstract</a></span>, <span class="pub-pdf-link"><a href="./files/pubs/students/ataei-17-ms-thesis.pdf">PDF</a></span>]</span><div class="pub-abstract ataei-17-ms-thesis"><p>Data variations are prevalent in real-world applications. For example, software
+vendors have to handle numerous variations in the business requirements,
+conventions, and environmental settings of a software product. In
+database-backed software, the database of each version may have a different
+schema and content. As another example, data scientists often need to use a
+subset of the available databases because using non-relevant information may
+reduce the effectiveness of the results. Such variations give rise to numerous
+data variants in these applications. Users often would like to query and/or
+analyze all such variants simultaneously. For example, a software vendor would
+like to perform common tests over all versions of its product and a data
+scientist would like to find the subset of information over which the analytics
+algorithm delivers the most accurate results. Currently, there is not any
+systematic and principled approach to managing and querying data variations and
+users have to use their intuition to perform such analyses. We propose a novel
+abstraction called a <em>variational database</em> that provides a compact and
+structured representation of general forms of data variations for relational
+databases. As opposed to data integration approaches that provide a unified
+representation of all data sources, variational databases make variations
+explicit in both the schema definition and the query language without
+introducing too much complexity.</p></div></div>
+</li>
+
+<li class="pub-item">
+<div class="pub-block"><a id="meng-17-ms-thesis"></a><div class="pub-title">Implementation Techniques for Variational Data Structures</div><div class="pub-authors">Meng Meng</div><div class="pub-details"><div class="pub-details"><span class="pub-venue">MS thesis, <span class="pub-venue-name">Oregon State University</span>, </span><span class="pub-year">2017</span></div></div><span class="pub-links">[<span class="pub-abstract-link meng-17-ms-thesis"><a href="javascript:toggleAbstract('meng-17-ms-thesis');">Abstract</a></span>, <span class="pub-pdf-link"><a href="./files/pubs/students/meng-17-ms-thesis.pdf">PDF</a></span>]</span><div class="pub-abstract meng-17-ms-thesis"><p>Many applications require not only representing variability in software and
+data, but also computing with it. To do so efficiently requires variational
+data structures that make variability explicit in the underlying data and the
+operations used to manipulate it. Variational data structures have been
+developed ad hoc for many applications, but there is little general
+understanding of how to design them or what tradeoffs exist among them.</p>
+<p>In this thesis, we introduce the concept of holes to represent variational data
+structures of different sizes and shapes. Moreover, we strive for a more
+systematic exploration and analysis of a variational data structure. We want to
+know how different design decisions affect the performance and scalability of a
+variational data structure, and what properties of the underlying data and
+operation sequences need to be considered.</p>
+<p>Specifically, we study several alternative designs of a variational stack and
+analyze how these design decisions affect the performance of a variational
+stack with different usage profiles. We evaluate variational stacks in a
+real-world scenario: in the interpreter VarexJ when executing real software
+containing variability. Finally, we discuss different ways of representing
+variational priority queues and show how this affects the performance of the
+variational Dijkstra’s algorithm.</p></div></div>
+</li>
+
+<li class="pub-item">
+<div class="pub-block"><a id="vandewetering-17-honors-thesis"></a><div class="pub-title">View-Based Editing of Variational Code</div><div class="pub-authors">Miles Van de Wetering</div><div class="pub-details"><div class="pub-details"><span class="pub-venue">Honors BS thesis, <span class="pub-venue-name">Oregon State University</span>, </span><span class="pub-year">2017</span></div></div><span class="pub-links">[<span class="pub-abstract-link vandewetering-17-honors-thesis"><a href="javascript:toggleAbstract('vandewetering-17-honors-thesis');">Abstract</a></span>, <span class="pub-pdf-link"><a href="./files/pubs/students/vandewetering-17-honors-thesis.pdf">PDF</a></span>]</span><div class="pub-abstract vandewetering-17-honors-thesis"><p>This paper discusses the merits of providing users variational views when
+editing variational code. I provide a plugin for the popular Atom Integrated
+Development Environment (IDE) which replaces #ifdef annotations commonly used
+by the C PreProcessor (CPP) with colored backgrounds, thus reducing code
+clutter and attempting to help programmers quickly distinguish code that
+belongs to different features. I also provide a number of helpful features
+designed to help the programmer create, remove, and refactor feature code.
+Finally, I present a user study conducted in order to determine how helpful
+each of the two main features (code folding and background color) are to
+programmers – it was determined that while there were no significant
+differences in efficiency or accuracy, the user experience was considerably
+enhanced.</p></div></div>
+</li>
+
+<li class="pub-item">
+<div class="pub-block"><a id="wu-17-ms-project"></a><div class="pub-title">A Template CoprHD Storage Driver Based on the Southbound SDK</div><div class="pub-authors">Shujin Wu</div><div class="pub-details"><div class="pub-details"><span class="pub-venue">MS project, <span class="pub-venue-name">Oregon State University</span>, </span><span class="pub-year">2017</span></div></div><span class="pub-links">[<span class="pub-abstract-link wu-17-ms-project"><a href="javascript:toggleAbstract('wu-17-ms-project');">Abstract</a></span>, <span class="pub-pdf-link"><a href="./files/pubs/students/wu-17-ms-project.pdf">PDF</a></span>]</span><div class="pub-abstract wu-17-ms-project"><p>CoprHD is an open source software-defined storage and API platform which
+creates an abstraction layer over multi-vendor heterogeneous storage systems.
+It offers the ability to discover, pool and automate the management of the
+storage ecosystem with the help of storage drivers establishing connections
+between CoprHD and storage systems. On the demand of attracting more attentions
+from third-party storage companies, CoprHD community proposed a southbound
+driver SDK to simplify the process of developing a storage driver for CoprHD.
+ScaleIO storage driver, being the first one based on this southbound SDK, is
+implemented by us with Intel and EMC to serve the purposes to verify the
+southbound SDK and explore an effective way for the third-party driver
+development. This ScaleIO storage driver also acts as a template driver for the
+CoprHD community.</p></div></div>
+</li>
+
+<li class="pub-item">
+<div class="pub-block"><a id="hubbard-16-ms-thesis"></a><div class="pub-title">A Formal Foundation for Variational Programming Using the Choice Calculus</div><div class="pub-authors">Spencer Hubbard</div><div class="pub-details"><div class="pub-details"><span class="pub-venue">MS thesis, <span class="pub-venue-name">Oregon State University</span>, </span><span class="pub-year">2016</span></div></div><span class="pub-links">[<span class="pub-abstract-link hubbard-16-ms-thesis"><a href="javascript:toggleAbstract('hubbard-16-ms-thesis');">Abstract</a></span>, <span class="pub-pdf-link"><a href="./files/pubs/students/hubbard-16-ms-thesis.pdf">PDF</a></span>]</span><div class="pub-abstract hubbard-16-ms-thesis"><p>In this thesis, we present semantic equivalence rules for an extension of the
+choice calculus and sound operations for an implementation of variational
+lists. The choice calculus is a calculus for describing variation and the
+formula choice calculus is an extension with formulas. We prove semantic
+equivalence rules for the formula choice calculus. Variational lists are
+functional data structures for representing and computing with variation in
+lists using the choice calculus. We prove map and bind operations are sound for
+an implementation of variational lists. These proofs are written and verified
+in the language of the Coq proof assistant.</p></div></div>
+</li>
+
+</ol>
+  </div>
+</div>
+
+<div id="footer">
+  <div class="container">
+    <div class="foot-madeby">© 2022 Eric Walkingshaw, <a href="./legal.html">details</a></div>
+  </div>
+</div>
+
+</div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="./js/scripts.js"></script>
+<!-- <script async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+</body>
+</html>
