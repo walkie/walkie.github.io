@@ -89,15 +89,14 @@ pitted against each other for repeated play and in various tournament formats.</
 <h2 id="resource-dsl-githubresourcedsl">Resource DSL (<a href="https://github.com/walkie/Resource-DSL">GitHub</a>)</h2>
 <p>A DSL implemented in Haskell for modeling the resource constraints in highly
 configurable systems. This DSL, which rather embarrassingly never got a proper
-name, was the main deliverable for a 4-year contract as part the <a href="https://github.com/darpa-brass/brass">DARPA
+name, was the main deliverable for a 4.5-year contract as part of the <a href="https://github.com/darpa-brass/brass">DARPA
 BRASS</a> program.</p>
-<p>Within the language, a software system, the environment it is expected to run
-in, and the capabilities it is expected to perform, are all modeled as
-components that require and provide “resources”. Resources may correspond to
-concrete external entities or quantities, such as required sensors, amount of
-network bandwidth, or a set of installed libraries, or may be a more abstract
-capability, such as <em>wayfinding</em>, that is provided by a component in the
-system.</p>
+<p>The language enables modeling a software system, the environment it is expected
+to run in, and the capabilities it is expected to perform, as components that
+require and provide “resources”. Resources may correspond to concrete external
+entities or quantities, such as required sensors, amount of network bandwidth,
+or a set of installed libraries, or may be a more abstract capability, such as
+<em>wayfinding</em>, that is provided by a component in the system.</p>
 <p>Additionally, the system’s components, their connections, the environment, and
 the system’s expectations are all <em>configurable</em>. This reflects actual software
 variation in the system, along with the range of possible environments and
@@ -110,9 +109,9 @@ In particular, it supports efficient exhaustive searches for configurations
 that satisfy requirement-provision interfaces among components and for the
 system as a whole.</p>
 <h2 id="hakyll-academic-webpage-githubwebpagegit">Hakyll Academic Webpage (<a href="https://github.com/walkie/academic-webpage">GitHub</a>)</h2>
-<p>This is the code used to statically generate my old academic web page
-(<a href="https://web.engr.oregonstate.edu/~walkiner/">linkrotting here</a>), made available as an example application of
-the <a href="https://jaspervdj.be/hakyll/">Hakyll</a> static site generator library in Haskell.</p>
+<p>This is the code used to statically generate my old academic web page, made
+available as an example application of the <a href="https://jaspervdj.be/hakyll/">Hakyll</a> static site
+generator library in Haskell.</p>
 <p>I know it’s being used by a handful of folks around the world, thanks to folks
 emailing me… and because some haven’t changed the Google Analytics key! 😬</p>
 <p>The most unique feature is its support for publications. I implemented a <a href="https://github.com/walkie/academic-webpage/blob/main/haskell/WebPage/Pubs/Paper.hs">tiny
