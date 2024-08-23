@@ -45,6 +45,26 @@
 <ol class="pub-list">
 
 <li class="pub-item">
+<div class="pub-block"><a id="oopsla24-expressive-power-variability"></a><div class="pub-title">On the Expressive Power of Languages for Static Variability</div><div class="pub-authors">Paul Maximilian Bittner, Alexander Schultheiß, Benjamin Moosherr, Jeffrey M. Young, Leopoldo Teixeira, Eric Walkingshaw, Parisa Ataei, and Thomas Thüm</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">Proc. of the ACM on Programming Languages (PACMPL)</span> issue <span class="pub-issue">OOPSLA2</span>, </span><span class="pub-year">2024</span></div></div><span class="pub-links">[<span class="pub-abstract-link oopsla24-expressive-power-variability"><a href="javascript:toggleAbstract('oopsla24-expressive-power-variability');">Abstract</a></span>, <span class="pub-code-link"><a href="https://github.com/pmbittner/Vatras">Code</a></span>]</span><div class="pub-abstract oopsla24-expressive-power-variability"><p>Variability permeates software development to satisfy ever-changing requirements and mass-customization
+needs. A prime example is the Linux kernel, which employs the C preprocessor to specify a set of related but
+distinct kernel variants. To study, analyze, and verify variational software, several formal languages have
+been proposed. For example, the choice calculus has been successfully applied for type checking and symbolic
+execution of configurable software, while other formalisms have been used for variational model checking,
+change impact analysis, among other use cases. Yet, these languages have not been formally compared, hence,
+little is known about their relationships. Crucially, it is unclear to what extent one language subsumes another,
+how research results from one language can be applied to other languages, and which language is suitable
+for which purpose or domain. In this paper, we propose a formal framework to compare the expressive
+power of languages for static (i.e. compile-time) variability. By establishing a common semantic domain to
+capture a widely used intuition of explicit variability, we can formulate the basic, yet to date
+neglected, properties of soundness, completeness, and expressiveness for variability languages. We then prove
+the (un)soundness and (in)completeness of a range of existing languages, and relate their ability to express
+the same variational systems. We implement our framework as an extensible open source Agda library in
+which proofs act as correct compilers between languages or differencing algorithms. We find different levels
+of expressiveness as well as complete and incomplete languages with respect to our unified semantic domain, with
+the choice calculus being among the most expressive languages.</p></div></div>
+</li>
+
+<li class="pub-item">
 <div class="pub-block"><a id="emse23-variational-sat"></a><div class="pub-title">Variational Satisfiability Solving: Efficiently Solving Lots of Related SAT Problems</div><div class="pub-authors">Jeffrey M. Young, Paul Maximilian Bittner, Eric Walkingshaw, and Thomas Thüm</div><div class="pub-details"><div class="pub-details"><span class="pub-venue"><span class="pub-venue-name">Empirical Software Engineering (EMSE)</span>, vol. 28, num. 14, Springer, </span><span class="pub-year">2023</span>, 1–53</div></div><span class="pub-links">[<span class="pub-abstract-link emse23-variational-sat"><a href="javascript:toggleAbstract('emse23-variational-sat');">Abstract</a></span>, <span class="pub-pdf-link"><a href="./files/pubs/2023/emse23-variational-sat.pdf">PDF</a></span>, <span class="pub-code-link"><a href="https://github.com/lambda-land/VSAT_EMSE">Code</a></span>]</span><div class="pub-abstract emse23-variational-sat"><p>Incremental satisfiability (SAT) solving is an extension of classic SAT solving that enables solving a set of related SAT problems by identifying and exploiting shared terms. However, using incremental solvers effectively is hard since performance is sensitive to the input order of subterms and results must be tracked manually. For analyses that generate sets of related SAT problems, such as those in software product lines, incremental solvers are either not used or their use is not clearly described in the literature. This paper translates the ordering problem to an encoding problem and automates the use of incremental solving. We introduce variational SAT solving, which differs from incremental solving by accepting all related problems as a single variational input and returning all results as a single variational output. Variational solving syntactically encodes differences in related SAT problems as local points of variation. With this syntax, our approach automates the interaction with the incremental solver and enables a method to automatically optimize sharing in the input. To evaluate these ideas, we formalize a variational SAT algorithm, construct a prototype variational solver, and perform an empirical analysis on two real-world datasets that applied incremental solvers to software evolution scenarios. We show, assuming a variational input, that the prototype solver scales better for these problems than four off-the-shelf incremental solvers while also automatically tracking individual results.</p></div></div>
 </li>
 
