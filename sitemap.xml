@@ -293,6 +293,11 @@
   </url>
 
   <url>
+    <loc>https://eric.walkingshaw.net/files/pubs/2024/oopsla24-expressive-power-variability.pdf</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
     <loc>https://eric.walkingshaw.net/files/pubs/students/abbott-17-ms-thesis.pdf</loc>
     <priority>0.5</priority>
   </url>
